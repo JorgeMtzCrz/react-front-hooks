@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Router from './Router';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "./assets/css/bootstrap.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Router/>,
   document.getElementById('root')
 );
 
