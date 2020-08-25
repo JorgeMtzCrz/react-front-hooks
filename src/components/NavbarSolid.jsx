@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   Form,
@@ -8,6 +8,7 @@ import {
   InputGroupText,
   Input
 } from 'reactstrap';
+import {Link} from 'react-router-dom'
 import logo from '../assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -25,17 +26,17 @@ const NavbarSolid = (props) => {
 }
 
   return (
-    <div className="mb-5">
-      <div style={{display:'flex', padding:"30px", flexWrap:"wrap", justifyContent:"space-between", alignContent:"center", alignItems:"center",height:"100px"}}>
+    <div>
+      <div className="navbar-logo">
         <div style={{display:"flex", flexWrap:"wrap", justifyContent:"row", alignContent:"center", alignItems:"center"}}>
-        <img height="51px" width="286px" src={logo} alt="BDIT Logo" />
+        <img className="logo" src={logo} alt="BDIT Logo" />
         <Form>
               <FormGroup className="ml-4 mb-0">
                 <InputGroup>
-                  <Input id="search-input" style={{height:"62px", width:"320px"}} placeholder="What are you looking for?" type="text" />
+                  <Input id="search-input" className="banner-input" placeholder="What are you looking for?" type="text" />
                   <InputGroupAddon addonType="append">
                     <InputGroupText style={{backgroundColor:"white"}}>
-                      <FontAwesomeIcon style={{width:"40px", color:"black"}} icon={faSearch} />
+                      <FontAwesomeIcon className="search-icon" style={{color:"black"}} icon={faSearch} />
                     </InputGroupText>
                   </InputGroupAddon>
                 </InputGroup>
@@ -48,12 +49,12 @@ const NavbarSolid = (props) => {
         </div>
       </div>
       <div className="topnav" id="myTopnav">
-        <a href="#home">HOME</a>
-        <a href="#news">HDTV'S</a>
-        <a href="#contact">COMPUTERS</a>
-        <a href="#about">ACCESORIES</a>
-        <a href="#contact">HOME AUDIO</a>
-        <a href="#about">ABOUT US</a>
+        <Link to="/"><p>HOME</p></Link>
+        <Link to="/hdtvs"><p>HDTV'S</p></Link>
+        <Link to="computers"><p>COMPUTERS</p></Link>
+        <Link to="accesories"><p>ACCESORIES</p></Link>
+        <Link to="audio"><p>HOME AUDIO</p></Link>
+        <Link to="about"><p>ABOUT US</p></Link>
         <a href="#" className="icon" onClick={myFunction}>
         <FontAwesomeIcon icon={faBars} />
         </a>

@@ -1,23 +1,33 @@
-import React, {useState} from 'react'
-
-import background from "../assets/images/three-hdtv.png"
+import React from 'react'
+import useSWR from 'swr'
+import { ALL_URL, ALL_FETCHER } from '../services/banner_service'
 
 
 function OfferSection(props) {
+  const { data, mutate } = useSWR(ALL_URL, ALL_FETCHER)
+  const banners = data && data.banners
+
+  if(!banners)return <p>Loading</p>
   return (
     <> 
-    <div className="offerSection">
-      <div className="image-offer">
-        <img src={background} alt="hdtv"/>
-      </div>
-      <div className="color-offer">
-      </div>
-      <div className="text-offer">
-        <p className="title-offer">HDTV'S</p>
-        <p className="subtitle-offer">SAVE UP TO 30%</p>
-        <button className="button-offer">SEE MORE</button>
-      </div>
-    </div>
+    {
+      banners.map(e=>{
+        return(
+        <div className="offerSection">
+          <div className="image-offer">
+            <img width="100%" height="100%" src={e.img} alt={e.title}/>
+          </div>
+          <div className="color-offer">
+          </div>
+          <div className="text-offer">
+            <p className="title-offer">{e.title}</p>
+            <p className="subtitle-offer">{e.subtitle}</p>
+            <button className="button-offer">SEE MORE</button>
+          </div>
+        </div>
+        )
+      })
+    }
       
     </>
   );

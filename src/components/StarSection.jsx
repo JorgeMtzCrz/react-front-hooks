@@ -1,6 +1,4 @@
-import React, {useState} from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import React from 'react'
 import star from '../assets/images/estrella.svg'
 
 
@@ -19,11 +17,11 @@ function StarSection(props) {
     <> 
     <div style={{display:"flex", width:"100%", height:"250px", alignItems:"center", flexDirection:"column"}}>
       <div style={{display: 'flex', alignItems: "center", alignContent:"center"}}>
-        <h3 style={{color:"#DF4322", fontSize:"30px"}}>How people rate us and our products</h3>
+        <h3 style={{color:"#003366", fontSize:"30px"}}>Why we are the best in town</h3>
       </div>
       <div style={{display:"flex", width:"100%", flexDirection:"row", justifyContent:"space-around"}}>
         <div style={{display:"flex", alignItems:"center", alignContent:"center", flexDirection:"column"}}>
-          <p style={{color:"#418CFA", fontSize:"30px",marginBottom:"15px"}}>4.8</p>
+          <p style={{color:"#003366", fontSize:"30px",marginBottom:"15px"}}>4.8</p>
           <div style={{display:"flex", flexDirection:"row", marginBottom:"15px"}}>
             <img src={star} alt="star-complete" />
             <img src={star} alt="star-complete" />
@@ -34,7 +32,7 @@ function StarSection(props) {
           <p style={{color:"#000000", font: "Regular 20px/27px Open Sans"}}>Rate on Facebook</p>
         </div>
         <div style={{display:"flex", alignItems:"center", alignContent:"center", flexDirection:"column"}}>
-          <p style={{color:"#418CFA", fontSize:"30px",marginBottom:"15px"}}>4.5</p>
+          <p style={{color:"#003366", fontSize:"30px",marginBottom:"15px"}}>4.5</p>
           <div style={{display:"flex", flexDirection:"row", marginBottom:"15px"}}>
             <img src={star} alt="star-complete" />
             <img src={star} alt="star-complete" />
@@ -45,7 +43,7 @@ function StarSection(props) {
           <p style={{color:"#000000", font: "Regular 20px/27px Open Sans"}}>Rate on Yelp</p>
         </div>
         <div style={{display:"flex", alignItems:"center", alignContent:"center", flexDirection:"column"}}>
-          <p style={{color:"#418CFA", fontSize:"30px",marginBottom:"15px"}}>4.4</p>
+          <p style={{color:"#003366", fontSize:"30px",marginBottom:"15px"}}>4.4</p>
           <div style={{display:"flex", flexDirection:"row", marginBottom:"15px"}}>
             <img src={star} alt="star-complete" />
             <img src={star} alt="star-complete" />

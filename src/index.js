@@ -7,6 +7,8 @@ import Router from './Router';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./assets/css/bootstrap.min.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-multi-carousel/lib/styles.css";
+
 
 
 ReactDOM.render(

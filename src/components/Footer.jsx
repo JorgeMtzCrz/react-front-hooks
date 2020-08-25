@@ -22,30 +22,30 @@ export default function Footer(props) {
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Best Deal Denver</h4>
-            <p>About us</p>
-            <p>Site map</p>
-            <p>About us</p>
-            <p>Site map</p>
+            <p>Store</p>
+            <p>How to buy?</p>
+            <p>Return policy</p>
+            <p>Electronic Bill</p>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Customer Service</h4>
-            <p>About us</p>
-            <p>Site map</p>
+            <p>Contact us</p>
+            <p>My Argyle Account</p>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Terms & Conditions</h4>
-            <p>About us</p>
-            <p>Site map</p>
+            <p>Privacy Policy</p>
+            <p>Legal Terms</p>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Site Admin</h4>
-            <p>About us</p>
-            <p>Site map</p>
+            <p>Login</p>
+            <p>Argyle Admin</p>
         </div>
       </div>
       <div className="social-column-content">
-        <img style={{margin:'0px 30px'}} src={facebook} alt="facebook" />
-        <img src={instagram} alt="facebook" />
+        <img  className="img-fb" src={facebook} alt="facebook" />
+        <img src={instagram} alt="instagram" />
       </div>
       <div className="copyright-footer">
         <p >Best Deal Denver © 2020. All rights reserved.</p>
