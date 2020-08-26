@@ -14,10 +14,10 @@ function StarSection(props) {
   });
 
   return (
-    <> 
+    <>
     <div style={{display:"flex", width:"100%", height:"250px", alignItems:"center", flexDirection:"column"}}>
       <div style={{display: 'flex', alignItems: "center", alignContent:"center"}}>
-        <h3 style={{color:"#003366", fontSize:"30px"}}>Why we are the best in town</h3>
+        <h3 style={{color:"#003366", fontSize:"30px"}}>#1 electronic store in Denver</h3>
       </div>
       <div style={{display:"flex", width:"100%", flexDirection:"row", justifyContent:"space-around"}}>
         <div style={{display:"flex", alignItems:"center", alignContent:"center", flexDirection:"column"}}>
@@ -38,7 +38,7 @@ function StarSection(props) {
             <img src={star} alt="star-complete" />
             <img src={star} alt="star-complete" />
             <img src={star} alt="star-complete" />
-            <img src={star} alt="star-complete" />
+            <img src={star} alt="star-half" />
           </div>
           <p style={{color:"#000000", font: "Regular 20px/27px Open Sans"}}>Rate on Yelp</p>
         </div>
@@ -54,7 +54,7 @@ function StarSection(props) {
           <p style={{color:"#000000", font: "Regular 20px/27px Open Sans"}}>Rate on Google</p>
         </div>
       </div>
-    </div>       
+    </div>
     </>
   );
 }

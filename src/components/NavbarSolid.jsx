@@ -44,17 +44,17 @@ const NavbarSolid = (props) => {
         </Form>
         </div>
         <div className="contact">
-          <p>+1 303-593-0581 4371</p>
-          <p>S Broadway, Englewood, CO 80113</p>
+          <p>(303) 593-0581</p>
+          <p>4371 S Broadway  <br/>  Englewood, CO 80113</p>
         </div>
       </div>
       <div className="topnav" id="myTopnav">
-        <Link to="/"><p>HOME</p></Link>
+      <Link to="about"><p>ABOUT US</p></Link>
         <Link to="/hdtvs"><p>HDTV'S</p></Link>
         <Link to="computers"><p>COMPUTERS</p></Link>
         <Link to="accesories"><p>ACCESORIES</p></Link>
         <Link to="audio"><p>HOME AUDIO</p></Link>
-        <Link to="about"><p>ABOUT US</p></Link>
+        <Link to="/"><p>HOME</p></Link>
         <a href="#" className="icon" onClick={myFunction}>
         <FontAwesomeIcon icon={faBars} />
         </a>
