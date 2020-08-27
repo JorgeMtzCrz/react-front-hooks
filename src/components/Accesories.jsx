@@ -5,6 +5,15 @@ import { ALL_ACCESORIES, ALL_FETCHER } from '../services/products_service'
 import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 
+
+// USER STYLING
+import '../assets/css/prodPages.css'
+
+// IMAGES
+import stock from '../assets/images/lap.png'
+
+
+
 function Accesories(props) {
   const { data, mutate } = useSWR(ALL_ACCESORIES, ALL_FETCHER)
   const accesories = data && data.accesories
@@ -31,22 +40,25 @@ function Accesories(props) {
             accesories.map((e,i)=>{
               return(
               <>
-              <div className="card-product" style={{backgroundImage:`url(${e.img})`}}>
-                    <h4 className="subtitle-card">{e.title}</h4>
-                    <p className="subtitle-card">${e.price}</p>
-                    <button className="button-card-blue">RESERVE</button>
-              </div>
+                <div className="card-product">
+                  <img className="product-image" src={stock} alt="computer" />
+                  <div className="product-price-section">
+                        <h4 className="subtitle-card">{e.title}</h4>
+                        <p className="subtitle-card">${e.price}</p>
+                        <button className="button-card-blue">RESERVE</button>
+                  </div>
+                </div>
               </>
               )
             })
           }
-          
-        
+
+
       </div>
     </div>
     <BannerEmail/>
     <Footer/>
-      
+
     </>
   );
 }

@@ -1,0 +1,47 @@
+/*
+======      DESKTOP VIEW      ========
+*/
+
+/*
+================
+  Container
+================
+*/
+
+.container-products {
+  margin-bottom: 10%;
+  overflow-x: scroll;
+}
+
+
+/*
+================
+  Product Card
+================
+*/
+
+.card-product {
+  margin: 5% 1%;
+  justify-content: space-between;
+  box-shadow: 1px 2px 5px 5px lightgray;
+  padding: 5% 0;
+  height: 30%;
+}
+
+
+.product-price-section {
+  width: 100%;
+  text-align: center;
+  color: #96BA27;
+}
+
+.product-price-section p {
+  font-size: 1.3em;
+}
+
+
+.product-price-section h4 {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: black;
+}

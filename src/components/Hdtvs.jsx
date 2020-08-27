@@ -5,6 +5,14 @@ import { ALL_HDTVS, ALL_FETCHER } from '../services/products_service'
 import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 
+// USER STYLING
+import '../assets/css/prodPages.css'
+
+// IMAGES
+import stock from '../assets/images/lap.png'
+
+
+
 function Hdtvs(props) {
   const { data, mutate } = useSWR(ALL_HDTVS, ALL_FETCHER)
   const hdtvs = data && data.hdtvs
@@ -31,11 +39,14 @@ function Hdtvs(props) {
             hdtvs.map((e,i)=>{
               return(
               <>
-              <div className="card-product" style={{backgroundImage:`url(${e.img})`}}>
+                <div className="card-product">
+                  <img className="product-image" src={stock} alt="computer" />
+                  <div className="product-price-section">
                     <h4 className="subtitle-card">{e.title}</h4>
                     <p className="subtitle-card">${e.price}</p>
                     <button className="button-card-blue">RESERVE</button>
-              </div>
+                  </div>
+                </div>
               </>
               )
             })

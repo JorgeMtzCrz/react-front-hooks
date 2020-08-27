@@ -11,7 +11,7 @@ function Why(props) {
 
   return (
     <>
-      <img className="aboutus-hero" src={hero} alt="Image of the front of the store" />
+      <img className="aboutus-hero" src={hero} alt="inside the store" />
         <div className="mb-5 why-section-container">
           <span>Why We're The</span><h1 className="title-green">#1 eco-Electronics Store In Denver</h1>
           <div className="mt-5 text-container-why">

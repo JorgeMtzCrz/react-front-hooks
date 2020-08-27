@@ -394,7 +394,6 @@ code {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 80px;
 }
 
 .side-products {
@@ -403,26 +402,16 @@ code {
 
 .cards-products {
     display: flex;
-    width: 80%;
+    width: auto;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 40px;
-    margin-right: 5%;
+    justify-content: space-between;
 }
 
 .card-product {
-    width: 325px;
-    height: 270px;
     display: flex;
-    margin-right: 10px;
-    margin-bottom: 20px;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-bottom: 20px;
 }
 
 .why-section-container {
@@ -687,7 +676,7 @@ code {
 @media (min-width: 1024px) and (max-width: 1366px) {
     .cards-products {
         display: flex;
-        width: 80%;
+        width: auto;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
@@ -829,7 +818,7 @@ code {
 @media (min-width: 768px) and (max-width: 1023px) {
     .cards-products {
         display: flex;
-        width: 80%;
+        width: auto;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
