@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 
+// USER STYLING
+import '../assets/css/home.css'
+
+
+
 import {
   Input,
   Button,
@@ -11,22 +16,15 @@ import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const BannerEmail = (props) => {
 
-
-
   return (
       <div className="banner-email">
         <div className="info-banner">
-            <p className="banner-text">Receive the best offers and more!</p>
-            <Input id="search-input" className="banner-input" placeholder="Write your email here" type="email" />
+            <p className="banner-text">Receive Exclusive Offers!</p>
+            <Input id="search-input" className="banner-input" placeholder="Email" type="email" size="100" />
             <Button className="banner-button">SEND</Button>
-            <p className="raya-banner">|</p>
-            <div className="banner-sub-section">
-              <p className="banner-sub-section-text">Promos</p>
-              <Button  >SEE MORE</Button>
-            </div>
         </div>
-        
-        
+
+
       </div>
   );
 }

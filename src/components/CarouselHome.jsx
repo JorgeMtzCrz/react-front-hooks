@@ -17,9 +17,9 @@ function CarouselHome(props) {
       document.body.classList.remove("profile-page");
     };
   });
-  if(!headers)return <p>Loading</p>
+  if(!headers)return <h4>Loading...</h4>
   return (
-    <> 
+    <>
     <Carousel autoPlay showThumbs={false} showStatus={false} className="mb-5 mt-5">
     {
       headers.map(e=>{
@@ -33,13 +33,13 @@ function CarouselHome(props) {
                   </div>
                   <div style={{width:"50%"}}>
                   <img alt="" width="100%" height="350px" src={e.img} />
-                  </div>  
-        </div> 
+                  </div>
+        </div>
         )
       })
-    }        
+    }
     </Carousel>
-            
+
     </>
   );
 }

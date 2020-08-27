@@ -1,6 +1,11 @@
 import React from 'react'
 import Carousel from "react-multi-carousel";
+
+// USER STYLING
 import "react-multi-carousel/lib/styles.css";
+import '../assets/css/aboutus.css'
+
+// IMAGES
 import testimonial from '../assets/images/testimonial.png'
 import star from '../assets/images/estrella.svg'
 
@@ -25,6 +30,10 @@ function TestimonialCarousel(props) {
     }
   };
   return (
+      <>
+        <div className="testi-spacer">
+          <h4 className="title-green title-hit">What people are saying about us</h4>
+        </div>
         <Carousel
         swipeable={true}
         draggable={false}
@@ -39,10 +48,9 @@ function TestimonialCarousel(props) {
         deviceType={props.deviceType}
         itemClass="carousel-item-padding-30-px"
         centerMode={true}
-      > 
+      >
       <li>
-        <div className="why-section mb-5" >
-          <h4 className="title-green">What people are saying about us</h4>
+        <div className="testi-section mb-5" >
           <img style={{marginTop:"40px"}} src={testimonial} alt="testimonial" />
           <p style={{marginTop:"40px",fontSize:"20px", color:"#727287"}}>Julia Gallegos</p>
           <div style={{display:"flex", flexDirection:"row", marginBottom:"15px"}}>
@@ -57,8 +65,7 @@ function TestimonialCarousel(props) {
         </div>
       </li>
       <li>
-        <div className="why-section mb-5" >
-          <h4 className="title-green">What people are saying about us</h4>
+        <div className="testi-section mb-5" >
           <img style={{marginTop:"40px"}} src={testimonial} alt="testimonial" />
           <p style={{marginTop:"40px",fontSize:"20px", color:"#727287"}}>Lissa Gallegos</p>
           <div style={{display:"flex", flexDirection:"row", marginBottom:"15px"}}>
@@ -72,10 +79,9 @@ function TestimonialCarousel(props) {
           <p style={{marginTop:"40px",fontSize:"20px", color:"#727287", textAlign:"center"}}>Awesome - great selection TV’s are amazing Samsung, LG, Vizio, TCL, staff is wonderful!!!</p>
         </div>
       </li>
-      
+
       <li>
-        <div className="why-section mb-5" >
-          <h4 className="title-green">What people are saying about us</h4>
+        <div className="testi-section mb-5" >
           <img style={{marginTop:"40px"}} src={testimonial} alt="testimonial" />
           <p style={{marginTop:"40px",fontSize:"20px", color:"#727287"}}>Andie Gallegos</p>
           <div style={{display:"flex", flexDirection:"row", marginBottom:"15px"}}>
@@ -91,6 +97,8 @@ function TestimonialCarousel(props) {
       </li>
 
       </Carousel>
+      <div className="testi-spacer"></div>
+      </>
   );
 }
 

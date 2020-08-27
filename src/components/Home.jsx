@@ -23,15 +23,15 @@ function Home(props) {
   });
 
   return (
-    <> 
+    <>
     <NavbarSolid/>
     <CarouselHome/>
     <StarSection/>
     <OfferSection/>
-    <CardsHome/>  
+    <CardsHome/>
     <BannerEmail/>
     <OurCommitments/>
-    <Footer/>          
+    <Footer/>
     </>
   );
 }

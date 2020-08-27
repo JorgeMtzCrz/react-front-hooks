@@ -16,12 +16,12 @@ function Hdtvs(props) {
       document.body.classList.remove("profile-page");
     };
   });
-  if(!hdtvs) return <p>Loading</p>
+  if(!hdtvs) return <h4>Loading...</h4>
   return (
     <>
     <NavbarSolid/>
     <div className="discount-green">
-    <p>-50% OFF in all store!</p>
+    <p>50% OFF in all store!</p>
     <p>SHOP NOW!</p>
     </div>
     <div className="container-products">
@@ -40,13 +40,13 @@ function Hdtvs(props) {
               )
             })
           }
-          
-        
+
+
       </div>
     </div>
     <BannerEmail/>
     <Footer/>
-      
+
     </>
   );
 }

@@ -7,9 +7,9 @@ function OfferSection(props) {
   const { data, mutate } = useSWR(ALL_URL, ALL_FETCHER)
   const banners = data && data.banners
 
-  if(!banners)return <p>Loading</p>
+  if(!banners)return <h4>Loading...</h4>
   return (
-    <> 
+    <>
     {
       banners.map(e=>{
         return(
@@ -28,7 +28,7 @@ function OfferSection(props) {
         )
       })
     }
-      
+
     </>
   );
 }

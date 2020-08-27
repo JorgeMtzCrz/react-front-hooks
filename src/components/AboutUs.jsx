@@ -13,16 +13,15 @@ import FeelBoxed from './FeelBoxed';
 function AboutUs(props) {
 
   return (
-    <> 
+    <>
     <NavbarSolid/>
-    <Hero/>
     <Why/>
     <ScrollPartners/>
     <Hit/>
     <TestimonialCarousel/>
     <FeelBoxed/>
     <BannerEmail/>
-    <Footer/>          
+    <Footer/>
     </>
   );
 }

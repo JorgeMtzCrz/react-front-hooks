@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
-import greatquality from "../assets/images/greatquality.png"
-import greenfriendly from "../assets/images/greenfriendly.png"
-import bestclass from "../assets/images/bestclass.png"
-import customer from "../assets/images/customer.png"
+import best from "../assets/icons/best.svg"
+import green from "../assets/icons/green.svg"
+import recommend from "../assets/icons/recommend.svg"
+import customer from "../assets/icons/customer.svg"
 
 
 function OurCommitments(props) {
@@ -21,15 +21,15 @@ function OurCommitments(props) {
       <h3 className="title-commitment">Our commitments</h3>
       <div className="cards-content">
         <div className="card-commitment">
-            <img src={greatquality} alt="cards" width="125px" height="125px"/>
+            <img src={best} alt="cards" width="125px" height="125px"/>
             <h4 className="subtitle-commitment">Commitment to Quality</h4>
         </div>
         <div className="card-commitment">
-            <img src={greenfriendly} alt="cards" width="125px" height="125px"/>
+            <img src={green} alt="cards" width="125px" height="125px"/>
             <h4 className="subtitle-commitment">100% Green Focused</h4>
         </div>
         <div className="card-commitment">
-            <img src={bestclass} alt="cards" width="125px" height="125px"/>
+            <img src={recommend} alt="cards" width="125px" height="125px"/>
             <h4 className="subtitle-commitment">Best in class Prices</h4>
         </div>
         <div className="card-commitment">

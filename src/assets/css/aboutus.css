@@ -1,0 +1,151 @@
+/*
+======      DESKTOP VIEW      ========
+*/
+
+
+/*
+================
+  Why BDD
+================
+*/
+
+.aboutus-hero {
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
+}
+
+
+.why-section-container {
+  margin: 10% 0;
+}
+
+.title-green {
+  font-size: 3em;
+}
+
+.text-why-black {
+
+}
+
+.text-why-green {
+
+}
+
+.text-why-blue {
+
+}
+
+.text-container-why {
+  border-top: solid 1px black;
+  padding-top: 5%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-why {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.circle-blue {
+  padding: .5% 2.5% 5% 2.5%;
+}
+
+.circle-green {
+  padding: .3% 2.5% 5% 2.5%;
+  margin: auto;
+}
+
+.container-why {
+
+}
+
+/*
+================
+  Scroll Partners
+================
+*/
+
+
+
+.main-scroll {
+  margin: 10% 0;
+}
+
+.container-scroll {
+}
+
+.slider-partners {
+  padding: 6%;
+
+}
+
+.title-gray {
+
+}
+
+.button-scroll-green {
+
+}
+
+/*
+================
+  Hit
+================
+*/
+
+.container-hit {
+  margin: 10% 0;
+}
+
+.number-hit {
+  position: absolute;
+  width: 25%;
+  left: 15%;
+  opacity: .071;
+}
+
+.hit-right {
+  left:60% !important;
+}
+
+
+/*
+================
+  Testimonial Carousel
+================
+ */
+
+ .testi-spacer {
+   margin: 10% 0;
+ }
+
+.testi-section {
+  margin: 0 17%;
+  text-align: center;
+}
+
+.testi-section > div img:first-child {
+  text-align: center;
+  margin-left: 30%;
+}
+
+
+/*
+================
+  Feel Boxed
+================
+*/
+
+
+
+
+/*
+======      MOBILE VIEW      ========
+*/

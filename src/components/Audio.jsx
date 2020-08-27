@@ -16,7 +16,7 @@ function Audio(props) {
       document.body.classList.remove("profile-page");
     };
   });
-  if(!audio) return <p>Loading</p>
+  if(!audio) return <h4>Loading...</h4>
   return (
     <>
     <NavbarSolid/>
@@ -40,13 +40,13 @@ function Audio(props) {
               )
             })
           }
-          
-        
+
+
       </div>
     </div>
     <BannerEmail/>
     <Footer/>
-      
+
     </>
   );
 }

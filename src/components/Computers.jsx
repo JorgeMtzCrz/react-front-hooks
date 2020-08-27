@@ -16,7 +16,7 @@ function Computers(props) {
       document.body.classList.remove("profile-page");
     };
   });
-  if(!computers) return <p>Loading</p>
+  if(!computers) return <h4>Loading...</h4>
   return (
     <>
     <NavbarSolid/>
@@ -40,13 +40,13 @@ function Computers(props) {
               )
             })
           }
-          
-        
+
+
       </div>
     </div>
     <BannerEmail/>
     <Footer/>
-      
+
     </>
   );
 }
