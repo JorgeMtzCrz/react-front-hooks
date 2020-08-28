@@ -1,19 +1,19 @@
 import React from 'react'
 import useSWR from 'swr'
-import { ALL_URL, ALL_FETCHER } from '../services/banner_service'
+import { ACTIVE_URL, ALL_FETCHER } from '../services/banner_service'
 
 
 function OfferSection(props) {
-  const { data, mutate } = useSWR(ALL_URL, ALL_FETCHER)
+  const { data, mutate } = useSWR(ACTIVE_URL, ALL_FETCHER)
   const banners = data && data.banners
 
   if(!banners)return <h4>Loading...</h4>
   return (
     <>
     {
-      banners.map(e=>{
+      banners.map((e,i)=>{
         return(
-        <div className="offerSection">
+        <div key={i}  className="offerSection">
           <div className="image-offer">
             <img width="100%" height="100%" src={e.img} alt={e.title}/>
           </div>

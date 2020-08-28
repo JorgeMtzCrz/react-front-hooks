@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react'
 import useSWR from 'swr'
 import { Carousel } from 'react-responsive-carousel';
-import { ALL_URL, ALL_FETCHER } from '../services/header_service'
+import { ACTIVE_URL, ALL_FETCHER } from '../services/header_service'
 
 
 
 function CarouselHome(props) {
 
-  const { data, mutate } = useSWR(ALL_URL, ALL_FETCHER)
+  const { data, mutate } = useSWR(ACTIVE_URL, ALL_FETCHER)
   const headers = data && data.headers
 
   document.documentElement.classList.remove("nav-open");
@@ -22,9 +22,9 @@ function CarouselHome(props) {
     <>
     <Carousel autoPlay showThumbs={false} showStatus={false} className="mb-5 mt-5">
     {
-      headers.map(e=>{
+      headers.map((e,i)=>{
         return(
-        <div style={{display: "flex", width:"100%", height:"340px", backgroundColor:"white"}}>
+        <div key={i} style={{display: "flex", width:"100%", height:"340px", backgroundColor:"white"}}>
                   <div style={{width:"50%", display:"flex", alignContent:"flexStart", flexDirection:"column"}}>
                     <h2 className="title-header">{e.title}</h2>
                     <h3 className="subtitle-header">{e.subtitle}</h3>
