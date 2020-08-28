@@ -11,6 +11,7 @@ function OfferSection(props) {
   return (
     <>
     {
+
       banners.map(e=>{
         return(
         <div className="offerSection">
@@ -28,6 +29,7 @@ function OfferSection(props) {
         )
       })
     }
+    <div className="testi-spacer"></div>
 
     </>
   );

@@ -37,6 +37,7 @@ function OurCommitments(props) {
             <h4 className="subtitle-commitment">Highest Rated Customer Service</h4>
         </div>
       </div>
+
     </div>
 
     </>
