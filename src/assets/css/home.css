@@ -1,35 +1,4 @@
 
-/*
-======      DESKTOP VIEW      ========
-*/
-
-
-
-/*
-================
-  Banner Email
-================
- */
-
-.info-banner {
-  margin-left: 15%;
-}
-
-#search-input {
-  width: 300px !important;
-}
-
-
-/*
-================
-  Cards Home
-================
- */
-
-.description-card {
-  text-align: center;
-}
-
 
 
 /*
@@ -65,22 +34,269 @@
 ======      MOBILE VIEW      ========
 */
 
+@media (max-width: 500px ) and (min-width: 200px ) {
 
 
+    .navbar-logo div {
+      margin: auto;
+    }
+
+    .navbar-logo div a {
+      text-align: center;
+    }
+
+    .contactl {
+      /* width: 40%; */
+    }
+
+    .contactl a {
+      box-shadow: 1 1 3px 3px rgba(144,144,144,.3);
+    }
+
+    .form-group {
+      margin: 5% 0 !important;
+      padding: 5% 0;
+    }
+
+    .banner-input {
+      width: 60% !important;
+      margin: 3% 0 3% -10px;
+    }
+
+    /* .input-group-append {
+      height: 90px;
+      margin: auto;
+    }
+
+    .input-group-text {
+      height: 40%;
+    } */
+
+    .input-group-text svg {
+      height: 30px;
+      margin: auto;
+    }
+
+    .logo {
+      margin: auto;
+    }
+
+    .topnav {
+    }
+
+    .responsive {
+      flex-direction: column;
+      padding: 5%;
+    }
+
+    .topnav:first-child {
+      margin-top: 8%;
+    }
+
+    .icon {
+      padding: 2%;
+    }
+
+    .form-group {
+      margin: 0 !important;
+    }
+
+    .form-content-container {
+      margin: 0;
+    }
+
+}
 
 /*
 ================
-  Placeholder
+  Star Section
 ================
  */
 
+.star-pride-container {
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 2.5em;
+  margin-top: 5%;
+  padding: 3%;
+}
+
+.text-green {
+  color: #96BA27;
+}
+
+.text-blue {
+  color: #003366;
+  text-decoration: underline;
+}
+
+
+/*
+======      MOBILE VIEW      ========
+*/
+
+@media (max-width: 500px ) and (min-width: 200px ) {
+
+
+/* Navbar */
+  .navbar-logo {
+    height: auto;
+    padding: 5px;
+
+  }
+
+
+  .contactl {
+    width: 100%;
+  }
+
+
+  .stars-aligned {
+    flex-direction: column !important;
+    margin: 5% 0;
+  }
+
+
+  /* Cards */
+  .cards-home {
+    flex-direction: column;
+    position: relative;
+    margin: 180% 0 0 0;
+  }
+
+  .offerSection {
+    display: none !important;
+  }
+
+  .card-home {
+    width: 100%;
+
+  }
+
+
+  /* Home Carousel */
+  .slider-wrapper {
+    padding: 4%;
+  }
+  .title-header,
+  .subtitle-header,
+  .description-header,
+  .button-header {
+    padding: 2%;
+  }
+  .subtitle-header {
+    font-size: 2em;
+  }
+  .button-header {
+    margin: 2%;
+  }
+
+
+  .main-home-section-title {
+    padding: 4%;
+    text-align: center;
+  }
+
+  .button-card-blue,
+  .button-card-green {
+    width: 100%;
+  }
+
+
+}
+
 
 /*
 ================
-  Placeholder
+  Banner Email
+================
+ */
+
+.info-banner {
+  margin-left: 15%;
+}
+
+#search-input {
+  width: 300px !important;
+}
+
+.banner-email {
+  padding: 3%;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+}
+
+.info-banner {
+
+}
+
+
+/*
+================
+  Cards Home
+================
+ */
+
+.description-card {
+  text-align: center;
+}
+
+
+/*
+======      MOBILE VIEW      ========
+*/
+
+
+
+
+/*
+================
+  Commitment
+================
+ */
+
+ @media (max-width: 500px ) and (min-width: 200px ) {
+
+
+    .cards-content {
+      flex-direction: column;
+    }
+    .card-commitment {
+      width: 70%;
+      text-align: center;
+    }
+
+    .card-commitment {
+      margin: 8%;
+    }
+
+}
+
+/*
+================
+  Footers
 ================
 */
 
+
+@media (max-width: 500px ) and (min-width: 200px ) {
+
+
+    .footer-column-content {
+      flex-direction: column;
+      height: auto;
+      width: 80%;
+      margin: 3% 0;
+      padding: auto;
+    }
+    .footer-column:first-child,
+    .footer-column:last-child {
+      text-align: left;
+      margin-right: 80px;
+    }
+
+}
 
 
 /*

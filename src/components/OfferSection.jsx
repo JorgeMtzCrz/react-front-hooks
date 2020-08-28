@@ -28,6 +28,7 @@ function OfferSection(props) {
         )
       })
     }
+    <div className="testi-spacer"></div>
 
     </>
   );

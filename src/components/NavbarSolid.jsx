@@ -33,7 +33,7 @@ const NavbarSolid = (props) => {
       <div className="navbar-logo">
         <div style={{display:"flex", flexWrap:"wrap", justifyContent:"row", alignContent:"center", alignItems:"center"}}>
         <a href="./"> <img className="logo" src={altLogo} alt="BDIT Logo" /> </a>
-        <Form>
+        <Form className="form-content-container">
               <FormGroup className="ml-4 mb-0">
                 <InputGroup>
                   <Input id="search-input" className="banner-input" placeholder="What are you looking for?" type="text" />

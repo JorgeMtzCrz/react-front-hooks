@@ -21,7 +21,7 @@ function FeelBoxed(props) {
           </div>
           <div className="text-feel">
             <p className="title-feel ">Don't feel boxed in by the pressure to buy new. <br /> <span className="text-dark">Choose freedom, choose the environment, choose value. </span></p>
-            <button className="button-feel text-dark border-dark">BUY GREEN</button>
+            <button className="button-feel ">BUY GREEN</button>
           </div>
         </div>
 

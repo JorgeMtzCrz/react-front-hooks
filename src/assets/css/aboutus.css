@@ -17,23 +17,11 @@
 
 
 .why-section-container {
-  margin: 10% 0;
+  margin: 10% 0 ;
 }
 
-.title-green {
+.title-hit {
   font-size: 3em;
-}
-
-.text-why-black {
-
-}
-
-.text-why-green {
-
-}
-
-.text-why-blue {
-
 }
 
 .text-container-why {
@@ -72,27 +60,22 @@
 ================
 */
 
-
+.why-section-container {}
 
 .main-scroll {
   margin: 10% 0;
 }
 
-.container-scroll {
-}
+.container-scroll {}
 
 .slider-partners {
   padding: 6%;
-
 }
 
-.title-gray {
+.title-gray {}
 
-}
+.button-scroll-green {}
 
-.button-scroll-green {
-
-}
 
 /*
 ================
@@ -143,6 +126,21 @@
 ================
 */
 
+
+.button-feel {
+    border: 1px #fff solid;
+    font-size: 30px;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 8px;
+    width: 175px;
+    height: 75px;
+    transition: background .5s;
+}
+
+.button-feel:hover  {
+  background-color: #96BA27;
+}
 
 
 

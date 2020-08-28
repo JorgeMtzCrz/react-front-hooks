@@ -21,7 +21,7 @@ function Hit(props) {
 
   return (
         <div className="mt-5 mb-5 why-section-container">
-          <h4 className="title-blue">Here’s how it works</h4>
+          <h4 className="title-hit title-blue">Here’s how it works</h4>
           <div className="mt-5 text-container-hit">
 
             <div className="mt-5 container-hit">
@@ -35,11 +35,11 @@ function Hit(props) {
             </div>
             <div className="mt-5 container-hit">
               <img className="number-hit hit-right" src={three} alt="Img of numerical order: 3"/>
-              <img src={box} alt="box" width="210px" height="144px" className="mr-5"/> <span className="text-why-black">We get them <span className="text-why-green">all preboxed and ready to go.</span> BUT we do a full quality inspection also we add whatever accessories are needed, and then pass on the savings to you.</span>
+              <img src={box} alt="box" width="210px" height="144px" className="mr-5"/> <span className="text-why-black">We get them, do a full quality inspection, add whatever accessories are needed, then pass the savings on to you.</span>
             </div>
             <div className="mt-5 container-hit">
               <img className="number-hit" src={four} alt="Img of numerical order: 4"/>
-              <span className="text-why-black" style={{width:"90%"}}><span className="text-why-blue">You get to feel proud that you’ve help protect the environment </span>& confident in great quality product.</span>
+              <span className="text-why-black" style={{width:"90%"}}><span className="text-why-blue">You feel PROUD that you’ve helped protect the environment </span>& confident in a great quality product.</span>
               <img src={feel} alt="feel" width="140px" height="140px" />
             </div>
 
