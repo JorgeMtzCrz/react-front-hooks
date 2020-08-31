@@ -9,10 +9,16 @@ import {
   Input
 } from 'reactstrap';
 import {Link} from 'react-router-dom'
-import logo from '../assets/images/logo.png'
-import altLogo from '../assets/images/altLogo-1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
+
+// USER STYLING
+import '../assets/css/navbar.css'
+
+// IMAGES
+import logo from '../assets/images/logo.png'
+import altLogo from '../assets/images/altLogo-1.png'
+
 
 const NavbarSolid = (props) => {
 
@@ -26,35 +32,38 @@ const NavbarSolid = (props) => {
   }
 }
 
-// TODO: Make this a clickable/useful
-
   return (
     <div>
       <div className="navbar-logo">
-        <div style={{display:"flex", flexWrap:"wrap", justifyContent:"row", alignContent:"center", alignItems:"center"}}>
-        <a href="./"> <img className="logo" src={altLogo} alt="BDIT Logo" /> </a>
-        <Form className="form-content-container">
-              <FormGroup className="ml-4 mb-0">
-                <InputGroup>
-                  <Input id="search-input" className="banner-input" placeholder="What are you looking for?" type="text" />
-                  <InputGroupAddon addonType="append">
-                    <InputGroupText style={{backgroundColor:"white"}}>
-                      <FontAwesomeIcon className="search-icon" style={{color:"black"}} icon={faSearch} />
-                    </InputGroupText>
-                  </InputGroupAddon>
-                </InputGroup>
-              </FormGroup>
-        </Form>
-        </div>
+        <div className="navbar-container" >
+          <a href="./"> <img className="logo" src={altLogo} alt="BDIT Logo" /> </a>
+
         <div className="contactl">
-          <a href="tel:303-593-0581"><div>
-            <b>Call Us!</b>
-            <p>(303) 593-0581</p>
-          </div></a>
-          <a href="https://g.page/bestDealDenver?share"><div>
-            <b>Come Say Hi!</b>
-            <p>4371 S Broadway  <br/>  Englewood, CO 80113</p>
-          </div></a>
+            <a href="tel:303-593-0581">
+              <div>
+                <b>Call Us!</b>
+                <p>(303) 593-0581</p>
+              </div>
+            </a>
+            <a href="https://g.page/bestDealDenver?share">
+              <div>
+                <b>Come Say Hi!</b>
+                <p>4371 S Broadway  <br/>  Englewood, CO 80113</p>
+              </div>
+            </a>
+            <Form className="form-content-container">
+                  <FormGroup className="">
+                    <InputGroup>
+                      <Input id="search-input" className="banner-input" placeholder="What are you looking for?" type="text" />
+                      <InputGroupAddon addonType="append">
+                        <InputGroupText style={{backgroundColor:"white"}}>
+                          <FontAwesomeIcon className="search-icon" style={{color:"black"}} icon={faSearch} />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                    </InputGroup>
+                  </FormGroup>
+            </Form>
+          </div>
         </div>
       </div>
       <div className="topnav" id="myTopnav">

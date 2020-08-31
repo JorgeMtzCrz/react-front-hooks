@@ -1,0 +1,203 @@
+
+
+/*
+======      DESKTOP VIEW      ========
+*/
+
+/* CONTAINER for the section above blue, nav buttons */
+.navbar-logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Specifically the section for the Contact Buttons  */
+.contactl {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.contactl b {
+  vertical-align: text-top;
+}
+
+.contactl p {
+  vertical-align: text-bottom;
+}
+
+.contactl > a {
+  margin: auto;
+  color: black;
+}
+
+/* Search Bar */
+.form-content-container {
+  grid-column: 1 / 3;
+}
+
+.contactl form {
+  display: flex !important;
+}
+
+.banner-input {
+  border-radius: 5px 0 0 5px !important;
+}
+
+.carousel-img {
+  width: 50%;
+}
+
+
+
+
+/*
+======      MOBILE VIEW      ========
+*/
+
+@media screen and (max-width: 500px ) and (min-width: 200px ) {
+
+  /*    */
+
+  /* Navbar */
+  .navbar-logo {
+    height: auto;
+    padding: 5px;
+  }
+
+  /* Logo at top of page */
+  .navbar-logo div a {
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin-left: 13%;
+    width: 80%;
+    position: relative;
+    padding: 2%;
+  }
+
+
+/* Top of Page: Seach Input */
+
+  .contacl form {
+    margin: auto;
+  }
+
+  .form-group {
+    margin: 5% 0 !important;
+    padding: 5% 0;
+  }
+
+  .banner-input {
+    width: 60% !important;
+    margin: 0 0 5% -10px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .input-group {
+    margin: auto;
+    width: 80%;
+    flex-wrap: nowrap;
+  }
+
+
+
+  /* Top of Page: Contact Buttons Call & Say Hey */
+  .contactl {
+    width: 100%;
+  }
+
+  /* Mobile Nav Bar - collapsed & Opened */
+  .responsive {
+    flex-direction: column;
+    padding: 5%;
+  }
+  .topnav:first-child {
+    margin-top: 8%;
+  }
+  .icon {
+    padding: 2%;
+  }
+
+}
+
+
+
+
+/*
+======      IPAD VIEW      ========
+*/
+
+@media screen and (max-width: 920px ) and (min-width: 376px ) {
+
+
+  .navbar-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* CONTAINER for the section above blue, nav buttons */
+  .logo {
+    width: 90%;
+  }
+
+  .navbar-container a {
+    margin: auto;
+  }
+
+  /* Specifically the section for the Contact Buttons  */
+    .contactl {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .contactl a {
+      margin: 3%;
+    }
+
+
+  /* Top of Page: Seach Input */
+    .form-group {
+      margin: 8% 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .banner-input {
+      width: 20% !important;
+      border-radius: 0 0 2px 2px;
+    }
+
+    .input-group {
+      display: flex;
+      width: 90%;
+      flex-wrap: nowrap !important;
+    }
+
+    .input-group-text {
+      height: 39%;
+    }
+
+    .input-group-append {
+      display: inline-flex;
+    }
+
+    /* Search Bar */
+    .form-content-container {
+      width: 40%;
+    }
+
+
+}

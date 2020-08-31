@@ -55,6 +55,29 @@
 }
 
 /*
+======      MOBILE VIEW      ========
+*/
+
+
+@media screen and (max-width: 375px) {
+
+  .title-hit {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .circle-blue,
+  .circle-green {
+    padding: 0 6% 15% 6%;
+  }
+
+}
+
+
+
+
+
+/*
 ================
   Scroll Partners
 ================
@@ -77,6 +100,14 @@
 .button-scroll-green {}
 
 
+@media screen and (max-width: 375px) {
+
+  .title-gray {
+    font-size: 2em;
+  }
+
+}
+
 /*
 ================
   Hit
@@ -98,25 +129,65 @@
   left:60% !important;
 }
 
+.hit-icons {
+  width: 20%;
+}
+
+
 
 /*
 ================
   Testimonial Carousel
 ================
  */
+ .react-multi-carousel-list {
+   width: 100%;
+   text-align: center;
+ }
+
+ .react-multi-carousel-item {
+   width: 1300px;
+   margin: 0 auto;
+ }
 
  .testi-spacer {
    margin: 10% 0;
  }
 
 .testi-section {
-  margin: 0 17%;
+  margin: 0;
   text-align: center;
+  width: 500px;
+  padding: 0 6%;
+}
+
+.testi-section > * {
+  margin: 2%;
 }
 
 .testi-section > div img:first-child {
   text-align: center;
-  margin-left: 30%;
+  margin-left: 31%;
+}
+
+/*
+======      MOBILE VIEW      ========
+*/
+
+
+@media screen and (max-width: 375px) {
+
+  .react-multi-carousel-item {
+    width: 100% !important;
+  }
+
+  .testi-section {
+    margin: 0 -18%;
+    text-align: center;
+    width: 350px;
+    padding: 0 8%;
+  }
+
 }
 
 
@@ -143,7 +214,21 @@
 }
 
 
-
 /*
 ======      MOBILE VIEW      ========
 */
+
+
+@media screen and (max-width: 375px) {
+
+
+  .feelSection {
+    height: 100%;
+  }
+
+  .title-feel {
+    padding: 0 !important;
+  }
+
+
+}

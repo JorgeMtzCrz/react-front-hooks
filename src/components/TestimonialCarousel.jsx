@@ -14,12 +14,12 @@ import star from '../assets/images/estrella.svg'
 function TestimonialCarousel(props) {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1025 },
       items: 1,
       slidesToSlide: 1// optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 465 },
       items: 1,
       slidesToSlide: 1// optional, default to 1.
     },
@@ -32,7 +32,7 @@ function TestimonialCarousel(props) {
   return (
       <>
         <div className="testi-spacer">
-          <h4 className="title-green title-hit">What people are saying about us</h4>
+          <h4 className="title-green title-hit">Why You'll Love Us Too</h4>
         </div>
         <Carousel
         swipeable={true}
@@ -46,7 +46,7 @@ function TestimonialCarousel(props) {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType={props.deviceType}
-        itemClass="carousel-item-padding-30-px"
+        itemClass=""
         centerMode={true}
       >
       <li>
