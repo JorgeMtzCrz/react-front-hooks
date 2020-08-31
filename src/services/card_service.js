@@ -8,6 +8,8 @@ const service = axios.create({
 })
 
 export const ALL_URL = baseURL + '/all'
+export const ACTIVE_URL = baseURL + '/active'
+
 
 export const ALL_FETCHER = async url => {
     const response = await fetch(url)

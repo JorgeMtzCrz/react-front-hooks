@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // USER STYLING
 import '../assets/css/home.css'
@@ -7,12 +7,9 @@ import '../assets/css/home.css'
 
 import {
   Input,
-  Button,
-  Divider
+  Button
 } from 'reactstrap';
-import logo from '../assets/images/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
+
 
 const BannerEmail = (props) => {
 
