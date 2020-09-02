@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Router from './Router';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./assets/css/bootstrap.min.css";
-import "./assets/css/prodPages.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import "react-multi-carousel/lib/styles.css";
+import ContextProvider from './CartContext'
 
 
 
-ReactDOM.render( <
-    Router / > ,
+
+ReactDOM.render( <ContextProvider><Router/></ContextProvider> ,
     document.getElementById('root')
 );
 
