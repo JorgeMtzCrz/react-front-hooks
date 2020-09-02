@@ -4,6 +4,9 @@ import { Carousel } from 'react-responsive-carousel';
 import { ACTIVE_URL, ALL_FETCHER } from '../services/header_service'
 
 
+// USER STYLING
+import '../assets/css/home.css'
+
 
 function CarouselHome(props) {
 
@@ -24,16 +27,16 @@ function CarouselHome(props) {
     {
       headers.map((e,i)=>{
         return(
-        <div key={i} style={{display: "flex", width:"100%", height:"340px", backgroundColor:"white"}}>
-                  <div style={{width:"50%", display:"flex", alignContent:"flexStart", flexDirection:"column"}}>
-                    <h2 className="title-header">{e.title}</h2>
-                    <h3 className="subtitle-header">{e.subtitle}</h3>
-                    <p className="description-header">{e.description}</p>
-                    <button className="button-header">SEE MORE</button>
-                  </div>
-                  <div style={{width:"50%"}}>
-                  <img alt="" width="100%" height="350px" src={e.img} />
-                  </div>
+        <div key={i} className="carousel-group-container" >
+            <div className="carousel-container">
+              <h2 className="title-header">{e.title}</h2>
+              <h3 className="subtitle-header">{e.subtitle}</h3>
+              <p className="description-header">{e.description}</p>
+              <button className="button-header">SEE MORE</button>
+            </div>
+            <div className="carousel-img" >
+              <img alt="" width="100%" height="350px" src={e.img} />
+            </div>
         </div>
         )
       })
