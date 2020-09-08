@@ -8,7 +8,6 @@ import Audio from './components/Audio'
 import AboutUs from './components/AboutUs'
 import ProductDetail from './components/ProductDetail'
 
-
 const Router = () => (
   <BrowserRouter>
     <Switch>

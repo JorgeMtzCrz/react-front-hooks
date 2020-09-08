@@ -46,7 +46,6 @@ function TestimonialCarousel(props) {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType={props.deviceType}
-        itemClass=""
         centerMode={true}
       >
       <li>

@@ -5,6 +5,7 @@ import { ALL_COMPUTERS, ALL_FETCHER } from '../services/products_service'
 import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
+import { Link } from 'react-router-dom';
 
 // USER STYLING
 import '../assets/css/prodPages.css'
@@ -35,7 +36,7 @@ function Computers(props) {
               return(
               <>
                 <div className="card-product">
-                  <img className="product-image" src={stock} alt="computer" />
+                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="computer" /></Link>
                   <div key={i}  className="product-price-section">
                         <h4 className="subtitle-card">{e.title}</h4>
                         <p className="subtitle-card">${e.price}</p>

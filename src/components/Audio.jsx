@@ -5,6 +5,7 @@ import { ALL_AUDIO, ALL_FETCHER } from '../services/products_service'
 import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
+import { Link } from 'react-router-dom';
 
 
 // USER STYLING
@@ -36,7 +37,7 @@ function Audio(props) {
               return(
               <>
                 <div key={i} className="card-product">
-                  <img className="product-image" src={stock} alt="computer" />
+                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="computer" /></Link>
                   <div className="product-price-section">
                         <h4 className="subtitle-card">{e.title}</h4>
                         <p className="subtitle-card">${e.price}</p>
