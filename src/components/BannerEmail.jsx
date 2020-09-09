@@ -19,8 +19,7 @@ const BannerEmail = (props) => {
       <div className="banner-email">
         <div className="info-banner">
             <p className="banner-text">Receive Exclusive Offers!</p>
-            <Input id="search-input" className="banner-input" placeholder="Email" type="email" size="100" />
-            <Button className="banner-button">SEND</Button>
+            <Button className="banner-button">Click Here</Button>
         </div>
       </div>
       <div className="testi-spacer"></div>
