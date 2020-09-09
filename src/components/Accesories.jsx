@@ -1,11 +1,9 @@
 import React from 'react'
-import useSWR from 'swr'
 import NavbarSolid from './NavbarSolid';
-import { ALL_ACCESORIES, ALL_FETCHER } from '../services/products_service'
 import Footer from './Footer';
 import BannerEmail from './BannerEmail';
-
-
+import {MyContext} from '../CartContext'
+import { Link } from 'react-router-dom';
 // USER STYLING
 import '../assets/css/prodPages.css'
 
@@ -15,17 +13,6 @@ import stock from '../assets/images/lap.png'
 
 
 function Accesories(props) {
-  const { data, mutate } = useSWR(ALL_ACCESORIES, ALL_FETCHER)
-  const accesories = data && data.accesories
-
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("profile-page");
-    return function cleanup() {
-      document.body.classList.remove("profile-page");
-    };
-  });
-  if(!accesories) return <p>Loading</p>
   return (
     <>
     <NavbarSolid/>
@@ -35,24 +22,28 @@ function Accesories(props) {
     </div>
     <div className="container-products">
       <div className="side-products"></div>
+
       <div className="cards-products">
-          {
+      <MyContext.Consumer>
+
+          {({ cart, addToCart, accesories})=>
+            !accesories ? <h4>Loading...</h4>:
             accesories.map((e,i)=>{
               return(
               <>
-                <div className="card-product">
-                  <img className="product-image" src={stock} alt="computer" />
+                <div key={i} className="card-product">
+                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="computer" /></Link>
                   <div className="product-price-section">
                         <h4 className="subtitle-card">{e.title}</h4>
                         <p className="subtitle-card">${e.price}</p>
-                        <button className="button-card-blue">RESERVE</button>
+                        <button className="button-card-blue" onClick={()=> addToCart(e)}>RESERVE</button>
                   </div>
                 </div>
               </>
               )
             })
           }
-
+      </MyContext.Consumer>
 
       </div>
     </div>

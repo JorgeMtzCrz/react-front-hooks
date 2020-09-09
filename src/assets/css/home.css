@@ -1,92 +1,75 @@
-
-
-
 /*
 ================
   Carousel
 ================
  */
 
-  .carousel-group-container {
+.carousel-group-container {
     display: flex;
     width: 100%;
     height: 340px;
     background-color: white;
-  }
+}
 
-  .carousel-container {
+.carousel-container {
     width: 50%;
     display: flex;
     align-content: flex-start;
     flex-direction: column;
-  }
+}
 
-  /*
+
+/*
   ======      MOBILE VIEW      ========
   */
 
-
 @media screen and (max-width: 375px) {
-
-  /* Home Carousel */
-  .slider-wrapper {
-    padding: 4%;
-  }
-  .title-header,
-  .subtitle-header,
-  .description-header,
-  .button-header {
-    padding: 2%;
-  }
-  .subtitle-header {
-    font-size: 2em;
-  }
-  .button-header {
-    margin: 2%;
-  }
-
-
-  .main-home-section-title {
-    padding: 4%;
-    text-align: center;
-  }
-
-  .button-card-blue,
-  .button-card-green {
-    width: 100%;
-  }
-
+    /* Home Carousel */
+    .slider-wrapper {
+        padding: 4%;
+    }
+    .title-header,
+    .subtitle-header,
+    .description-header,
+    .button-header {
+        padding: 2%;
+    }
+    .subtitle-header {
+        font-size: 2em;
+    }
+    .button-header {
+        margin: 2%;
+    }
+    .main-home-section-title {
+        padding: 4%;
+        text-align: center;
+    }
+    .button-card-blue,
+    .button-card-green {
+        width: 100%;
+    }
 }
 
 
-
-  /*
+/*
   ======      IPAD VIEW      ========
   */
 
-@media (max-width: 920px ) and (min-width: 376px ) {
-
-  .carousel-container {
-    width: 50%;
-    display: flex;
-  }
-
-  .carousel-container h2 {
-    font-size: 3em;
-  }
-  .carousel-container h3 {
-    font-size: 2em;
-  }
-
-
-  .carousel-img {
-    margin-left: 5%;
-  }
-
-
-
+@media (max-width: 920px) and (min-width: 376px) {
+    .carousel-container {
+        width: 50%;
+        display: flex;
+    }
+    .carousel-container h2 {
+        font-size: 3em;
+    }
+    .carousel-container h3 {
+        font-size: 2em;
+    }
+    .carousel-img {
+        margin-left: 5%;
+    }
 }
-
 
 
 /*
@@ -96,20 +79,20 @@
  */
 
 .star-pride-container {
-  text-align: center;
-  font-size: 1.3em;
-  line-height: 2.5em;
-  margin-top: 5%;
-  padding: 3%;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 2.5em;
+    margin-top: 5%;
+    padding: 3%;
 }
 
 .text-green {
-  color: #96BA27;
+    color: #96BA27;
 }
 
 .text-blue {
-  color: #003366;
-  text-decoration: underline;
+    color: #003366;
+    text-decoration: underline;
 }
 
 
@@ -117,46 +100,34 @@
 ======      MOBILE VIEW      ========
 */
 
-@media (max-width: 500px ) and (min-width: 200px ) {
-
-
-  .stars-aligned {
-    flex-direction: column !important;
-    margin: 5% 0;
-  }
-
-
-  /* Cards */
-  .cards-home {
-    flex-direction: column;
-    position: relative;
-    margin: 180% 0 0 0;
-  }
-
-  .offerSection {
-    display: none !important;
-  }
-
-  .card-home {
-    width: 100%;
-
-  }
-
-
+@media (max-width: 500px) and (min-width: 200px) {
+    .stars-aligned {
+        flex-direction: column !important;
+        margin: 5% 0;
+    }
+    /* Cards */
+    .cards-home {
+        flex-direction: column;
+        position: relative;
+        margin: 180% 0 0 0;
+    }
+    .offerSection {
+        display: none !important;
+    }
+    .card-home {
+        width: 100%;
+    }
 }
+
 
 /*
 ======      IPAD VIEW      ========
 */
 
-@media (max-width: 920px ) and (min-width: 376px ) {
-
-  .stars-aligned {
-    flex-direction: column !important;
-  }
-
-
-
+@media (max-width: 920px) and (min-width: 376px) {
+    .stars-aligned {
+        flex-direction: column !important;
+    }
 }
 
 
@@ -167,19 +138,20 @@
  */
 
 .info-banner {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #search-input {
-  width: 300px !important;
+    width: 300px!important;
 }
 
 .banner-email {
-  padding: 3%;
-  flex-direction: column;
-  height: auto;
-  text-align: center;
+    padding: 3%;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
 }
 
 
@@ -187,27 +159,23 @@
 ======      MOBILE VIEW      ========
 */
 
-@media screen and (max width: 375px) {
-
-  .banner-email {
-    text-align: center !important;
-    display: flex;
-    flex-direction: column !important;
-    padding: 3%;
-    height: auto;
-  }
-
-  .info-banner {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column !important;
-  }
-
-  .info-banner input,
-  .info-banner button {
-    margin: auto;
-  }
-
+@media screen and (max-width: 375px) {
+    .banner-email {
+        text-align: center!important;
+        display: flex;
+        flex-direction: column!important;
+        padding: 3%;
+        height: auto;
+    }
+    .info-banner {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column!important;
+    }
+    .info-banner input,
+    .info-banner button {
+        margin: auto;
+    }
 }
 
 
@@ -215,26 +183,17 @@
 ======      IPAD VIEW      ========
 */
 
-@media screen and (max-width: 920px ) {
-
-  .info-banner {
-    flex-direction: column;
-  }
-
-  .info-banner input {
-    margin: 5% auto;
-  }
-
-  .info-banner button {
-    margin: 5% auto;
-  }
-
+@media screen and (max-width: 920px) {
+    .info-banner {
+        flex-direction: column;
+    }
+    .info-banner input {
+        margin: 5% auto;
+    }
+    .info-banner button {
+        margin: 5% auto;
+    }
 }
-
-
-
-
-
 
 
 /*
@@ -244,7 +203,7 @@
  */
 
 .description-card {
-  text-align: center;
+    text-align: center;
 }
 
 
@@ -252,14 +211,10 @@
 ======      IPAD VIEW      ========
 */
 
-@media (max-width: 920px ) and (min-width: 376px ) {
-
-  .card-home {
-    width: auto;
-  }
-
-
-
+@media (max-width: 920px) and (min-width: 376px) {
+    .card-home {
+        width: auto;
+    }
 }
 
 
@@ -269,26 +224,24 @@
 ================
  */
 
- /*
+
+/*
  ======      MOBILE VIEW      ========
  */
 
- @media (max-width: 500px )  {
-
-
+@media (max-width: 500px) {
     .cards-content {
-      flex-direction: column;
+        flex-direction: column;
     }
     .card-commitment {
-      width: 70%;
-      text-align: center;
+        width: 70%;
+        text-align: center;
     }
-
     .card-commitment {
-      margin: 8%;
+        margin: 8%;
     }
-
 }
+
 
 /*
 ================
@@ -296,27 +249,19 @@
 ================
 */
 
-
-@media (max-width: 500px ) and (min-width: 200px ) {
-
-
+@media (max-width: 500px) and (min-width: 200px) {
     .footer-column-content {
-      flex-direction: column;
-      height: auto;
-      width: 80%;
-      margin: 3% 0;
-      padding: auto;
+        flex-direction: column;
+        height: auto;
+        width: 80%;
+        margin: 3% 0;
+        padding: auto;
     }
-
     .footer-column:first-child,
     .footer-column:last-child {
-      text-align: left;
-      margin-right: 80px;
+        text-align: left;
+        margin-right: 80px;
     }
-
-
-
-
 }
 
 
@@ -327,7 +272,7 @@
  */
 
 
- /*
+/*
  ================
   Placeholder
  ================
