@@ -14,8 +14,8 @@ import '../assets/css/prodPages.css'
 import stock from '../assets/images/lap.png'
 import { Link } from 'react-router-dom';
 
-const baseURL = 'http://localhost:3000/product'
-//const baseURL = 'https://bestdealtest.herokuapp.com/product'
+//const baseURL = 'http://localhost:3000/product'
+const baseURL = 'https://bestdealtest.herokuapp.com/product'
 
 
 

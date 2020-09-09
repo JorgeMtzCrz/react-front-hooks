@@ -1,10 +1,9 @@
 import React from 'react';
-import axios from 'axios'
 import useForm from '../hooks/useForm'
+import axios from 'axios'
 import handleAsync from '../utils/handleAsync'
 import {  CREATE_SUBSCRIBER } from '../services/email_service'
 import Swal from 'sweetalert2'
-import composeData from '../utils/composeData'
 
 // USER STYLING
 import '../assets/css/home.css'
@@ -16,6 +15,8 @@ import {
   Button
 } from 'reactstrap';
 
+//const baseURL = 'http://localhost:3000/subscriber'
+const baseURL = 'https://bestdealtest.herokuapp.com/subscriber/create'
 
 const BannerEmail = (props) => {
   const [form, handleInput]= useForm()
@@ -29,22 +30,21 @@ const BannerEmail = (props) => {
         'error'
       )
     }else{
-      const response = await handleAsync(() => CREATE_SUBSCRIBER({email}))
-
-      if(response){
-        Swal.fire(
-          'Good job!',
-          'Now you joined in Best Deal in Town!',
-          'success'
-        )
-  
-      }else{
-        Swal.fire(
-          'Something went wrong!',
-          'Try again in a few minutes',
-          'error'
-        )
-      }
+        axios.post(baseURL, email)
+        .then(({data})=>{
+          Swal.fire(
+            'Good job!',
+            'Now you joined in Best Deal in Town!',
+            'success'
+          )
+        })
+        .catch(err =>{
+          Swal.fire(
+            'Something went wrong!',
+            'Try again in a few minutes',
+            'error'
+          )
+        })
     }
     
 

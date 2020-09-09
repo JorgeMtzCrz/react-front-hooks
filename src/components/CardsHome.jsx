@@ -24,7 +24,7 @@ function CardsHome(props) {
             <>
             <div key={i} className="card-home">
               <div className="image-card">
-                <img   src={e.img} alt="cards" width="50%" height="100%"/>
+                <img   src={e.img} alt="cards" width="50%" height="275px"/>
                 <div key={i}  className="text-card">
                   <h3 className={ i === 0 || i === 3 ? "title-blue":"title-green"}>{e.title}</h3>
                   <h5 className="subtitle-card">{e.subtitle}</h5>

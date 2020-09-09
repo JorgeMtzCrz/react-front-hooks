@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const baseURL = 'http://localhost:3000/subscriber'
-    //const baseURL = 'https://bestdealtest.herokuapp.com/subscriber'
+//const baseURL = 'http://localhost:3000/subscriber'
+const baseURL = 'https://bestdealtest.herokuapp.com/subscriber'
 
 const service = axios.create({
     baseURL,
