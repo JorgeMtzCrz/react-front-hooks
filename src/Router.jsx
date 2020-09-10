@@ -8,6 +8,7 @@ import Audio from './components/Audio'
 import AboutUs from './components/AboutUs'
 import ProductDetail from './components/ProductDetail'
 import PaymentsOps from './components/PaymentsOps'
+import Blog from './components/Blog'
 
 const Router = () => (
   <BrowserRouter>
@@ -23,6 +24,7 @@ const Router = () => (
       <Route component={ProductDetail} exact path="/computers/:id" />
       <Route component={ProductDetail} exact path="/accesories/:id" />
       <Route component={PaymentsOps} exact path="/payment-options"/>
+      <Route component={Blog} exact path="/blog"/>
     </Switch>
   </BrowserRouter>
 )

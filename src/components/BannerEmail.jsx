@@ -15,8 +15,8 @@ import {
   Button
 } from 'reactstrap';
 
-//const baseURL = 'http://localhost:3000/subscriber'
-const baseURL = 'https://bestdealtest.herokuapp.com/subscriber/create'
+const baseURL = 'http://localhost:3000/subscriber'
+// const baseURL = 'https://bestdealtest.herokuapp.com/subscriber/create'
 
 const BannerEmail = (props) => {
   const [form, handleInput]= useForm()
@@ -46,7 +46,7 @@ const BannerEmail = (props) => {
           )
         })
     }
-    
+
 
 
   }
@@ -56,14 +56,8 @@ const BannerEmail = (props) => {
       <div className="banner-email">
         <div className="info-banner">
             <p className="banner-text">Receive Exclusive Offers!</p>
-<<<<<<< HEAD
+            
             <Button className="banner-button">Click Here</Button>
-=======
-            <form className="info-banner">
-            <Input  id="search-input" onChange={handleInput} name="email" className="banner-input" placeholder="Email" type="email" size="100" />
-            <Button onClick={sendEmail} className="banner-button">SEND</Button>
-            </form>
->>>>>>> 58f55325524dac0f69f55b116ef7bd4f218ee5f3
         </div>
       </div>
       <div className="testi-spacer"></div>

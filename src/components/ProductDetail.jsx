@@ -14,8 +14,8 @@ import '../assets/css/prodPages.css'
 import stock from '../assets/images/lap.png'
 import { Link } from 'react-router-dom';
 
-//const baseURL = 'http://localhost:3000/product'
-const baseURL = 'https://bestdealtest.herokuapp.com/product'
+const baseURL = 'http://localhost:3000/product'
+// const baseURL = 'https://bestdealtest.herokuapp.com/product'
 
 
 
@@ -28,8 +28,8 @@ function ProductDetail(props) {
     <>
     <NavbarSolid/>
     <div className="discount-green">
-    <p>50% OFF in all store!</p>
-    <p>SHOP NOW!</p>
+      <p>50% OFF in all store!</p>
+      <p>SHOP NOW!</p>
     </div>
     <div className="detail-product">
       <MyContext.Consumer>

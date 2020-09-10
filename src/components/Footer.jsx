@@ -12,7 +12,7 @@ export default function Footer(props) {
     };
   });
   return (
-    <> 
+    <>
     <div className="footer-content">
       <div className="footer-column-content">
         <div className="footer-column">
@@ -33,7 +33,7 @@ export default function Footer(props) {
             <p>My Argyle Account</p>
         </div>
         <div className="footer-column">
-            <h4 className="subtitle-footer">Terms & Conditions</h4>
+            <h4 className="subtitle-footer">Legal</h4>
             <p>Privacy Policy</p>
             <p>Legal Terms</p>
         </div>
@@ -41,6 +41,8 @@ export default function Footer(props) {
             <h4 className="subtitle-footer">Site Admin</h4>
             <p>Login</p>
             <p>Argyle Admin</p>
+            <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Progressive</a> </p>
+            <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Synchrony</a> </p>
         </div>
       </div>
       <div className="social-column-content">
@@ -52,7 +54,7 @@ export default function Footer(props) {
       </div>
 
     </div>
-      
+
     </>
   );
 }
