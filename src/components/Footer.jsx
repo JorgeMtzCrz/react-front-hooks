@@ -42,7 +42,7 @@ export default function Footer(props) {
             <p>Login</p>
             <p>Argyle Admin</p>
             <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Progressive</a> </p>
-            <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Synchrony</a> </p>
+            <p> <a href="https://businesscenter.synchronybusiness.com/portal/login">Synchrony</a> </p>
         </div>
       </div>
       <div className="social-column-content">
