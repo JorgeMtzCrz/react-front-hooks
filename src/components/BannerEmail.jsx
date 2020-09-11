@@ -1,8 +1,6 @@
 import React from 'react';
 import useForm from '../hooks/useForm'
 import axios from 'axios'
-import handleAsync from '../utils/handleAsync'
-import {  CREATE_SUBSCRIBER } from '../services/email_service'
 import Swal from 'sweetalert2'
 
 // USER STYLING

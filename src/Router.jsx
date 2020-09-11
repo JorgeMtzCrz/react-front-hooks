@@ -7,6 +7,7 @@ import Accesories from './components/Accesories'
 import Audio from './components/Audio'
 import AboutUs from './components/AboutUs'
 import ProductDetail from './components/ProductDetail'
+import Cart from './components/Cart'
 
 const Router = () => (
   <BrowserRouter>
@@ -21,6 +22,7 @@ const Router = () => (
       <Route component={ProductDetail} exact path="/audio/:id" />
       <Route component={ProductDetail} exact path="/computers/:id" />
       <Route component={ProductDetail} exact path="/accesories/:id" />
+      <Route component={Cart} exact path="/cart"/>
     </Switch>
   </BrowserRouter>
 )

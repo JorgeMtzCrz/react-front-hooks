@@ -11,6 +11,8 @@ import {
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
+import {MyContext} from '../CartContext'
+import cartImg from '../assets/icons/cart.svg'
 
 // USER STYLING
 import '../assets/css/navbar.css'
@@ -67,12 +69,27 @@ const NavbarSolid = (props) => {
         </div>
       </div>
       <div className="topnav" id="myTopnav">
-      <Link to="/about"><p>ABOUT US</p></Link>
+        <Link to="/about"><p>ABOUT US</p></Link>
         <Link to="/hdtvs"><p>TVS & INSTALL</p></Link>
         <Link to="/computers"><p>COMPUTERS</p></Link>
         <Link to="/accesories"><p>ACCESORIES</p></Link>
         <Link to="/audio"><p>HOME AUDIO</p></Link>
         <Link to="/"><p>HOME</p></Link>
+      <MyContext.Consumer>
+
+        {
+          ({cart})=>{
+            return(
+              <Link to="/cart">
+                <img style={{marginTop: "8px"}} src={cartImg} alt="cart-icon"/>
+                <span><p>{cart.length}</p></span>
+              </Link>
+            )
+
+          }
+        }
+      </MyContext.Consumer>
+
         <a href="#" className="icon" onClick={myFunction}>
         <FontAwesomeIcon icon={faBars} />
         </a>
