@@ -12,8 +12,8 @@ import '../assets/css/prodPages.css'
 
 // IMAGES
 
-//const baseURL = 'http://localhost:3000/product'
-const baseURL = 'https://bestdealtest.herokuapp.com/product'
+const baseURL = 'http://localhost:3000/product'
+// const baseURL = 'https://bestdealtest.herokuapp.com/product'
 
 
 
@@ -25,8 +25,8 @@ function ProductDetail(props) {
     <>
     <NavbarSolid/>
     <div className="discount-green">
-    <p>50% OFF in all store!</p>
-    <p>SHOP NOW!</p>
+      <p>50% OFF in all store!</p>
+      <p>SHOP NOW!</p>
     </div>
     <div className="detail-product">
       <MyContext.Consumer>
@@ -34,12 +34,16 @@ function ProductDetail(props) {
           {({addToCart})=>
               <>
                 <div className="detail-box">
-                  <div className="image-detail"> <img height="410px" width="720px" src={product.img} alt={product.title}/> </div>
+                  <div className="image-detail">
+                    <img src={product.img} alt={product.title}/>
+                  </div>
                   <div className="title-detail">
                     <p className="title-price">${product.price}</p>
                     <p className="title-product">{product.title}</p>
                     <p className="description-product">{product.description}</p>
                     <button onClick={()=> addToCart(product)} className="button-detail-product">RESERVE</button>
+                    <br />
+                  <p>If you're curious about our payment options <a href="/payment-options">CLICK HERE</a> to learn more. </p>
                   </div>
                 </div>
                 <div className="specification-product">
@@ -50,7 +54,7 @@ function ProductDetail(props) {
                       {product.specifications.map(e=>{
                         return(
                           <div className="bullet">
-                           <img width="80px" src={bullet} alt={e.titleSpecification}/>
+                           <img src={bullet} alt={e.titleSpecification}/>
                            <p className="title-bullet">{e.titleSpecification.toUpperCase()}</p>
                            <p className="description-bullet">{e.descriptionProduct}</p>
                           </div>

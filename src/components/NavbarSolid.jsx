@@ -38,7 +38,7 @@ const NavbarSolid = (props) => {
     <div>
       <div className="navbar-logo">
         <div className="navbar-container" >
-          <a href="./"> <img className="logo" src={altLogo} alt="BDIT Logo" /> </a>
+          <a href="/"> <img className="logo" src={altLogo} alt="BDIT Logo" /> </a>
 
         <div className="contactl">
             <a href="tel:303-593-0581">
@@ -90,6 +90,8 @@ const NavbarSolid = (props) => {
         }
       </MyContext.Consumer>
 
+        <Link to="/payment-options"><p>PAYMENT SOLUTIONS</p></Link>
+        <Link to="/blog"><p>BLOG</p></Link>
         <a href="#" className="icon" onClick={myFunction}>
         <FontAwesomeIcon icon={faBars} />
         </a>

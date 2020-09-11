@@ -4,7 +4,11 @@ import NavbarSolid from './NavbarSolid';
 import { ALL_HDTVS, ALL_FETCHER } from '../services/products_service'
 import Footer from './Footer';
 import BannerEmail from './BannerEmail';
+
+import Installs from './Installs';
+
 import {MyContext} from '../CartContext'
+
 
 // USER STYLING
 import '../assets/css/prodPages.css'
@@ -43,6 +47,7 @@ function Hdtvs(props) {
                     <button onClick={()=> addToCart(e)} className="button-card-blue">RESERVE</button>
                   </div>
                 </div>
+
               </>
               )
             })
@@ -51,7 +56,9 @@ function Hdtvs(props) {
 
       </div>
     </div>
+
     <BannerEmail/>
+    <Installs/>
     <Footer/>
 
     </>
