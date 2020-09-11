@@ -75,23 +75,22 @@ const NavbarSolid = (props) => {
         <Link to="/accesories"><p>ACCESORIES</p></Link>
         <Link to="/audio"><p>HOME AUDIO</p></Link>
         <Link to="/"><p>HOME</p></Link>
-      <MyContext.Consumer>
-
-        {
-          ({cart})=>{
-            return(
-              <Link to="/cart">
-                <img style={{marginTop: "8px"}} src={cartImg} alt="cart-icon"/>
-                <span><p>{cart.length}</p></span>
-              </Link>
-            )
-
-          }
-        }
-      </MyContext.Consumer>
-
         <Link to="/payment-options"><p>PAYMENT SOLUTIONS</p></Link>
         <Link to="/blog"><p>BLOG</p></Link>
+        <MyContext.Consumer>
+
+          {
+            ({cart})=>{
+              return(
+                <Link to="/cart">
+                  <img style={{marginTop: "8px"}} src={cartImg} alt="cart-icon"/>
+                  <span><p>{cart.length}</p></span>
+                </Link>
+              )
+
+            }
+          }
+        </MyContext.Consumer>
         <a href="#" className="icon" onClick={myFunction}>
         <FontAwesomeIcon icon={faBars} />
         </a>
