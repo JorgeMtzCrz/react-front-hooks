@@ -72,8 +72,8 @@ const NavbarSolid = (props) => {
         <Link to="/computers"><p>COMPUTERS</p></Link>
         <Link to="/accesories"><p>ACCESORIES</p></Link>
         <Link to="/audio"><p>HOME AUDIO</p></Link>
-        <Link to="payment-options"><p>PAYMENT SOLUTIONS</p></Link>
-        <Link to="blog"><p>BLOG</p></Link>
+        <Link to="/payment-options"><p>PAYMENT SOLUTIONS</p></Link>
+        <Link to="/blog"><p>BLOG</p></Link>
         <a href="#" className="icon" onClick={myFunction}>
         <FontAwesomeIcon icon={faBars} />
         </a>

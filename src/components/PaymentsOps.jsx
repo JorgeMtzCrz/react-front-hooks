@@ -47,7 +47,7 @@ function PaymentsOps(props) {
 
   <p>For Progressive Leasing's&nbsp;Payment Option, you only need a few things to apply!</p>
 
-  <p><b>What is the process? How do I get started with a lease-purchase option today?</b></p>
+  <h3><b>What is the process?</b></h3> <h4>How do I get started with a lease-purchase option today?</h4>
 
   <div className="prog-process">
     <ol>
@@ -64,9 +64,9 @@ function PaymentsOps(props) {
   <br />
   <br />
   <br />
-  
+
   <hr />
-  
+
   <br />
 
 <div className="pay-faqs">

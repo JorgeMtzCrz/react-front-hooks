@@ -2,6 +2,10 @@ import React, {useState} from 'react'
 import instagram from '../assets/images/instagram.png'
 import facebook from '../assets/images/facebook.png'
 
+// User STYLING
+import '../assets/css/footer.css'
+
+
 export default function Footer(props) {
 
   document.documentElement.classList.remove("nav-open");
