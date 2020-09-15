@@ -74,6 +74,12 @@ code {
     box-sizing: border-box;
 }
 
+.form-mailchimp {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+}
+
 .coupon-input {
     width: 230px;
     height: 75px;
@@ -283,7 +289,6 @@ code {
         right: 10px;
         display: block;
     }
-
     .topnav.responsive {
         position: relative;
     }
@@ -463,8 +468,6 @@ code {
     font-weight: 300;
     margin-top: 20px;
 }
-
-
 
 .title-header {
     padding-left: 100px;
@@ -994,7 +997,6 @@ code {
         width: 60%;
         height: 40px;
     }
-
     .topnav p {
         float: left;
         display: block;

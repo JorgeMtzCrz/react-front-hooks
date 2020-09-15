@@ -6,6 +6,7 @@ import { ACTIVE_URL, ALL_FETCHER } from '../services/header_service'
 
 // USER STYLING
 import '../assets/css/home.css'
+import { Link } from 'react-router-dom';
 
 
 function CarouselHome(props) {
@@ -32,7 +33,7 @@ function CarouselHome(props) {
               <h2 className="title-header">{e.title}</h2>
               <h3 className="subtitle-header">{e.subtitle}</h3>
               <p className="description-header">{e.description}</p>
-              <button className="button-header">SEE MORE</button>
+            <Link to={e.url}> <button className="button-header">SEE MORE</button></Link> 
             </div>
             <div className="carousel-img" >
               <img alt="" width="100%" height="350px" src={e.img} />

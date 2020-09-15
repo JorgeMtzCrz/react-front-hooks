@@ -44,7 +44,7 @@ function Hdtvs(props) {
                   <div className="product-price-section">
                     <h4 className="subtitle-card">{e.title}</h4>
                     <p className="subtitle-card">${e.price}</p>
-                    <button onClick={()=> addToCart(e)} className="button-card-blue">RESERVE</button>
+                    {/*<button onClick={()=> addToCart(e)} className="button-card-blue">RESERVE</button>*/}
                   </div>
                 </div>
 
