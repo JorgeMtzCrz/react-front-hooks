@@ -1,7 +1,6 @@
 import React from 'react'
 
 // ICONS
-import estrella from '../assets/images/estrella.svg'
 import star from '../assets/icons/star.svg'
 import halfStar from '../assets/icons/half-star.svg'
 import mostStar from '../assets/icons/most-star.svg'

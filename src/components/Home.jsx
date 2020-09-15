@@ -1,6 +1,4 @@
-import React, {useState} from 'react'
-import axios from 'axios'
-import Swal from 'sweetalert2'
+import React from 'react'
 import NavbarSolid from './NavbarSolid';
 import CarouselHome from './CarouselHome';
 import StarSection from './StarSection';

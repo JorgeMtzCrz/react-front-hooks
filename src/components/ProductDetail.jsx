@@ -1,7 +1,7 @@
 import React from 'react'
 import useSWR from 'swr'
 import NavbarSolid from './NavbarSolid';
-import { ALL_HDTVS, ALL_FETCHER } from '../services/products_service'
+import { ALL_FETCHER } from '../services/products_service'
 import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
@@ -11,8 +11,6 @@ import bullet from '../assets/images/bullet.png'
 import '../assets/css/prodPages.css'
 
 // IMAGES
-import stock from '../assets/images/lap.png'
-import { Link } from 'react-router-dom';
 
 const baseURL = 'http://localhost:3000/product'
 // const baseURL = 'https://bestdealtest.herokuapp.com/product'
@@ -23,7 +21,6 @@ function ProductDetail(props) {
   const { data } = useSWR(`${baseURL}/detail/${props.match.params.id}`, ALL_FETCHER)
   const product = data && data.product
   if(!product) return <h4>Loading...</h4>
-  console.log(product)
   return (
     <>
     <NavbarSolid/>
