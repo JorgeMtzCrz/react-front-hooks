@@ -35,7 +35,7 @@ function CarouselHome(props) {
               <button className="button-header">SEE MORE</button>
             </div>
             <div className="carousel-img" >
-              <img alt="" width="100%" height="350px" src={e.img} />
+              <img alt={e.subtitle} width="100%" src={e.img} />
             </div>
         </div>
         )

@@ -25,8 +25,7 @@ function StarSection(props) {
 
   return (
     <>
-    <div className="testi-spacer"></div>
-    <div style={{display:"flex", width:"100%", height:"450px", alignItems:"center", flexDirection:"column"}}>
+    <div style={{display:"flex", width:"100%", alignItems:"center", flexDirection:"column"}}>
       <div className="main-home-section-title" style={{display: 'flex', alignItems: "center", alignContent:"center"}}>
         <h3 style={{color:"#003366", fontSize:"30px"}}>#1 eco-Electronic Store in Denver</h3>
       </div>
@@ -65,11 +64,10 @@ function StarSection(props) {
           <p style={{color:"#000000", font: "Regular 20px/27px Open Sans"}}>Google</p>
         </div>
       </div>
-      <div className="star-pride-container">We are <span className="text-green">humbled and proud</span> to say that we have the <span className="text-blue">most loyal customers</span>, <br /> that our shared vision has brought us a lot of recognition over the years, and as we near a decade in Englewood, we are so grateful to be part of a <span className="text-green">wonderful community</span>.</div>
+      <div className="star-pride-container">We are <span className="text-green">humbled and proud</span> to say that we have the best, <span className="text-blue"> most supportive community</span>, <br /> that our shared vision has brought us a lot of recognition over the years, and as we near a decade in Englewood, we are so grateful to be part of a <span className="text-green">wonderful community</span>.</div>
 
     </div>
 
-    <div className="testi-spacer"></div>
     </>
   );
 }

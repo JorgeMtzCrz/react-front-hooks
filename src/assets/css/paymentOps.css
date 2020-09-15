@@ -1,11 +1,16 @@
+
+
+/* page CONTAINER */
 .inner-container {
   padding: 3%;
 }
 
+/* page  sub-CONTAINER */
 .inner-container-content {
   text-align: center !important;
 }
 
+/* page TITLES */
 .inner-container-content > h4,
 .inner-container-content > h3 {
   color: #727287;
@@ -16,11 +21,17 @@
 }
 
 
+
+/* INTRO - Offer section */
 .pay-partners-logos {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto;
   margin: 5% auto;
+}
+
+.pay-partners-logos div {
+  width: 90%;
 }
 
 .pay-partners-logos div p {
@@ -38,7 +49,12 @@
   padding: auto;
 }
 
+/* END intro section */
 
+
+
+
+/* Process Section */
 .prog-process {
   margin: auto;
   width: 50%;
@@ -50,12 +66,133 @@
 
 #approval-btn {
   background-color: white;
-  padding: 1%;
+  padding: 1% 2%;
   border-radius: 5px;
-
   box-shadow: 0 0 4px 4px lightgray;
 }
+/* END process section */
+
+
+
+/* FAQ Section */
 
 .pay-faqs {
   text-align: left;
+}
+
+
+/*
+======      MOBILE VIEW      ========
+*/
+
+@media screen and (max-width: 500px ) {
+
+  /* INTRO - Offer section */
+  .pay-partners-logos {
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+  }
+
+  .pay-partners-logos div {
+    margin: 7% auto;
+  }
+
+  .pay-partners-logos div:first-child {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10%;
+  }
+
+  .paymentOps-imgs {
+    width: 80%;
+    margin: 3% 0;
+  }
+/* END intro section */
+
+
+/* Process Section */
+.prog-process {
+  margin: auto;
+  width: 90%;
+}
+
+#approval-btn {
+  background-color: white;
+  padding: 3% 2%;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 4px lightgray;
+}
+/* END process section */
+
+
+
+
+}
+
+/*
+======      IPAD VIEW      ========
+*/
+
+@media screen and (max-width: 800px ) and (min-width: 501px ) {
+
+  /* INTRO - Offer section */
+  .pay-partners-logos {
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+  }
+
+  .pay-partners-logos div {
+    margin: 7% auto;
+  }
+
+  .pay-partners-logos div:first-child {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10%;
+  }
+
+  .paymentOps-imgs {
+    width: 80%;
+    margin: 3% 0;
+  }
+/* END intro section */
+
+/* Process Section */
+  .prog-process {
+    margin: auto;
+    width: 90%;
+  }
+
+  #approval-btn {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 4px lightgray;
+  }
+/* END process section */
+
+
+}
+
+/*
+======      LARGE IPAD VIEW      ========
+*/
+
+@media screen and (max-width: 1070px ) and (min-width: 801px ) {
+
+/* INTRO - Offer section */
+  .pay-partners-logos div {
+    width: 90%;
+  }
+/* END intro section */
+
+
+/* Process Section */
+  .prog-process {
+    margin: auto;
+    width: 70%;
+  }
+/* END process section */
+
+
+
 }
