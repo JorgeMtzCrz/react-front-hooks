@@ -13,7 +13,7 @@ export default function ClientDetails({setTable}) {
     telephone: form.telephone
   }
 
-  
+
   return (
     <>
     <MyContext.Consumer>
@@ -27,9 +27,8 @@ export default function ClientDetails({setTable}) {
       <div className="cart-client-details">
         <p className="options-cart bag-text-green">PERSONAL INFO</p>
         <p className="text-prices-detail">Please, fill in the blanks with the information of the person who
-        is going to pickup your products. We will ask for your number order
-        and for an ID.</p>
-        
+        is going to pickup your products.</p>
+
         <span className="details-row">
           <FormGroup className="group-form">
             <label className="text-prices-detail">First name</label>

@@ -24,7 +24,7 @@ function Installs(props) {
           <img src={baseMount} alt="BDIT wall mounted TV, very happy customer"/>
 
           <div>
-            <p>If you need your TV installed our team is ready to go.</p>
+            <p>If you need your TV installed, our team is ready to go.</p>
             <a href="https://calendly.com/bdit/install">Schedule Install</a>
             <p>Great news! If you buy a TV & mount with us you get a great discount on both the install & the mount.</p>
           </div>
@@ -34,8 +34,8 @@ function Installs(props) {
               <h3>Basic Install - No Mount</h3>
               <p>$99</p>
             </div>
-            <div>
-              <h3>Install & SetUp - Mount Included</h3>
+            <div id="pricing-2">
+              <h3>Install & Setup - Mount Included</h3>
               <p>$150</p>
             </div>
             <small>*Subtract $20 if your TV is less than 55 <br /> <span>Take 20% off if you buy your TV with US!</span></small>

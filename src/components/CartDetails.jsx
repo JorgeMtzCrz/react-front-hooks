@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {MyContext} from '../CartContext'
 
 
+// User STYLING
+import '../assets/css/cartdetail.css'
+
 
 
 export default function CartDetails({setTable}) {
@@ -24,12 +27,12 @@ export default function CartDetails({setTable}) {
           <p className="bag-text-blue">TOTAL: ${subtotal}</p>
         </div>
         {cart.map((e,i)=>{
-          
+
           return(
             <>
               <div className="product-detail-cart mb-5">
                 <div className="img-detail-cart">
-                  <img width="200px" height="120px" src={e.img} alt="img-product" />
+                  <img src={e.img} alt="img-product" />
                 </div>
                 <div className="fields-detail-cart">
                   <p className="bag-text-green">{e.title}</p>
@@ -41,7 +44,7 @@ export default function CartDetails({setTable}) {
                   <p className="bag-text-blue">$ {e.discount ? e.discount : 0} OFF</p>
                 </div>
               </div>
-              
+
             </>
           )
         })}

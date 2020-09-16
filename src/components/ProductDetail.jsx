@@ -8,7 +8,7 @@ import {MyContext} from '../CartContext'
 import bullet from '../assets/images/bullet.png'
 
 // USER STYLING
-import '../assets/css/prodPages.css'
+import '../assets/css/prodDetail.css'
 
 // IMAGES
 
