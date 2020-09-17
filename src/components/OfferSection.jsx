@@ -2,6 +2,9 @@ import React from 'react'
 import useSWR from 'swr'
 import { ACTIVE_URL, ALL_FETCHER } from '../services/banner_service'
 
+// User Styling
+import '../assets/css/home.css'
+
 
 function OfferSection(props) {
   const { data, mutate } = useSWR(ACTIVE_URL, ALL_FETCHER)
@@ -15,7 +18,7 @@ function OfferSection(props) {
         return(
         <div key={i}  className="offerSection">
           <div className="image-offer">
-            <img width="100%" height="100%" src={e.img} alt={e.title}/>
+            <img src={e.img} alt={e.title}/>
           </div>
           <div className="color-offer">
           </div>
@@ -28,7 +31,6 @@ function OfferSection(props) {
         )
       })
     }
-    <div className="testi-spacer"></div>
 
     </>
   );

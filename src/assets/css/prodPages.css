@@ -46,6 +46,104 @@
 }
 
 
+
+/*
+======      MOBILE VIEW      ========
+*/
+
+@media screen and (max-width: 600px) {
+
+  .side-products {
+    display: none;
+  }
+
+  .cards-products {
+    margin: auto;
+    width: 100%;
+  }
+
+  .card-product {
+    margin: 5% auto;
+    padding: 5%;
+    height: 10%;
+  }
+
+
+}
+
+/*
+======      IPAD VIEW      ========
+*/
+
+@media screen and (max-width: 800px) and (min-width: 601px) {
+
+    .side-products {
+      display: none;
+    }
+
+    .cards-products {
+      margin: auto;
+      width: 100%;
+      flex-direction: row;
+    }
+
+    .card-product {
+      margin: 5% auto;
+      padding: 5%;
+      height: 10%;
+      width: 43%;
+    }
+
+    .card-product a img {
+      width: 100%;
+    }
+
+
+}
+
+
+/*
+======      DESKTOP VIEW      ========
+*/
+
+@media screen and (max-width: 1200px) and (min-width: 801px) {
+
+  .side-products {
+    display: none;
+  }
+
+  .card-product a img {
+    width: 100%;
+  }
+
+
+}
+
+/*
+======      temp LARGE DESKTOP VIEW      ========
+*/
+
+@media screen and (min-width: 1201px) {
+
+    .side-products {
+      display: none;
+    }
+
+    .cards-products {
+      width: 100%;
+    }
+
+    .card-product {
+      height: 25%;
+    }
+
+
+}
+
+
+
+
+
 /*
 ================
   Product Detail Card

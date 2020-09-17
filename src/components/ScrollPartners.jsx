@@ -18,17 +18,16 @@ function ScrollPartners(props) {
   return (
 
 
-        <div className="main-scroll mb-5">
-          <h4 className="title-gray">Your Favorite Brands @ Your Favorite Prices</h4>
-          <div className="container-scroll">
-            {slides.map((marcas, i) => (
-              <div key={i} className="slider-partners">
-                <img src={marcas} alt="marcas" />
-              </div>
-            ))}
-          </div>
-          <button className="button-scroll-green">BUY GREEN</button>
-        <div className="testi-spacer"></div>
+      <div className="main-scroll">
+        <h4 className="title-gray">Your Favorite Brands @ Your Favorite Prices</h4>
+        <div className="container-scroll">
+          {slides.map((marcas, i) => (
+            <div key={i} className="slider-partners">
+              <img src={marcas} alt="marcas" />
+            </div>
+          ))}
+        </div>
+        <button className="button-scroll-green">BUY GREEN</button>
       </div>
   );
 }

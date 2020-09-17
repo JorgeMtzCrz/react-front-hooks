@@ -16,7 +16,7 @@
 
 .footer-column a {
   color: black;
-  
+
 }
 
 
@@ -34,7 +34,7 @@
   }
 
   .footer-column-content {
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-around;
       align-items: center;
       align-content: center;
@@ -47,13 +47,12 @@
       flex-direction: column;
       justify-content: right;
       box-sizing: border-box;
-      height: 196px;
+      margin-bottom: 8%;
   }
 
   .social-column-content {
       display: flex;
       flex-direction: row;
-      justify-content: right;
       width: 100%;
       padding: 30px 25px;
       box-sizing: border-box;

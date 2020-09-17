@@ -26,21 +26,23 @@ function Hit(props) {
 
             <div className="mt-5 container-hit">
               <img className="number-hit hit-right" src={one} alt="Img of numerical order: 1"/>
-              <img src={big} alt="store " className="mr-5 hit-icons"/> <span className="text-why-black">Big Stores & Manufacturers get a bunch of returned product (mostly unused). They collect all the product and <span className="text-why-green">sell them in BIG quantities.</span></span>
+              <img src={big} alt="store " className="mr-5 mobile-hit-icon hit-icons"/> <span className="text-why-black">Big Stores & Manufacturers get a bunch of returned product (mostly unused). They collect all the product and <span className="text-why-green">sell them in BIG quantities.</span></span>
             </div>
             <div className="mt-5 container-hit">
               <img className="number-hit " src={two} alt="Img of numerical order: 2"/>
+              <img src={hit} className="mobile-hit-icon hit-icons" alt="house" />
               <span className="text-why-black" style={{width:"90%"}}>Our suppliers buy them, <span className="text-why-blue">quality control everything, and sell their best options to us!</span></span>
-              <img src={hit} className="hit-icons" alt="house" />
+              <img src={hit} className="hit-icons desktop-hit-icon" alt="house" />
             </div>
             <div className="mt-5 container-hit">
               <img className="number-hit hit-right" src={three} alt="Img of numerical order: 3"/>
-              <img src={box} alt="box" alt="suppliers" className="mr-5 hit-icons"/> <span className="text-why-black">We get them, do a full quality inspection, add whatever accessories are needed, then pass the savings on to you.</span>
+              <img src={box} alt="box" alt="suppliers" className="mr-5 mobile-hit-icon hit-icons"/> <span className="text-why-black">We get them, do a full quality inspection, add whatever accessories are needed, then pass the savings on to you.</span>
             </div>
             <div className="mt-5 container-hit">
               <img className="number-hit" src={four} alt="Img of numerical order: 4"/>
-              <span className="text-why-black" style={{width:"90%"}}><span className="text-why-blue">You feel PROUD that you’ve helped protect the environment </span>& confident in a great quality product.</span>
-              <img src={feel} alt="feel" className="hit-icons" />
+              <img src={feel} alt="feel" className="hit-icons mobile-hit-icon" />
+              <span className="text-why-black" style={{width:"90%"}}><span className="text-why-blue">You feel confident in a great quality product & </span><span className="text-why-green">PROUD that you’ve helped protect the environment</span>.</span>
+              <img src={feel} alt="feel" className="hit-icons desktop-hit-icon" />
             </div>
 
           </div>

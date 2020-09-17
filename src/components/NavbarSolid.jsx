@@ -70,9 +70,9 @@ const NavbarSolid = (props) => {
       </div>
       <div className="topnav" id="myTopnav">
         <Link to="/about"><p>ABOUT US</p></Link>
-        <Link to="/hdtvs"><p>TVS & INSTALL</p></Link>
+        <Link to="/hdtvs"><p>TVS & INSTALLS</p></Link>
         <Link to="/computers"><p>COMPUTERS</p></Link>
-        <Link to="/accesories"><p>ACCESORIES</p></Link>
+        <Link to="/accesories"><p>ACCESSORIES</p></Link>
         <Link to="/audio"><p>HOME AUDIO</p></Link>
         <Link to="/payment-options"><p>PAYMENT SOLUTIONS</p></Link>
         <Link to="/blog"><p>BLOG</p></Link>
