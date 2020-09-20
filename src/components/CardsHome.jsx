@@ -2,6 +2,10 @@ import React from 'react'
 import useSWR from 'swr'
 import { ACTIVE_URL, ALL_FETCHER } from '../services/card_service'
 
+
+import LoadScreen from './loading'
+
+
 // User STYLING
 import '../assets/css/home.css'
 
@@ -17,7 +21,7 @@ function CardsHome(props) {
       document.body.classList.remove("profile-page");
     };
   });
-  if(!cards) return <h4>Loading...</h4>
+  if(!cards) return <LoadScreen />
   return (
     <>
     <div className="cards-home">

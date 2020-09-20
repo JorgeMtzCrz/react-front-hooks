@@ -49,8 +49,7 @@ const BannerEmail = (props) => {
       <div className="banner-email">
         <div className="info-banner">
             <p className="banner-text">Receive Exclusive Offers!</p>
-
-            <Button onClick={toggle} className="banner-button">Click Here</Button>
+            <Button onClick={toggle} className="banner-button">SIGN UP NOW!</Button>
         </div>
       </div>
       <div className="testi-spacer"></div>

@@ -108,7 +108,7 @@
 @media screen and (max-width: 779px) and (min-width: 601px) {
 
   .why-section-container span {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .title-green {
@@ -165,7 +165,7 @@
 
 
 /*
-======      IPAD PRO VIEW      ========
+======     DESKTOP VIEW      ========
 */
 
 @media screen and (max-width: 1204px) and (min-width: 1032px) {
@@ -370,6 +370,7 @@
  .react-multi-carousel-list {
    width: 100%;
    text-align: center;
+   align-items: normal !important;
  }
 
  .react-multi-carousel-item {
@@ -378,7 +379,7 @@
  }
 
  .testi-spacer {
-   margin: 10% 0;
+   margin: 5% 0;
  }
 
 .testi-section {
@@ -484,7 +485,6 @@
 
   .react-multi-carousel-item {
     margin: 0;
-    width: 500px !important;
   }
 
 }

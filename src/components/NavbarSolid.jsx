@@ -38,7 +38,7 @@ const NavbarSolid = (props) => {
     <div>
       <div className="navbar-logo">
         <div className="navbar-container" >
-          <a href="/"> <img className="logo" src={altLogo} alt="BDIT Logo" /> </a>
+          <a href="/"> <img className="logo" src={altLogo} alt="BDIT Logo" /></a>
 
         <div className="contactl">
             <a href="tel:303-593-0581">
@@ -56,7 +56,7 @@ const NavbarSolid = (props) => {
             <Form className="form-content-container">
                   <FormGroup className="">
                     <InputGroup>
-                      <Input id="search-input" className="banner-input" placeholder="What are you looking for?" type="text" />
+                      <Input id="search-inputs" className="banner-input" placeholder="What are you looking for?" type="text" />
                       <InputGroupAddon addonType="append">
                         <InputGroupText style={{backgroundColor:"white"}}>
                           <FontAwesomeIcon className="search-icon" style={{color:"black"}} icon={faSearch} />
@@ -70,7 +70,7 @@ const NavbarSolid = (props) => {
               {
                 ({cart})=>{
                   return(
-                    <Link to="/cart">
+                    <Link className="cartIcon" to="/cart">
                       <img style={{display:'inline', marginTop: "2px", gridRow:"1/3"}} src={cartImg} alt="cart-icon"/>
                       <span><span>{cart.length}</span></span>
                     </Link>

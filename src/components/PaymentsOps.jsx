@@ -1,14 +1,14 @@
 import React from 'react'
-import NavbarSolid from './NavbarSolid';
-import BannerEmail from './BannerEmail';
-import Footer from './Footer';
+import NavbarSolid from './NavbarSolid'
+import BannerEmail from './BannerEmail'
+import Footer from './Footer'
 
 // User Styling
-import '../assets/css/paymentOps.css';
+import '../assets/css/paymentOps.css'
 
 // IMAGES
-import synch from '../assets/images/synch-logo.png';
-import prog from '../assets/images/prog-logo.png';
+import synch from '../assets/images/synch-logo.png'
+import prog from '../assets/images/prog-logo.png'
 
 
 function PaymentsOps(props) {
@@ -17,8 +17,8 @@ function PaymentsOps(props) {
     <>
     <NavbarSolid/>
 
-<div class="inner-container main">
-  <div class="inner-container-content">
+<div className="inner-container main">
+  <div className="inner-container-content">
     <h4>Pay Over Time</h4>
     <h1 className="title-green title-h1">Financing & Leasing Options</h1>
 
@@ -100,7 +100,7 @@ function PaymentsOps(props) {
     <br />
     <a href="https://approve.me/s/bestdealintown/29657#/splash"><img src="https://bestdealdenver.com/image/data/PL_Square.png" /></a></div>
     </div>
-  <div class="clearfix footer_margin"></div>
+  <div className="clearfix footer_margin"></div>
     <br />
   <br />
   </div>

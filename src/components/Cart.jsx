@@ -23,9 +23,11 @@ export default function Cart() {
     <div className="cart-breadcrumb">
       <p style={{color:"#96BA27", fontWeight:"bold"}} className="text-breadcrumb">BAG </p>
       <p className="dash-breadcrumb">- - - - - - - -</p>
-      <p style={{color: wtab === '2' || wtab==='3' ?"#96BA27" : "#727287", fontWeight: wtab === '2' ? 'bold' : '0'}} 
+      <p className="dash-breadcrumb-2">- - - -</p>
+      <p style={{color: wtab === '2' || wtab==='3' ?"#96BA27" : "#727287", fontWeight: wtab === '2' ? 'bold' : '0'}}
       className="text-breadcrumb">INFORMATION</p>
       <p className="dash-breadcrumb">- - - - - - - -</p>
+      <p className="dash-breadcrumb-2">- - - -</p>
       <p style={{color: wtab === '3' ?"#96BA27" : "#727287", fontWeight: wtab === '3' ? 'bold' : '0'}}
       className="text-breadcrumb">PICKUP</p>
     </div>

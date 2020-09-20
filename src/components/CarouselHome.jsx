@@ -28,6 +28,9 @@ function CarouselHome(props) {
       headers.map((e,i)=>{
         return(
         <div key={i} className="carousel-group-container" >
+            <div className="carousel-img-mobile" >
+              <img alt={e.subtitle} width="100%" src={e.img} />
+            </div>
             <div className="carousel-container">
               <h2 className="title-header">{e.title}</h2>
               <h3 className="subtitle-header">{e.subtitle}</h3>
