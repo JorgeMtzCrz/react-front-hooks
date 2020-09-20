@@ -12,7 +12,7 @@ const LoadScreen = (props) => {
   return (
     <>
       <div>
-        Loading...
+        Loading ...
       </div>
       <div>
         <p>
@@ -21,7 +21,7 @@ const LoadScreen = (props) => {
       </div>
     </>
   );
-  
+
 }
 
 export default LoadScreen;
