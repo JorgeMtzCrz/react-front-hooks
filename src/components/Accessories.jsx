@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import useSWR from 'swr';
+import { ALL_ACCESSORIES, ALL_FETCHER } from '../services/products_service';
 import NavbarSolid from './NavbarSolid';
-import Footer from './Footer';
-import BannerEmail from './BannerEmail';
+import Footer from './Footer'
+import BannerEmail from './BannerEmail'
 import {MyContext} from '../CartContext'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import LoadScreen from './Loading'
+
+
 // USER STYLING
 import '../assets/css/prodPages.css'
 
@@ -12,14 +17,14 @@ import stock from '../assets/images/lap.png'
 
 
 
-function Accesories(props) {
+function Accessories(props) {
+  const { data } = useSWR(ALL_ACCESSORIES, ALL_FETCHER)
+  const accessories = data && data.accessories
+  if(!accessories) return <LoadScreen />
   return (
     <>
     <NavbarSolid/>
-    <div className="discount-green">
-    <p>-50% OFF in all store!</p>
-    <p>SHOP NOW!</p>
-    </div>
+
     <div className="container-products">
       <div className="side-products"></div>
 
@@ -54,4 +59,4 @@ function Accesories(props) {
   );
 }
 
-export default Accesories;
+export default Accessories;

@@ -14,6 +14,7 @@ import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
 import {MyContext} from '../CartContext'
 import cartImg from '../assets/icons/cart.svg'
 
+
 // USER STYLING
 import '../assets/css/navbar.css'
 
@@ -86,7 +87,7 @@ const NavbarSolid = (props) => {
         <Link to="/about"><p>ABOUT US</p></Link>
         <Link to="/hdtvs"><p>TVS & INSTALLS</p></Link>
         <Link to="/computers"><p>COMPUTERS</p></Link>
-        <Link to="/accesories"><p>ACCESSORIES</p></Link>
+        <Link to="/accessories"><p>ACCESSORIES</p></Link>
         <Link to="/audio"><p>HOME AUDIO</p></Link>
         <Link to="/payment-options"><p>PAYMENT SOLUTIONS</p></Link>
         <Link to="/blog"><p>BLOG</p></Link>

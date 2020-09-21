@@ -6,6 +6,7 @@ import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
 import { Link } from 'react-router-dom';
+import LoadScreen from './Loading'
 
 
 // USER STYLING
@@ -18,7 +19,7 @@ import stock from '../assets/images/lap.png'
 function Audio(props) {
   const { data } = useSWR(ALL_AUDIO, ALL_FETCHER)
   const audio = data && data.audio
-  if(!audio) return <h4>Loading...</h4>
+  if(!audio) return <LoadScreen />
   return (
     <>
     <NavbarSolid/>
@@ -30,9 +31,9 @@ function Audio(props) {
       <div className="side-products"></div>
       <div className="cards-products">
       <MyContext.Consumer>
-      
+
           {({addToCart})=>
-          
+
             audio.map((e,i)=>{
               return(
               <>

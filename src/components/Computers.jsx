@@ -6,7 +6,7 @@ import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
 import { Link } from 'react-router-dom';
-import LoadScreen from './loading.jsx';
+import LoadScreen from './Loading';
 
 // USER STYLING
 import '../assets/css/prodPages.css'

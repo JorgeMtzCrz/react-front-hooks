@@ -11,13 +11,15 @@ const LoadScreen = (props) => {
 
   return (
     <>
-      <div>
-        Loading ...
-      </div>
-      <div>
-        <p>
-          Big ol loading screen
-        </p>
+      <div className="loading-container">
+          <div>
+            Loading ...
+          </div>
+          <div>
+            <p>
+              Big ol loading screen
+            </p>
+          </div>
       </div>
     </>
   );

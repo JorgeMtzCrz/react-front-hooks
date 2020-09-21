@@ -3,7 +3,7 @@ import useSWR from 'swr'
 import { ACTIVE_URL, ALL_FETCHER } from '../services/card_service'
 
 
-import LoadScreen from './loading'
+import LoadScreen from './Loading'
 
 
 // User STYLING

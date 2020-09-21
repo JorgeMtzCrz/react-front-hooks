@@ -1,14 +1,14 @@
 import React, {createContext, useState} from 'react';
-import { ALL_ACCESORIES,  ALL_FETCHER } from './services/products_service'
+import { ALL_ACCESSORIES,  ALL_FETCHER } from './services/products_service'
 import useSWR from 'swr'
 
 
 export const MyContext = createContext()
 
 export default function ContextProvider(props) {
-  const { data } = useSWR(ALL_ACCESORIES, ALL_FETCHER)
+  const { data } = useSWR(ALL_ACCESSORIES, ALL_FETCHER)
   const [coupon, setCoupon] = useState(0)
-  
+
 
   const accesories = data && data.accesories
 
