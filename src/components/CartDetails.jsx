@@ -19,7 +19,7 @@ export default function CartDetails({setTable}) {
       <div className="cart-details">
       <div className="cart-product-details">
         <div className="banner-offer-cart">
-          <h2>RESERVATION IS CANCELED @ 7pm</h2>
+          <h2>RESERVATIONS ARE CANCELED @ 7pm</h2>
           <h2>You Can Always Choose Delivery!</h2>
         </div>
         <div className="bag-text">

@@ -22,10 +22,22 @@
 
 
 /*
-======      MOBILE VIEW      ========
+======      MOBILE & IPAD VIEW      ========
 */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+
+  .discount-green {
+    font-size: 1.3em;
+  }
+
+  .image-detail img {
+    object-fit: cover;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
 
   /* NOTE: product detail pages */
   .detail-box {
@@ -44,6 +56,11 @@
 
   .title-detail {
     width: 100%;
+  }
+
+
+  .title-detail p:last-child{
+    text-align: center;
   }
 
 

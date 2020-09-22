@@ -6,6 +6,7 @@ import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
 import bullet from '../assets/images/bullet.png'
+import LoadScreen from './Loading'
 
 // USER STYLING
 import '../assets/css/prodDetail.css'
@@ -20,13 +21,13 @@ const baseURL = 'http://localhost:3000/product'
 function ProductDetail(props) {
   const { data } = useSWR(`${baseURL}/detail/${props.match.params.id}`, ALL_FETCHER)
   const product = data && data.product
-  if(!product) return <h4>Loading...</h4>
+  if(!product) return <LoadScreen />
   return (
     <>
     <NavbarSolid/>
     <div className="discount-green">
-      <p>50% OFF in all store!</p>
-      <p>SHOP NOW!</p>
+      <p>RESERVE ONLINE, PAY IN PERSON</p>
+      <p>Shop eco. Shop Smart</p>
     </div>
     <div className="detail-product">
       <MyContext.Consumer>
@@ -43,7 +44,7 @@ function ProductDetail(props) {
                     <p className="description-product">{product.description}</p>
                     <button onClick={()=> addToCart(product)} className="button-detail-product">RESERVE</button>
                     <br />
-                  <p>If you're curious about our payment options <a href="/payment-options">CLICK HERE</a> to learn more. </p>
+                    <p>If you're curious about our payment options <a href="/payment-options">CLICK HERE</a> to learn more. </p>
                   </div>
                 </div>
                 <div className="specification-product">
