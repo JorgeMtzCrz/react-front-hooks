@@ -19,8 +19,8 @@ export default function CartDetails({setTable}) {
       <div className="cart-details">
       <div className="cart-product-details">
         <div className="banner-offer-cart">
-          <h2>-50% OFF in all store!</h2>
-          <h2>SHOP NOW!</h2>
+          <h2>RESERVATION IS CANCELED @ 7pm</h2>
+          <h2>You Can Always Choose Delivery!</h2>
         </div>
         <div className="bag-text">
           <p className="bag-text-green">My shopping bag item(s) {cart.length}</p>

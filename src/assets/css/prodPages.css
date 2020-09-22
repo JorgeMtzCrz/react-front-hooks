@@ -27,6 +27,10 @@
   height: 30%;
 }
 
+.card-product-no-banner {
+  height: 25% !important;
+}
+
 
 .product-price-section {
   width: 100%;
@@ -167,7 +171,7 @@
     }
 
     .card-product {
-      height: 66% !important;
+      height: 66%;
     }
 
 }

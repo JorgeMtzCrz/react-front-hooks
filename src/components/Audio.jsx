@@ -23,21 +23,16 @@ function Audio(props) {
   return (
     <>
     <NavbarSolid/>
-    <div className="discount-green">
-    <p>-50% OFF in all store!</p>
-    <p>SHOP NOW!</p>
-    </div>
     <div className="container-products">
       <div className="side-products"></div>
       <div className="cards-products">
       <MyContext.Consumer>
 
           {({addToCart})=>
-
             audio.map((e,i)=>{
               return(
               <>
-                <div key={i} className="card-product">
+                <div key={i} className="card-product card-product-no-banner">
                 <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="computer" /></Link>
                   <div className="product-price-section">
                         <h4 className="subtitle-card">{e.title}</h4>

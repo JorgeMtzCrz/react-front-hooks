@@ -18,9 +18,9 @@ import stock from '../assets/images/lap.png'
 
 
 function Accessories(props) {
-  const { data } = useSWR(ALL_ACCESSORIES, ALL_FETCHER)
-  const accessories = data && data.accessories
-  if(!accessories) return <LoadScreen />
+    const { data } = useSWR(ALL_ACCESSORIES, ALL_FETCHER)
+    const accessories = data && data.accessories
+    if(!accessories) return <LoadScreen />
   return (
     <>
     <NavbarSolid/>
@@ -31,13 +31,12 @@ function Accessories(props) {
       <div className="cards-products">
       <MyContext.Consumer>
 
-          {({ cart, addToCart, accesories})=>
-            !accesories ? <h4>Loading...</h4>:
-            accesories.map((e,i)=>{
+          {({addToCart})=>
+            accessories.map((e,i)=>{
               return(
               <>
-                <div key={i} className="card-product">
-                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="computer" /></Link>
+                <div key={i} className="card-product card-product-no-banner">
+                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="Great Quality and better prices" /></Link>
                   <div className="product-price-section">
                         <h4 className="subtitle-card">{e.title}</h4>
                         <p className="subtitle-card">${e.price}</p>
