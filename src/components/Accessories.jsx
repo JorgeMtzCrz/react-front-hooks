@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import useSWR from 'swr';
+import { ALL_ACCESSORIES, ALL_FETCHER } from '../services/products_service';
 import NavbarSolid from './NavbarSolid';
-import Footer from './Footer';
-import BannerEmail from './BannerEmail';
+import Footer from './Footer'
+import BannerEmail from './BannerEmail'
 import {MyContext} from '../CartContext'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import LoadScreen from './Loading'
+
+
 // USER STYLING
 import '../assets/css/prodPages.css'
 
@@ -12,27 +17,26 @@ import stock from '../assets/images/lap.png'
 
 
 
-function Accesories(props) {
+function Accessories(props) {
+    const { data } = useSWR(ALL_ACCESSORIES, ALL_FETCHER)
+    const accessories = data && data.accessories
+    if(!accessories) return <LoadScreen />
   return (
     <>
     <NavbarSolid/>
-    <div className="discount-green">
-    <p>-50% OFF in all store!</p>
-    <p>SHOP NOW!</p>
-    </div>
+
     <div className="container-products">
       <div className="side-products"></div>
 
       <div className="cards-products">
       <MyContext.Consumer>
 
-          {({ cart, addToCart, accesories})=>
-            !accesories ? <h4>Loading...</h4>:
-            accesories.map((e,i)=>{
+          {({addToCart})=>
+            accessories.map((e,i)=>{
               return(
               <>
-                <div key={i} className="card-product">
-                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="computer" /></Link>
+                <div key={i} className="card-product card-product-no-banner">
+                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="Great Quality and better prices" /></Link>
                   <div className="product-price-section">
                         <h4 className="subtitle-card">{e.title}</h4>
                         <p className="subtitle-card">${e.price}</p>
@@ -54,4 +58,4 @@ function Accesories(props) {
   );
 }
 
-export default Accesories;
+export default Accessories;

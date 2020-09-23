@@ -16,39 +16,13 @@ const BannerEmail = (props) => {
   const email = form.email
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
-  const sendEmail = async e=>{
-    e.preventDefault()
-    if(form.email === undefined ){
-      Swal.fire(
-        'Something went wrong!',
-        'The field email is required to join',
-        'error'
-      )
-    }else{
-        axios.post(baseURL, email)
-        .then(({data})=>{
-          Swal.fire(
-            'Good job!',
-            'Now you joined in Best Deal in Town!',
-            'success'
-          )
-        })
-        .catch(err =>{
-          Swal.fire(
-            'Something went wrong!',
-            'Try again in a few minutes',
-            'error'
-          )
-        })
-    }
-  }
+
   return (
     <>
       <div className="banner-email">
         <div className="info-banner">
             <p className="banner-text">Receive Exclusive Offers!</p>
-
-            <Button onClick={toggle} className="banner-button">Click Here</Button>
+            <Button onClick={toggle} className="banner-button">SIGN UP NOW!</Button>
         </div>
       </div>
       <div className="testi-spacer"></div>

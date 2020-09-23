@@ -14,6 +14,7 @@ import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
 import {MyContext} from '../CartContext'
 import cartImg from '../assets/icons/cart.svg'
 
+
 // USER STYLING
 import '../assets/css/navbar.css'
 
@@ -38,7 +39,7 @@ const NavbarSolid = (props) => {
     <div>
       <div className="navbar-logo">
         <div className="navbar-container" >
-          <a href="/"> <img className="logo" src={altLogo} alt="BDIT Logo" /> </a>
+          <a href="/"> <img className="logo" src={altLogo} alt="BDIT Logo" /></a>
 
         <div className="contactl">
             <a href="tel:303-593-0581">
@@ -56,7 +57,7 @@ const NavbarSolid = (props) => {
             <Form className="form-content-container">
                   <FormGroup className="">
                     <InputGroup>
-                      <Input id="search-input" className="banner-input" placeholder="What are you looking for?" type="text" />
+                      <Input id="search-inputs" className="banner-input" placeholder="What are you looking for?" type="text" />
                       <InputGroupAddon addonType="append">
                         <InputGroupText style={{backgroundColor:"white"}}>
                           <FontAwesomeIcon className="search-icon" style={{color:"black"}} icon={faSearch} />
@@ -65,6 +66,20 @@ const NavbarSolid = (props) => {
                     </InputGroup>
                   </FormGroup>
             </Form>
+            <MyContext.Consumer>
+
+              {
+                ({cart})=>{
+                  return(
+                    <Link className="cartIcon" to="/cart">
+                      <img style={{display:'inline', marginTop: "2px", gridRow:"1/3"}} src={cartImg} alt="cart-icon"/>
+                      <span><span>{cart.length}</span></span>
+                    </Link>
+                  )
+
+                }
+              }
+            </MyContext.Consumer>
           </div>
         </div>
       </div>
@@ -72,24 +87,10 @@ const NavbarSolid = (props) => {
         <Link to="/about"><p>ABOUT US</p></Link>
         <Link to="/hdtvs"><p>TVS & INSTALLS</p></Link>
         <Link to="/computers"><p>COMPUTERS</p></Link>
-        <Link to="/accesories"><p>ACCESSORIES</p></Link>
+        <Link to="/accessories"><p>ACCESSORIES</p></Link>
         <Link to="/audio"><p>HOME AUDIO</p></Link>
         <Link to="/payment-options"><p>PAYMENT SOLUTIONS</p></Link>
         <Link to="/blog"><p>BLOG</p></Link>
-        {/*<MyContext.Consumer>
-
-          {
-            ({cart})=>{
-              return(
-                <Link to="/cart">
-                  <img style={{marginTop: "8px"}} src={cartImg} alt="cart-icon"/>
-                  <span><p>{cart.length}</p></span>
-                </Link>
-              )
-
-            }
-          }
-        </MyContext.Consumer>*/}
         <a href="#" className="icon" onClick={myFunction}>
         <FontAwesomeIcon icon={faBars} />
         </a>

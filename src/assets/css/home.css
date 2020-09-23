@@ -19,51 +19,73 @@
     flex-direction: column;
 }
 
+.carousel-img-mobile {
+  display: none;
+}
+
 
 /*
   ======      MOBILE VIEW      ========
   */
 
-@media screen and (max-width: 500px) {
-    /* Home Carousel */
+@media screen and (max-width: 700px) {
 
-    .slider-wrapper {
-        padding: 4%;
+    /* Home Carousel */
+    .carousel-group-container {
+      display: flex;
+      flex-direction: column !important;
+      min-height: 575px;
     }
+
+    .carousel-container {
+      width: 100% !important;
+    }
+
+    /* Image locaiton switch for mobile */
+    .carousel-img-mobile {
+      display: block !important;
+    }
+    .carousel-img {
+      display: none !important;
+    }
+
     .title-header,
     .subtitle-header,
-    .description-header,
-    .button-header {
+    .description-header {
         padding: 2%;
     }
 
     .title-header {
-      font-size: 2em;
+      font-size: 1.8em;
     }
 
     .subtitle-header {
         font-size: 2em;
     }
+
     .button-header {
-        margin: 2%;
-        z-index: 10 !important;
+      margin: 5% auto;
+      width: 100%;
+      height: 80px;
+      z-index: 10 !important;
     }
+
+    .carousel .slide img {
+      object-fit: contain;
+      max-height: 250px !important;
+    }
+
+    /* END Carousel */
+
+
     .main-home-section-title {
         padding: 4%;
         text-align: center;
     }
+
     .button-card-blue,
     .button-card-green {
         width: 100%;
-    }
-
-    .carousel-img {
-      margin: auto;
-    }
-
-    .carousel-img img {
-      min-height: 200px;
-      max-height: 300px;
     }
 
 }
@@ -73,7 +95,7 @@
   ======      IPAD VIEW      ========
   */
 
-@media (max-width: 1030px) and (min-width: 500px) {
+@media (max-width: 1030px) and (min-width: 701px) {
     .carousel-container {
         width: 50%;
         display: flex;
@@ -246,7 +268,7 @@
  }
 
 
- @media (max-width: 500px) and (min-width: 200px) {
+ @media (max-width: 600px)  {
 
    .offerSection {
      display: none;

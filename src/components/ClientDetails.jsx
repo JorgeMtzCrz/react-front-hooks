@@ -13,7 +13,7 @@ export default function ClientDetails({setTable}) {
     telephone: form.telephone
   }
 
-  
+
   return (
     <>
     <MyContext.Consumer>
@@ -27,26 +27,25 @@ export default function ClientDetails({setTable}) {
       <div className="cart-client-details">
         <p className="options-cart bag-text-green">PERSONAL INFO</p>
         <p className="text-prices-detail">Please, fill in the blanks with the information of the person who
-        is going to pickup your products. We will ask for your number order
-        and for an ID.</p>
-        
+        is going to pickup your products.</p>
+
         <span className="details-row">
           <FormGroup className="group-form">
-            <label className="text-prices-detail">First name</label>
-            <input onChange={handleInput} className="input-client" type="text" name="firstname" id="firstname"/>
+            <label className="text-prices-detail">First Name*</label>
+            <input required onChange={handleInput} className="input-client" type="text" name="firstname" id="firstname"/>
           </FormGroup>
           <FormGroup className="group-form" >
-            <label className="text-prices-detail">Last name</label>
-            <input onChange={handleInput} className="input-client" type="text" name="lastname" id="lastname"/>
+            <label className="text-prices-detail">Last Name*</label>
+            <input required onChange={handleInput} className="input-client" type="text" name="lastname" id="lastname"/>
           </FormGroup>
         </span>
           <FormGroup className="group-form">
-            <label className="text-prices-detail">Email</label>
-            <input onChange={handleInput} className="input-client" type="email" name="email" id="email"/>
+            <label className="text-prices-detail">Email*</label>
+            <input required onChange={handleInput} className="input-client" type="email" name="email" id="email"/>
           </FormGroup>
           <FormGroup className="group-form">
-            <label className="text-prices-detail">Telephone</label>
-            <input onChange={handleInput} className="input-client" type="text" name="telephone" id="telephone"/>
+            <label className="text-prices-detail">Telephone*</label>
+            <input required onChange={handleInput} className="input-client" type="text" name="telephone" id="telephone"/>
           </FormGroup>
 
       </div>

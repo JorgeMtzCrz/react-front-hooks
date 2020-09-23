@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {MyContext} from '../CartContext'
 
 
+// User STYLING
+import '../assets/css/cartdetail.css'
+
 
 
 export default function CartDetails({setTable}) {
@@ -16,20 +19,20 @@ export default function CartDetails({setTable}) {
       <div className="cart-details">
       <div className="cart-product-details">
         <div className="banner-offer-cart">
-          <h2>-50% OFF in all store!</h2>
-          <h2>SHOP NOW!</h2>
+          <h2>RESERVATIONS ARE CANCELED @ 7pm</h2>
+          <h2>You Can Always Choose Delivery!</h2>
         </div>
         <div className="bag-text">
           <p className="bag-text-green">My shopping bag item(s) {cart.length}</p>
           <p className="bag-text-blue">TOTAL: ${subtotal}</p>
         </div>
         {cart.map((e,i)=>{
-          
+
           return(
             <>
               <div className="product-detail-cart mb-5">
                 <div className="img-detail-cart">
-                  <img width="200px" height="120px" src={e.img} alt="img-product" />
+                  <img src={e.img} alt="img-product" />
                 </div>
                 <div className="fields-detail-cart">
                   <p className="bag-text-green">{e.title}</p>
@@ -41,7 +44,7 @@ export default function CartDetails({setTable}) {
                   <p className="bag-text-blue">$ {e.discount ? e.discount : 0} OFF</p>
                 </div>
               </div>
-              
+
             </>
           )
         })}

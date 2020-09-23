@@ -6,6 +6,7 @@ import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 
 import Installs from './Installs';
+import LoadScreen from './Loading';
 
 import {MyContext} from '../CartContext'
 
@@ -22,13 +23,13 @@ import { Link } from 'react-router-dom';
 function Hdtvs(props) {
   const { data } = useSWR(ALL_HDTVS, ALL_FETCHER)
   const hdtvs = data && data.hdtvs
-  if(!hdtvs) return <h4>Loading...</h4>
+  if(!hdtvs) return <LoadScreen />
   return (
     <>
     <NavbarSolid/>
     <div className="discount-green">
-    <p>50% OFF in all store!</p>
-    <p>SHOP NOW!</p>
+    <p>100% eco-Electronic TVs!</p>
+    <small>Save the environment, save the wallet</small>
     </div>
     <div className="container-products">
       <div className="side-products"></div>

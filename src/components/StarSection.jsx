@@ -26,7 +26,7 @@ function StarSection(props) {
     <>
     <div style={{display:"flex", width:"100%", alignItems:"center", flexDirection:"column"}}>
       <div className="main-home-section-title" style={{display: 'flex', alignItems: "center", alignContent:"center"}}>
-        <h3 style={{color:"#003366", fontSize:"30px"}}>#1 eco-Electronic Store in Denver</h3>
+        <h3 className="text-green" style={{fontSize:"40px"}}>#1 eco-Electronic Store in Denver</h3>
       </div>
       <div className="stars-aligned" style={{display:"flex", width:"100%", flexDirection:"row", justifyContent:"space-around"}}>
         <div style={{display:"flex", alignItems:"center", alignContent:"center", flexDirection:"column"}}>

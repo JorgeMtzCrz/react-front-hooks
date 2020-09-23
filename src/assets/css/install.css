@@ -1,4 +1,9 @@
-
+/*
+====    Installs Container     ====
+*/
+.install-container {
+  padding: 0 3%;
+}
 
 .install-content-container {
   text-align: center;
@@ -10,20 +15,19 @@
   margin-bottom: 5%;
 }
 
-
 .install-content-container > img {
   width: 28%;
 }
 
 .install-content-container > div {
-  margin-top: 10%;
+  margin-top: 15%;
 }
 
 .install-content-container a {
   box-shadow: 0 0 5px 5px lightgray;
-  padding: 2% 1%;
+  padding: 2% 5%;
   border-radius: 10px;
-  min-width: 200px !important;
+  min-width: 250px !important;
 }
 
 .install-content-container a:hover {
@@ -37,22 +41,35 @@
 }
 
 
+
+/*
+====    Installs Pricing     ====
+*/
+
 .install-pricing-container {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 45% 45% auto;
-  min-height: 400px;
+  grid-template-columns: 45% 10% 45%;
+  grid-template-rows: auto  auto;
+  min-height: 300px;
+  width: 80%;
+  margin: 10% auto !important;
 }
 
 
 .install-pricing-container p {
-  font-size: 4em !important;
+  font-size: 5em !important;
   color: #96BA27;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px 0px lightgray;
+}
+
+#pricing-2 {
+  grid-column: 3;
 }
 
 .install-pricing-container small {
-  grid-row: 3;
-  grid-column: 1 / 3;
+  grid-row: 2-top;
+  grid-column: 1 / 5;
   font-size: 1.3em;
 }
 
@@ -63,5 +80,65 @@
 }
 
 .install-cta {
-  width: 100%
+  width: 100%;
+  margin-top: 2% !important;
+}
+
+
+/*
+======      MOBILE VIEW      ========
+*/
+
+@media screen and (max-width: 589px) and (min-width: 350px) {
+
+  .install-pricing-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .install-content-container > div p {
+    font-size: 1.5em;
+    margin: 20% auto;
+  }
+
+  .install-content-container a {
+    padding: 5% 10%;
+    border-radius: 3px;
+    min-width: 250px !important;
+    width: 100%;
+  }
+
+
+  .install-content-container > img {
+    width: 32%;
+  }
+
+}
+
+
+/*
+======      IPAD VIEW      ========
+*/
+
+@media screen and (max-width: 739px) and (min-width: 590px) {
+
+  .install-pricing-container div {
+    font-size: .8em;
+  }
+
+  .install-pricing-container div h3 {
+    font-size: 1em;
+  }
+
+}
+
+
+/*
+======      DESKTOP VIEW      ========
+*/
+
+@media screen and (max-width: 1170px) and (min-width: 740px) {
+  .install-pricing-container div h3 {
+    font-size: 1em;
+  }
 }

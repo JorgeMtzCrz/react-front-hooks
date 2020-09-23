@@ -10,6 +10,7 @@ code {
 }
 
 
+<<<<<<< HEAD
 /* CART */
 
 .cart-breadcrumb {
@@ -318,6 +319,8 @@ code {
     margin: 0;
     padding: 0;
 }
+=======
+>>>>>>> 3a83b11ced8c6f7167c8b4e381c00294e941332b
 
 .cards-home {
     display: flex;

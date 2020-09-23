@@ -12,7 +12,7 @@ const service = axios.create({
 
 export const ALL_HDTVS = baseURL + '/hdtvs'
 export const ALL_COMPUTERS = baseURL + '/computers'
-export const ALL_ACCESORIES = baseURL + '/accesories'
+export const ALL_ACCESSORIES = baseURL + '/accessories'
 export const ALL_AUDIO = baseURL + '/audio'
 
 

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import NavbarSolid from './NavbarSolid';
 import BannerEmail from './BannerEmail';
@@ -8,6 +9,9 @@ import '../assets/css/blog.css';
 
 // IMAGES
 import blog1 from '../assets/images/blog-1.png'
+import blog2 from '../assets/images/blog-2.png'
+
+
 
 function PaymentsOps(props) {
 
@@ -33,13 +37,13 @@ function PaymentsOps(props) {
             <p>Get a quick intro on how to boost your productivity with Apple Computers</p>
           </div>
         </a>
-        <div className="blog-ex">
-          example 2
-        </div>
-        <div className="blog-ex">
-        </div>
-        <div className="blog-ex">
-        </div>
+        <a href="https://bddblog.netlify.app/pages/tips-tricks.html#tt-091620">
+          <div className="blog-ex">
+            <img src={blog2} />
+            <h1>Shortcuts To Success (for computers)</h1>
+            <p>Get a quick intro on how to boost your productivity with Apple Computers</p>
+          </div>
+        </a>
       </div>
 
         <div class="clearfix footer_margin"></div>

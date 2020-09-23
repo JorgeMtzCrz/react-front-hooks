@@ -1,0 +1,67 @@
+
+
+/*
+================
+  Product Detail Card
+================
+*/
+
+.image-detail img {
+  width: 100%;
+  max-height: 400px;
+}
+
+.product-detail-cart {
+  width: 100%;
+  padding: 2%;
+  margin-left: 2%;
+  left: 0;
+}
+
+
+
+
+/*
+======      MOBILE & IPAD VIEW      ========
+*/
+
+@media screen and (max-width: 500px) {
+
+  .discount-green {
+    font-size: 1.3em;
+  }
+
+  .image-detail img {
+    object-fit: cover;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+  /* NOTE: product detail pages */
+  .detail-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-detail {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .description-product {
+    height: 100%;
+  }
+
+  .title-detail {
+    width: 100%;
+  }
+
+
+  .title-detail p:last-child{
+    text-align: center;
+  }
+
+
+}

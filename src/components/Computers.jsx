@@ -6,6 +6,7 @@ import Footer from './Footer';
 import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
 import { Link } from 'react-router-dom';
+import LoadScreen from './Loading';
 
 // USER STYLING
 import '../assets/css/prodPages.css'
@@ -18,13 +19,13 @@ import stock from '../assets/images/lap.png'
 function Computers(props) {
   const {data} = useSWR(ALL_COMPUTERS, ALL_FETCHER)
   const computers = data && data.computers
-  if(!computers) return <h4>Loading...</h4>
+  if(!computers) return <LoadScreen />
   return (
     <>
     <NavbarSolid/>
     <div className="discount-green">
-    <p>-50% OFF in all store!</p>
-    <p>SHOP NOW!</p>
+    <p>100% eco-Electronic computers!</p>
+    <small>Save the environment, save the wallet</small>
     </div>
     <div className="container-products">
       <div className="side-products"></div>
