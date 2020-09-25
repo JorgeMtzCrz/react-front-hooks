@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, {useState, useEffect} from 'react';
 import {
   Form,
   FormGroup,
@@ -13,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons'
 import {MyContext} from '../CartContext'
 import cartImg from '../assets/icons/cart.svg'
+import axios from 'axios'
 
 
 // USER STYLING
@@ -24,16 +24,29 @@ import altLogo from '../assets/images/altLogo-1.png'
 
 
 const NavbarSolid = (props) => {
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [products, setProducts] = useState([])
 
   function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
   }
-}
+
+  function handleSearch (event) {
+    setSearchTerm(event.target.value)
+    
+  }
+  useEffect(() => {
+    axios.get(`http://localhost:3000/product/search?title=${searchTerm}`)
+      .then(({data: {products}})=>{
+        setProducts(products)
+      })
+      .catch(err=> console.log(err))
+  }, [searchTerm,  setProducts]);
 
   return (
     <div>
@@ -57,15 +70,26 @@ const NavbarSolid = (props) => {
             <Form className="form-content-container">
                   <FormGroup className="">
                     <InputGroup>
-                      <Input id="search-inputs" className="banner-input" placeholder="What are you looking for?" type="text" />
+                      <Input onChange={handleSearch} value={searchTerm} id="search-inputs" className="banner-input" placeholder="What are you looking for?" type="text" />
                       <InputGroupAddon addonType="append">
                         <InputGroupText style={{backgroundColor:"white"}}>
                           <FontAwesomeIcon className="search-icon" style={{color:"black"}} icon={faSearch} />
                         </InputGroupText>
                       </InputGroupAddon>
+                      
                     </InputGroup>
+                    <ul className="search-div">
+                            { products.map((e,i)=>{
+                              return(
+                               searchTerm === ''? null : 
+                              <Link  to={`${e.url}`}><li className="search-li">{e.title}</li></Link> 
+                              )
+                            })}
+                    </ul>
                   </FormGroup>
             </Form>
+            
+
             <MyContext.Consumer>
 
               {

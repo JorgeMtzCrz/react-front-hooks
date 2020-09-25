@@ -1,31 +1,49 @@
 import React, {useState} from 'react';
 import {MyContext} from '../CartContext'
-import {FormGroup} from 'reactstrap'
-import useForm from '../hooks/useForm'
-
+import axios from 'axios'
+import Swal from 'sweetalert2'
 // User STYLING
 import '../assets/css/cartdetail.css'
 
 
+ const baseURL = 'http://localhost:3000/product/email'
 
 export default function SendCart({setTable}) {
-  const [form, handleInput]= useForm()
-  const client ={
-    firstname: form.firstname,
-    lastname: form.lastname,
-    email: form.email,
-    telephone: form.telephone
-  }
-
 
   return (
     <>
     <MyContext.Consumer>
-    {({cart, coupon, addClient, removeProduct })=>{
+    {({cart, coupon, client:{client}, addClient, removeProduct })=>{
       let num = Math.floor((Math.random() * 9999999999) + 1);
       const subtotal = cart.reduce((pv,cv)=> pv + cv.price, 0)
-      const discounts = cart.reduce((pv,cv)=> pv + cv.discount ? cv.discount : 0, 0)
-      const total = subtotal - discounts -coupon
+      const discounts = cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)
+      const total = subtotal - discounts - coupon
+      const handleSubmit =(e) =>{
+        e.preventDefault()
+        const data = {
+          email: client.email,
+          name: client.firstname,
+          products: cart,
+          order: num,
+          total: total
+        }
+        axios.post(baseURL, data)
+        .then(({data})=>{
+          Swal.fire(
+            'Good job!',
+            'Now you joined in Best Deal in Town!',
+            'success'
+          )
+        })
+        .catch(err =>{
+          Swal.fire(
+            'Something went wrong!',
+            'Try again in a few minutes',
+            'error'
+          )
+        })
+      }
+
       return(
       <div className="cart-details">
       <div className="cart-client-details">
@@ -72,7 +90,7 @@ export default function SendCart({setTable}) {
         <hr className="divider"/>
         <span className="details-row"><p className="options-cart">TOTAL:</p> <p className="options-cart">$ {total}</p></span>
 
-        <button onClick={()=> {addClient(client); setTable('3')}} className="button-cart-continue">SUBMIT ORDER</button>
+        <button  onClick={handleSubmit} className="button-cart-continue">SUBMIT ORDER</button>
       </div>
       </div>
       )

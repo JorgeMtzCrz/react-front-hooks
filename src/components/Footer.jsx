@@ -23,29 +23,29 @@ export default function Footer(props) {
         <div className="footer-column">
             <h4 className="subtitle-footer">About us</h4>
           <Link to={"/about"}><p>About us</p></Link>  
-          <Link><p>Site map</p></Link>
+          <Link to="#"><p>Site map</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Best Deal Denver</h4>
-            <Link><p>Store</p></Link>
-            <Link><p>How to buy?</p></Link>
-            <Link><p>Return policy</p></Link>
-            <Link><p>Electronic Bill</p></Link>
+            <Link to="#"><p>Store</p></Link>
+            <Link to="#"><p>How to buy?</p></Link>
+            <Link to="#"><p>Return policy</p></Link>
+            <Link to="#"><p>Electronic Bill</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Customer Service</h4>
-            <Link><p>Contact us</p></Link>
-            <Link><p>My Argyle Account</p></Link>
+            <Link to="#"><p>Contact us</p></Link>
+            <Link to="#"><p>My Argyle Account</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Legal</h4>
-            <Link><p>Privacy Policy</p></Link>
-            <Link><p>Legal Terms</p></Link>
+            <Link to="#"><p>Privacy Policy</p></Link>
+            <Link to="#"><p>Legal Terms</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Site Admin</h4>
-            <Link><p>Login</p></Link>
-            <Link><p>Argyle Admin</p></Link>
+            <Link to="#"><p>Login</p></Link>
+            <Link to="#"><p>Argyle Admin</p></Link>
             <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Progressive</a> </p>
             <p> <a href="https://businesscenter.synchronybusiness.com/portal/login">Synchrony</a> </p>
         </div>

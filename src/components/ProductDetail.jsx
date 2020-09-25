@@ -42,7 +42,7 @@ function ProductDetail(props) {
                     <p className="title-price">${product.price}</p>
                     <p className="title-product">{product.title}</p>
                     <p className="description-product">{product.description}</p>
-                    {/*<button onClick={()=> addToCart(product)} className="button-detail-product">RESERVE</button>*/}
+                    <button onClick={()=> addToCart(product)} className="button-detail-product">RESERVE</button>
                     <br />
                     <p>If you're curious about our payment options <a href="/payment-options">CLICK HERE</a> to learn more. </p>
                   </div>

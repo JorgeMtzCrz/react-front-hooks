@@ -1,19 +1,14 @@
 import React, {useState} from 'react';
-import useForm from '../hooks/useForm'
-import axios from 'axios'
-import Swal from 'sweetalert2'
-import { Input, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 // USER STYLING
 import '../assets/css/home.css'
 import Mailchimp from 'react-mailchimp-form'
 
 
-const baseURL = 'http://localhost:3000/subscriber'
+//const baseURL = 'http://localhost:3000/subscriber'
 // const baseURL = 'https://bestdealtest.herokuapp.com/subscriber/create'
 
 const BannerEmail = (props) => {
-  const [form, handleInput]= useForm()
-  const email = form.email
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
 
@@ -26,9 +21,9 @@ const BannerEmail = (props) => {
         </div>
       </div>
       <div className="testi-spacer"></div>
-      <Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
+      <Modal isOpen={modal} modalTransition={{ timeout: 100 }} backdropTransition={{ timeout: 1000 }}
         toggle={toggle} className={props.className}>
-        <ModalHeader toggle={toggle}>Receive the best offers</ModalHeader>
+        <ModalHeader toggle={toggle}>Receive the best offers. <br/> Subscribe to the Newsletter</ModalHeader>
         <ModalBody>
         <Mailchimp
         action='https://bestdealdenver.us7.list-manage.com/subscribe/post?u=2c978d5e0ee8e92b4ee843ea8&id=3deffbdbeb' 
@@ -63,7 +58,7 @@ const BannerEmail = (props) => {
             error: "An unexpected internal error has occurred.",
             empty: "You must write an e-mail.",
             duplicate: "Too many subscribe attempts for this email address",
-            button: "Subscribe!"
+            button: "SUBSCRIBE!"
           }
         }
         // Add a personalized class

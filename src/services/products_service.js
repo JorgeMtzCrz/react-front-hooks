@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-//const baseURL = 'http://localhost:3000/product'
-//const baseURL = 'https://bestdealtest.herokuapp.com/product'
-const baseURL = 'https://bestdealapp.herokuapp.com/product'
+const baseURL = 'http://localhost:3000/product'
+    //const baseURL = 'https://bestdealtest.herokuapp.com/product'
+    //const baseURL = 'https://bestdealapp.herokuapp.com/product'
 
 
 const service = axios.create({
@@ -20,7 +20,9 @@ export const ALL_FETCHER = async url => {
     const response = await fetch(url)
     return await response.json()
 }
+export const SEND_EMAIL = data => service.post('/email', data)
 
-export const CREATE_HEADER = data => service.post('/create', data)
 
-export const DELETE_HEADER = id => service.delete(`/delete/${id}`)
+export const CREATE_PRODUCT = data => service.post('/create', data)
+
+export const DELETE_PRODUCT = id => service.delete(`/delete/${id}`)

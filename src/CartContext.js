@@ -1,6 +1,7 @@
 import React, {createContext, useState} from 'react';
 import { ALL_ACCESSORIES,  ALL_FETCHER } from './services/products_service'
 import useSWR from 'swr'
+import Swal from 'sweetalert2'
 
 
 export const MyContext = createContext()
@@ -18,6 +19,11 @@ export default function ContextProvider(props) {
 
   const addToCart =(product)=>{
     setCart(prev => ([...prev, product] ))
+    Swal.fire(
+      `The product ${product.title} was added successfully `,
+      '',
+      'success'
+    )
   }
 
   const addClient = (client) =>{
