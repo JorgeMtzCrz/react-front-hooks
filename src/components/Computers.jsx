@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import useSWR from 'swr'
 import NavbarSolid from './NavbarSolid';
 import { ALL_COMPUTERS, ALL_FETCHER } from '../services/products_service'
@@ -7,16 +7,19 @@ import BannerEmail from './BannerEmail';
 import {MyContext} from '../CartContext'
 import { Link } from 'react-router-dom';
 import LoadScreen from './Loading';
+import {UncontrolledTooltip} from 'reactstrap'
 
 // USER STYLING
 import '../assets/css/prodPages.css'
 
 // IMAGES
-import stock from '../assets/images/lap.png'
+import tooltip from '../assets/images/toolquest.svg'
 
 
 
 function Computers(props) {
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+  const toggle = (id) => setTooltipOpen(!tooltipOpen);
   const {data} = useSWR(ALL_COMPUTERS, ALL_FETCHER)
   const computers = data && data.computers
   if(!computers) return <LoadScreen />
@@ -36,14 +39,20 @@ function Computers(props) {
             computers.map((e,i)=>{
               return(
               <>
-                <div className="card-product">
-                <Link  to={`${e.url}`}><img className="product-image" src={stock} alt="computer" /></Link>
-                  <div key={i}  className="product-price-section">
-                        <h4 className="subtitle-card">{e.title}</h4>
-                        <p className="subtitle-card">${e.price}</p>
-                        {/*<button onClick={()=> addToCart(e)} className="button-card-blue">RESERVE</button>*/}
+              <div key={e._id}  className="card-product">
+              <Link  to={`${e.url}`}> <img width="300px" height="250px" src={e.img} alt="hdtvs" /></Link>
+                <div  className="product-price-section">
+                  <h4 className="subtitle-card">{e.title}</h4>
+                  <p className="subtitle-card">${e.price}</p>
+                  <div className="tooltip-content">
+                  <button onClick={()=> addToCart(e)} className="button-card-blue">RESERVE</button>
+                  <img style={{margin:'10px'}} width="25px" src={tooltip} alt={"tooltip-src"+e._id} id={`tooltip`} />
                   </div>
+                  <UncontrolledTooltip placement="bottom" isOpen={tooltipOpen} target={`tooltip`} toggle={toggle}>
+                  Reserve your product, come to the store, pay and pick them up. Or choose a delivery date and time and pay when you receive them.  We will soon have an online payment solution that avoids fraud.
+                  </UncontrolledTooltip>
                 </div>
+              </div>
               </>
               )
             })

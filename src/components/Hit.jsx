@@ -36,7 +36,7 @@ function Hit(props) {
             </div>
             <div className="mt-5 container-hit">
               <img className="number-hit hit-right" src={three} alt="Img of numerical order: 3"/>
-              <img src={box} alt="box" alt="suppliers" className="mr-5 mobile-hit-icon hit-icons"/> <span className="text-why-black">We get them, do a full quality inspection, add whatever accessories are needed, then pass the savings on to you.</span>
+              <img src={box} alt="box" className="mr-5 mobile-hit-icon hit-icons"/> <span className="text-why-black">We get them, do a full quality inspection, add whatever accessories are needed, then pass the savings on to you.</span>
             </div>
             <div className="mt-5 container-hit">
               <img className="number-hit" src={four} alt="Img of numerical order: 4"/>

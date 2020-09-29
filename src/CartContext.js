@@ -35,8 +35,6 @@ export default function ContextProvider(props) {
       setCart(cartFilter)
   }
 
-  console.log(client)
-  console.log(cart)
   return (
     <>
     <MyContext.Provider value={{ cart, coupon, removeProduct, client, addToCart, addClient, accesories}}>

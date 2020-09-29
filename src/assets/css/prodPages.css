@@ -24,8 +24,12 @@
     margin: 5% 1%;
     justify-content: space-between;
     box-shadow: 1px 2px 5px 5px lightgray;
-    padding: 5% 0;
-    height: 30%;
+    padding: 3% 0;
+    height: 33%;
+    max-height: 33%;
+    width: 30%;
+    box-sizing: content-box;
+    overflow-block: hidden;
 }
 
 .card-product-no-banner {
@@ -36,6 +40,9 @@
     width: 100%;
     text-align: center;
     color: #96BA27;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .product-price-section p {

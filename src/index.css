@@ -257,6 +257,14 @@ code {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    box-sizing: content-box;
+}
+
+.tooltip-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
 }
 
 .why-section-container {
