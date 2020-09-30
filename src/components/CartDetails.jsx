@@ -15,7 +15,7 @@ export default function CartDetails({setTable}) {
       const subtotal = cart.reduce((pv,cv)=> pv + cv.price, 0)
       const discounts = cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)
       const total = subtotal - discounts -coupon
-      return(
+      return (
       <div className="cart-details">
       <div className="cart-product-details">
         <div className="banner-offer-cart">
@@ -28,7 +28,7 @@ export default function CartDetails({setTable}) {
         </div>
         {cart.map((e,i)=>{
 
-          return(
+          return (
             <>
               <div className="product-detail-cart mb-5">
                 <div className="img-detail-cart">
