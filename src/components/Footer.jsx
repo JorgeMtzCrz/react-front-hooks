@@ -4,6 +4,7 @@ import facebook from '../assets/images/facebook.png'
 
 // User STYLING
 import '../assets/css/footer.css'
+import { Link } from 'react-router-dom';
 
 
 export default function Footer(props) {
@@ -21,30 +22,30 @@ export default function Footer(props) {
       <div className="footer-column-content">
         <div className="footer-column">
             <h4 className="subtitle-footer">About us</h4>
-            <p>About us</p>
-            <p>Site map</p>
+          <Link to={"/about"}><p>About us</p></Link>  
+          <Link to="#"><p>Site map</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Best Deal Denver</h4>
-            <p>Store</p>
-            <p>How to buy?</p>
-            <p>Return policy</p>
-            <p>Electronic Bill</p>
+            <Link to="#"><p>Store</p></Link>
+            <Link to="#"><p>How to buy?</p></Link>
+            <Link to="#"><p>Return policy</p></Link>
+            <Link to="#"><p>Electronic Bill</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Customer Service</h4>
-            <p>Contact us</p>
-            <p>My Argyle Account</p>
+            <Link to="#"><p>Contact us</p></Link>
+            <Link to="#"><p>My Argyle Account</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Legal</h4>
-            <p>Privacy Policy</p>
-            <p>Legal Terms</p>
+            <Link to="#"><p>Privacy Policy</p></Link>
+            <Link to="#"><p>Legal Terms</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Site Admin</h4>
-            <p>Login</p>
-            <p>Argyle Admin</p>
+            <Link to="#"><p>Login</p></Link>
+            <Link to="#"><p>Argyle Admin</p></Link>
             <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Progressive</a> </p>
             <p> <a href="https://businesscenter.synchronybusiness.com/portal/login">Synchrony</a> </p>
         </div>
@@ -54,7 +55,7 @@ export default function Footer(props) {
         <img src={instagram} alt="instagram" />
       </div>
       <div className="copyright-footer">
-        <p >Best Deal Denver © 2020. All rights reserved.</p>
+        <p>Best Deal Denver © 2020. All rights reserved.</p>
       </div>
 
     </div>

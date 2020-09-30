@@ -67,7 +67,7 @@ export default function CartDetails({setTable}) {
         <hr className="divider"/>
         <span className="details-row"><p className="options-cart">TOTAL:</p> <p className="options-cart">$ {total}</p></span>
 
-        <button onClick={()=> setTable(2)} className="button-cart-continue">CONTINUE</button>
+        <button disabled={cart.length === 0 ? true : false} onClick={()=> setTable(2)} className="button-cart-continue">CONTINUE</button>
       </div>
       </div>
       )

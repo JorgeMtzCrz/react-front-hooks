@@ -40,7 +40,7 @@ function Accessories(props) {
                   <div className="product-price-section">
                         <h4 className="subtitle-card">{e.title}</h4>
                         <p className="subtitle-card">${e.price}</p>
-                        <button className="button-card-blue" onClick={()=> addToCart(e)}>RESERVE</button>
+                        {/*<button className="button-card-blue" onClick={()=> addToCart(e)}>RESERVE</button>*/}
                   </div>
                 </div>
               </>

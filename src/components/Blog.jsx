@@ -19,8 +19,8 @@ function PaymentsOps(props) {
     <>
     <NavbarSolid/>
 
-    <div class="inner-container main">
-      <div class="inner-container-content">
+    <div className="inner-container main">
+      <div className="inner-container-content">
         <h6>Practical Tips & Tricks to get the most out of YOUR tech</h6>
         <h1 className="title-green title-h1">Tips & Tricks | BDIT BLOG</h1>
 
@@ -28,25 +28,25 @@ function PaymentsOps(props) {
         <br />
 
       <h3>Check Out Some of Our Work Below</h3>
-        <p><a target="_blank" href="https://bddblog.netlify.app">CLICK HERE</a> to see all of our posts!</p>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://bddblog.netlify.app">CLICK HERE</a> to see all of our posts!</p>
       <div className="blog-exs-container">
         <a href="https://bddblog.netlify.app/pages/tips-tricks.html#tt-090820">
           <div className="blog-ex">
-            <img src={blog1} />
+            <img src={blog1} alt="blog-img"  />
             <h1>Shortcuts To Success (for computers)</h1>
             <p>Get a quick intro on how to boost your productivity with Apple Computers</p>
           </div>
         </a>
         <a href="https://bddblog.netlify.app/pages/tips-tricks.html#tt-091620">
           <div className="blog-ex">
-            <img src={blog2} />
+            <img src={blog2} alt="blog-img" />
             <h1>Shortcuts To Success (for computers)</h1>
             <p>Get a quick intro on how to boost your productivity with Apple Computers</p>
           </div>
         </a>
       </div>
 
-        <div class="clearfix footer_margin"></div>
+        <div className="clearfix footer_margin"></div>
           <br />
         <br />
 

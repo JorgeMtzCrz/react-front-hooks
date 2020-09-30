@@ -20,7 +20,7 @@ export default function ClientDetails({setTable}) {
     {({cart, coupon, addClient, removeProduct })=>{
 
       const subtotal = cart.reduce((pv,cv)=> pv + cv.price, 0)
-      const discounts = cart.reduce((pv,cv)=> pv + cv.discount ? cv.discount : 0, 0)
+      const discounts = cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)
       const total = subtotal - discounts -coupon
       return(
       <div className="cart-details">
@@ -28,7 +28,6 @@ export default function ClientDetails({setTable}) {
         <p className="options-cart bag-text-green">PERSONAL INFO</p>
         <p className="text-prices-detail">Please, fill in the blanks with the information of the person who
         is going to pickup your products.</p>
-
         <span className="details-row">
           <FormGroup className="group-form">
             <label className="text-prices-detail">First Name*</label>
@@ -47,7 +46,6 @@ export default function ClientDetails({setTable}) {
             <label className="text-prices-detail">Telephone*</label>
             <input required onChange={handleInput} className="input-client" type="text" name="telephone" id="telephone"/>
           </FormGroup>
-
       </div>
       <div className="cart-total">
         <p className="options-cart">OPTIONS</p>
@@ -67,7 +65,8 @@ export default function ClientDetails({setTable}) {
         <hr className="divider"/>
         <span className="details-row"><p className="options-cart">TOTAL:</p> <p className="options-cart">$ {total}</p></span>
 
-        <button onClick={()=> {addClient(client); setTable('3')}} className="button-cart-continue">CONTINUE</button>
+        <button  onClick={()=> {addClient(client); setTable('3')}} className="button-cart-continue">CONTINUE</button>
+        
       </div>
       </div>
       )
