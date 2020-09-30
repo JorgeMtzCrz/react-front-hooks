@@ -5,7 +5,7 @@ import '../assets/css/home.css'
 import Mailchimp from 'react-mailchimp-form'
 
 
-//const baseURL = 'http://localhost:3000/subscriber'
+const baseURL = 'http://localhost:3000/subscriber'
 // const baseURL = 'https://bestdealtest.herokuapp.com/subscriber/create'
 
 const BannerEmail = (props) => {
@@ -26,8 +26,8 @@ const BannerEmail = (props) => {
         <ModalHeader toggle={toggle}>Receive the best offers. <br/> Subscribe to the Newsletter</ModalHeader>
         <ModalBody>
         <Mailchimp
-        action='https://bestdealdenver.us7.list-manage.com/subscribe/post?u=2c978d5e0ee8e92b4ee843ea8&id=3deffbdbeb' 
-        
+        action='https://bestdealdenver.us7.list-manage.com/subscribe/post?u=2c978d5e0ee8e92b4ee843ea8&id=3deffbdbeb'
+
         //Adding multiple fields:
         fields={[
           {
