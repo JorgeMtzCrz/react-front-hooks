@@ -12,9 +12,10 @@ export default function CartDetails({setTable}) {
     <>
     <MyContext.Consumer>
     {({cart, coupon, removeProduct })=>{
-      const subtotal = cart.reduce((pv,cv)=> pv + cv.price, 0)
-      const discounts = cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)
-      const total = subtotal - discounts -coupon
+      const subtotal = parseFloat(Math.round(cart.reduce((pv,cv)=> pv + cv.price, 0)*100)/100).toFixed(2)
+      const discounts = parseFloat(Math.round(cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)*100)/100).toFixed(2)
+      const total = parseFloat(Math.round((subtotal - discounts - coupon)*100)/100).toFixed(2)
+      const couponFix = parseFloat(Math.round(coupon*100)/100).toFixed(2)
       return(
       <div className="cart-details">
       <div className="cart-product-details">
@@ -61,13 +62,13 @@ export default function CartDetails({setTable}) {
           <p className="text-prices-detail">PRICE DETAILS</p>
           <span className="details-row"><p className="text-prices-detail">SUBTOTAL:</p><p className="text-prices-detail">$ {subtotal}</p></span>
           <span className="details-row"><p className="text-prices-detail">DISCOUNTS:</p><p className="text-prices-detail">$ {discounts}</p></span>
-          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ 0</p></span>
-          <span className="details-row"><p className="text-prices-detail">COUPON DISCOUNT:</p> <p className="text-prices-detail">$ {coupon}</p></span>
+          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ 0.00</p></span>
+          <span className="details-row"><p className="text-prices-detail">COUPON DISCOUNT:</p> <p className="text-prices-detail">$ {couponFix}</p></span>
         </div>
         <hr className="divider"/>
         <span className="details-row"><p className="options-cart">TOTAL:</p> <p className="options-cart">$ {total}</p></span>
 
-        <button disabled={cart.length === 0 ? true : false} onClick={()=> setTable(2)} className="button-cart-continue">CONTINUE</button>
+        <button  onClick={()=> setTable(2)} className="button-cart-continue">CONTINUE</button>
       </div>
       </div>
       )

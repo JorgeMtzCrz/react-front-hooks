@@ -251,13 +251,15 @@ code {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    overflow: hidden;
 }
 
 .card-product {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    align-content: center;
 }
 
 .tooltip-content {

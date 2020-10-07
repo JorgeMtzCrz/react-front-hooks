@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import useSWR from 'swr';
-import {UncontrolledTooltip} from 'reactstrap'
 import { ALL_ACCESSORIES, ALL_FETCHER } from '../services/products_service';
 import NavbarSolid from './NavbarSolid';
 import Footer from './Footer'
@@ -8,7 +7,7 @@ import BannerEmail from './BannerEmail'
 import {MyContext} from '../CartContext'
 import { Link } from 'react-router-dom'
 import LoadScreen from './Loading'
-
+import ReactTooltip from 'react-tooltip'
 
 // USER STYLING
 import '../assets/css/prodPages.css'
@@ -20,8 +19,6 @@ import tooltip from '../assets/images/toolquest.svg'
 
 function Accessories(props) {
 
-  const [tooltipOpen, setTooltipOpen] = useState(false);
-  const toggle = (id) => setTooltipOpen(!tooltipOpen);
     const { data } = useSWR(ALL_ACCESSORIES, ALL_FETCHER)
     const accessories = data && data.accessories
     if(!accessories) return <LoadScreen />
@@ -39,17 +36,16 @@ function Accessories(props) {
               return(
               <>
               <div key={e._id}  className="card-product">
-              <Link  to={`${e.url}`}> <img width="300px" height="250px" src={e.img} alt="hdtvs" /></Link>
+              <Link  to={`${e.url}`}> <img width="100%" height="250px" src={e.img} alt="hdtvs" /></Link>
                 <div  className="product-price-section">
                   <h4 className="subtitle-card">{e.title}</h4>
                   <p className="subtitle-card">${e.price}</p>
                   <div className="tooltip-content">
                   <button onClick={()=> addToCart(e)} className="button-card-blue">RESERVE</button>
-                  <img style={{margin:'10px'}} width="25px" src={tooltip} alt={"tooltip-src"+e._id} id={`tooltip`} />
+                  <p data-tip="Reserve your product, come to the store, pay and pick them up. <br> Or choose a delivery date and time and pay when
+                     you receive them. <br> We will soon have an online payment solution that avoids fraud."><img style={{margin:'10px'}} width="25px" src={tooltip} alt={"tooltip-src"+e._id}/> </p>
                   </div>
-                  <UncontrolledTooltip placement="bottom" isOpen={tooltipOpen} target={`tooltip`} toggle={toggle}>
-                  Reserve your product, come to the store, pay and pick them up. Or choose a delivery date and time and pay when you receive them.  We will soon have an online payment solution that avoids fraud.
-                  </UncontrolledTooltip>
+                    <ReactTooltip effect="solid" multiline/>
                 </div>
               </div>
               </>

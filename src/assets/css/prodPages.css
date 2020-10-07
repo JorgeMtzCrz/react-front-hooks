@@ -28,8 +28,8 @@
     height: 33%;
     max-height: 33%;
     width: 30%;
-    box-sizing: content-box;
-    overflow-block: hidden;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
 .card-product-no-banner {
@@ -53,6 +53,10 @@
     font-weight: bold;
     font-size: 1.3em;
     color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
 }
 
 
@@ -72,6 +76,7 @@
         margin: 5% auto;
         padding: 5%;
         height: 10%;
+        width: 90%;
     }
 }
 
@@ -111,7 +116,7 @@
         display: none;
     }
     .card-product {
-        height: 40%;
+        height: 20%;
     }
     .card-product a img {
         width: 100%;
@@ -132,7 +137,7 @@
         height: 100%;
     }
     .card-product {
-        height: 70%;
+        height: 30%;
     }
     .card-product a img {
         width: 100%;
