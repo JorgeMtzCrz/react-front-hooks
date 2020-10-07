@@ -29,7 +29,7 @@ export default function CartDetails({setTable}) {
         </div>
         {cart.map((e,i)=>{
 
-          return(
+          return (
             <>
               <div className="product-detail-cart mb-5">
                 <div className="img-detail-cart">

@@ -20,6 +20,7 @@
         "react-datetime": "^3.0.4",
         "react-datetime-picker": "^3.0.4",
         "react-dom": "^16.13.1",
+        "react-mailchimp-email-signup-form": "^1.0.4",
         "react-mailchimp-form": "^1.0.2",
         "react-multi-carousel": "^2.5.5",
         "react-responsive-carousel": "^3.2.9",

@@ -9296,6 +9296,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-mailchimp-email-signup-form@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-mailchimp-email-signup-form/-/react-mailchimp-email-signup-form-1.0.4.tgz#06ddb1113cc5cffa9f41fc49da3ea12d664ff814"
+  integrity sha512-L7j+nfcdiVqELm8S+tXKQAJ7qLH9iJYRjRwpCu6K9ymKTrh6gPBKyXiCy0JKeRBpSSePgw+QgHzxJltqXf7/ig==
+
 react-mailchimp-form@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-mailchimp-form/-/react-mailchimp-form-1.0.2.tgz#e4dfdc6a36bb2fb274ea49f2b19f9d54bbdfe65f"

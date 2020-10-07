@@ -393,10 +393,22 @@
   margin: 2%;
 }
 
+.testi-section > img {
+  width: 50%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+
 .testi-section > div img:first-child {
   text-align: center;
   margin-left: 31%;
 }
+
+.react-multiple-carousel__arrow {
+  top: 30% !important;
+}
+
 
 /*
 ======      MOBILE VIEW      ========
@@ -481,14 +493,13 @@
 ======      DESKTOP LARGE VIEW      ========
 */
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
 
   .react-multi-carousel-item {
     margin: 0;
   }
 
 }
-
 
 
 /*
