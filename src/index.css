@@ -246,7 +246,7 @@ code {
 }
 
 .cards-products {
-    width: 80%;
+    width: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

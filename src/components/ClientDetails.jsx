@@ -1,43 +1,95 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {MyContext} from '../CartContext'
 import {FormGroup} from 'reactstrap'
 import useForm from '../hooks/useForm'
 import {Label, Input} from 'reactstrap'
 import {InlineWidget} from 'react-calendly'
+import axios from 'axios'
+import LoaderDate from './LoaderDate'
+const isCalendlyScheduledEvent = (e) => {
+  return e.data.event &&
+         e.data.event.indexOf('calendly') === 0 &&
+         e.data.event === 'calendly.event_scheduled'
+}
 
 
 
 export default function ClientDetails({setTable}) {
-
+  const context = useContext(MyContext)
+  const {dateDelivery, addDateDelivery, setDelivery} = context
   const [form, handleInput]= useForm()
-  const [delivery, setDelivery] = useState('')
-  const deliveryPay = delivery.delivery === "delivery" ? 20 : 0 
-  const deliveryPayFix = parseFloat(Math.round(deliveryPay*100)/100).toFixed(2)
-  const client ={
-    firstname: form.firstname,
-    lastname: form.lastname,
-    email: form.email,
-    telephone: form.telephone,
-    delivery: deliveryPay
-  }
-  const handleRadio=(e)=>{
-    e.persist()
-    setDelivery(prevState => ({
-      ...prevState,
-      [e.target.name]: e.target.value
-    }))
+  const [spin, setSpin] = useState(false)
 
-  }
+ function compareValues(key, order = 'asc') {
+    return function innerSort(a, b) {
+        if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+            // property doesn't exist on either object
+            return 0;
+        }
 
+        const varA = (typeof a[key] === 'string') ?
+            a[key].toUpperCase() : a[key];
+        const varB = (typeof b[key] === 'string') ?
+            b[key].toUpperCase() : b[key];
+
+        let comparison = 0;
+        if (varA > varB) {
+            comparison = 1;
+        } else if (varA < varB) {
+            comparison = -1;
+        }
+        return (
+            (order === 'desc') ? (comparison * -1) : comparison
+        );
+    };
+}
+  useEffect(() => {
+    window.addEventListener(
+      'message',
+      (e) => {
+        if (isCalendlyScheduledEvent(e)) {
+          e.preventDefault()
+          setSpin(true)
+          axios({
+            method: 'GET',
+            url: 'https://v1.nocodeapi.com/jorgemtzcrz/calendly/MTxdBsAFNADfFWQA',
+          }).then(function (response) {
+            // handle success
+            e.preventDefault()
+            const created = response.data.collection.sort(compareValues('created_at', 'desc'))
+            addDateDelivery(created[0].start_time)
+            setSpin(false)
+          }).catch(function (error) {
+            // handle error
+            console.log(error);
+          })
+        }
+      }
+    )
+  }, [addDateDelivery, setDelivery])
+  
   return (
     <>
     <MyContext.Consumer>
-    {({cart, coupon, addClient, removeProduct })=>{
-
+    {({cart, coupon, addClient, delivery, addHour, handleRadio, removeProduct })=>{
+      const deliveryPay = delivery.delivery === "delivery" ? 20 : 0 
+      const deliveryPayFix = parseFloat(Math.round(deliveryPay*100)/100).toFixed(2)
       const subtotal = parseFloat(Math.round(cart.reduce((pv,cv)=> pv + cv.price, 0)*100)/100).toFixed(2)
       const discounts = parseFloat(Math.round(cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)*100)/100).toFixed(2)
       const total = parseFloat(Math.round((subtotal - discounts - coupon + deliveryPay)*100)/100).toFixed(2)
       const couponFix = parseFloat(Math.round(coupon*100)/100).toFixed(2)
+      const client ={
+        firstname: form.firstname,
+        lastname: form.lastname,
+        email: form.email,
+        telephone: form.telephone,
+        delivery: deliveryPay,
+
+      }
+      let date = new Date()
+      
+      let hour = (date.setHours(date.getHours() + 2) && date.getHours()) + ':' + date.getMinutes()
+
       return(
       <div className="cart-details">
       <div className="cart-client-details">
@@ -81,7 +133,7 @@ export default function ClientDetails({setTable}) {
           </Label>
         </FormGroup>
         <InlineWidget
-        url="https://calendly.com/bdit/delivery"
+        url="https://calendly.com/jorgemtzcrz/envio-bdd"
         pageSettings={{
           backgroundColor: 'ffffff',
           hideEventTypeDetails: false,
@@ -91,7 +143,7 @@ export default function ClientDetails({setTable}) {
         }}
         styles={{
           height: '1000px',
-          display:delivery.delivery==="delivery"?'block':"none"
+          display:!spin&&delivery.delivery==="delivery"&&dateDelivery===""?'block':"none"
         }}
         prefill={{
           email: '-',
@@ -99,15 +151,19 @@ export default function ClientDetails({setTable}) {
           
         }}
         />
-
-
+        <LoaderDate spin={spin}/>
+        <div style={{marginTop:'30px', textAlign: 'center', display: dateDelivery==="" ? 'none': 'block'}}>
+          <p className="text-prices-detail">
+          Your delivery has been scheduled.
+          </p>
+        </div>
 
       </div>
       <div className="cart-total">
         <p className="options-cart">OPTIONS</p>
         <div>
           <p className="text-prices-detail">COUPON</p>
-          <input className="coupon-input" type="text" name="coupon" id="coupon"/>
+          <input className="coupon-input" type="text" name="coupon" />
           <button className="coupon-button">APPLY</button>
         </div>
         <hr className="divider"/>
@@ -123,7 +179,7 @@ export default function ClientDetails({setTable}) {
         <hr className="divider"/>
         <span className="details-row"><p className="options-cart">TOTAL:</p> <p className="options-cart">$ {total}</p></span>
 
-        <button  onClick={()=> {addClient(client); setTable('3')}} className="button-cart-continue">CONTINUE</button>
+        <button  onClick={()=> {addClient(client); addHour(hour); setTable('3')}} className="button-cart-continue">CONTINUE</button>
         
       </div>
       </div>

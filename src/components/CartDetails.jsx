@@ -54,7 +54,7 @@ export default function CartDetails({setTable}) {
         <p className="options-cart">OPTIONS</p>
         <div>
           <p className="text-prices-detail">COUPON</p>
-          <input className="coupon-input" type="text" name="coupon" id="coupon"/>
+          <input className="coupon-input" type="text" name="coupon" />
           <button className="coupon-button">APPLY</button>
         </div>
         <hr className="divider"/>

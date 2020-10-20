@@ -1,11 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 // USER STYLING
 import '../assets/css/loading.css'
 
-
-const baseURL = 'http://localhost:3000/subscriber'
-// const baseURL = 'https://bestdealtest.herokuapp.com/subscriber/create'
 
 const LoadScreen = (props) => {
 

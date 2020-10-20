@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import instagram from '../assets/images/instagram.png'
 import facebook from '../assets/images/facebook.png'
+import Swal from 'sweetalert2'
 
 // User STYLING
 import '../assets/css/footer.css'
@@ -16,6 +17,22 @@ export default function Footer(props) {
       document.body.classList.remove("profile-page");
     };
   });
+
+  const openContactUs = () =>{
+    Swal.fire({
+      title: '<strong>Contact Us</strong>',
+      html:
+        '<a href="mailto:best.deal.in.denver@gmail.com">Email: best.deal.in.denver@gmail.com</a> '+
+        '<br/>'+
+        '<a href="tel:303-593-0581">Phone: 303 593 0581</a> ',
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText:
+        ' Ok!',
+    })
+  }
+
   return (
     <>
     <div className="footer-content">
@@ -23,36 +40,34 @@ export default function Footer(props) {
         <div className="footer-column">
             <h4 className="subtitle-footer">About us</h4>
           <Link to={"/about"}><p>About us</p></Link>  
-          <Link to="#"><p>Site map</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Best Deal Denver</h4>
             <Link to="#"><p>Store</p></Link>
             <Link to="#"><p>How to buy?</p></Link>
-            <Link to="#"><p>Return policy</p></Link>
-            <Link to="#"><p>Electronic Bill</p></Link>
+            <Link to="return-policy"><p>Return policy</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Customer Service</h4>
-            <Link to="#"><p>Contact us</p></Link>
-            <Link to="#"><p>My Argyle Account</p></Link>
+            <span className="span-a" style={{cursor:'pointer'}} onClick={openContactUs}><p>Contact us</p></span>
+            <Link to="//payment.roverpayapp.com/" target="_blank"><p>My Argyle Account</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Legal</h4>
-            <Link to="#"><p>Privacy Policy</p></Link>
-            <Link to="#"><p>Legal Terms</p></Link>
+            <Link to="privacy-policy"><p>Privacy Policy</p></Link>
+            <Link to="legal-terms"><p>Legal Terms</p></Link>
         </div>
         <div className="footer-column">
             <h4 className="subtitle-footer">Site Admin</h4>
-            <Link to="#"><p>Login</p></Link>
-            <Link to="#"><p>Argyle Admin</p></Link>
+            <Link to="//admin.bditdenver.com" target="_blank"><p>Login</p></Link>
+            <Link to="//manager.roverpayapp.com/login" target="_blank"><p>Argyle Admin</p></Link>
             <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Progressive</a> </p>
             <p> <a href="https://businesscenter.synchronybusiness.com/portal/login">Synchrony</a> </p>
         </div>
       </div>
       <div className="social-column-content">
-        <img  className="img-fb" src={facebook} alt="facebook" />
-        <img src={instagram} alt="instagram" />
+       <Link to="//facebook.com/DenverHDTV" target="_blank"><img  className="img-fb" src={facebook} alt="facebook" /></Link>
+        <Link to="//instagram.com/bestdealdenver" target="_blank"><img src={instagram} alt="instagram" /></Link>
       </div>
       <div className="copyright-footer">
         <p>Best Deal Denver © 2020. All rights reserved.</p>

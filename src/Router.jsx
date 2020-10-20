@@ -10,9 +10,14 @@ import ProductDetail from './components/ProductDetail'
 import Cart from './components/Cart'
 import PaymentsOps from './components/PaymentsOps'
 import Blog from './components/Blog'
+import ReturnPolicy from './components/ReturnPolicy'
+import LegalTerms from './components/LegalTerms'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import ScrollTop from './ScrollTop'
 
 const Router = () => (
   <BrowserRouter>
+  <ScrollTop>
     <Switch>
       <Route component={Home} exact path="/" />
       <Route component={Hdtvs} exact path="/hdtvs"/>
@@ -27,7 +32,11 @@ const Router = () => (
       <Route component={Cart} exact path="/cart"/>
       <Route component={PaymentsOps} exact path="/payment-options"/>
       <Route component={Blog} exact path="/blog"/>
+      <Route component={ReturnPolicy} exact path="/return-policy"/>
+      <Route component={LegalTerms} exact path="/legal-terms"/>
+      <Route component={PrivacyPolicy} exact path="/privacy-policy"/>
     </Switch>
+  </ScrollTop>
   </BrowserRouter>
 )
 

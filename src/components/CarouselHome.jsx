@@ -36,7 +36,7 @@ function CarouselHome(props) {
               <h2 className="title-header">{e.title}</h2>
               <h3 className="subtitle-header">{e.subtitle}</h3>
               <p className="description-header">{e.description}</p>
-            <Link to={e.url}> <button className="button-header">SEE MORE</button></Link> 
+            <Link to={`${e.url}`} target='_blank'> <button className="button-header">SEE MORE</button></Link> 
             </div>
             <div className="carousel-img" >
               <img alt={e.subtitle} width="100%" src={e.img} />

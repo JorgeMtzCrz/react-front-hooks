@@ -5,8 +5,6 @@ import '../assets/css/home.css'
 import Mailchimp from 'react-mailchimp-form'
 
 
-const baseURL = 'http://localhost:3000/subscriber'
-// const baseURL = 'https://bestdealtest.herokuapp.com/subscriber/create'
 
 const BannerEmail = (props) => {
   const [modal, setModal] = useState(false);

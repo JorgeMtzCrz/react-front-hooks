@@ -20,7 +20,7 @@ import '../assets/css/navbar.css'
 
 // IMAGES
 import logo from '../assets/images/logo.png'
-import altLogo from '../assets/images/altLogo-1.png'
+import altLogo from '../assets/images/bdit-logo.png'
 
 
 const NavbarSolid = (props) => {

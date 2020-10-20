@@ -16,9 +16,9 @@ import tooltip from '../assets/images/toolquest.svg'
 
 // IMAGES
 
-const baseURL = 'http://localhost:3000/product'
+//const baseURL = 'http://localhost:3000/product'
 //const baseURL = 'https://bestdealtest.herokuapp.com/product'
-//const baseURL = 'https://bestdealapp.herokuapp.com/product'
+const baseURL = 'https://bestdealapp.herokuapp.com/product'
 
 
 

@@ -4,20 +4,30 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 // User STYLING
 import '../assets/css/cartdetail.css'
+import { useHistory } from 'react-router-dom';
+import Moment from 'react-moment'
+import moment from 'moment';
 
 
- const baseURL = 'http://localhost:3000/product/email'
+
+
+ //const baseURL = 'http://localhost:3000/product/email'
+ const baseURL = 'https://bestdealapp.herokuapp.com/product/email'
 
 export default function SendCart({setTable}) {
+  const history =useHistory()
 
   return (
     <>
     <MyContext.Consumer>
-    {({cart, coupon, client:{client}, addClient, removeProduct })=>{
+    {({cart, coupon, client:{client},dateStore, setCart, delivery, addClient, removeProduct })=>{
+      const deliveryPay = delivery.delivery === "delivery" ? 20 : 0 
+      const deliveryPayFix = parseFloat(Math.round(deliveryPay*100)/100).toFixed(2)
       let num = Math.floor((Math.random() * 9999999999) + 1);
-      const subtotal = cart.reduce((pv,cv)=> pv + cv.price, 0)
-      const discounts = cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)
-      const total = subtotal - discounts - coupon
+      const subtotal = parseFloat(Math.round(cart.reduce((pv,cv)=> pv + cv.price, 0)*100)/100).toFixed(2)
+      const discounts = parseFloat(Math.round(cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)*100)/100).toFixed(2)
+      const total = parseFloat(Math.round((subtotal - discounts - coupon + deliveryPay)*100)/100).toFixed(2)
+      const couponFix = parseFloat(Math.round(coupon*100)/100).toFixed(2)
       const handleSubmit =(e) =>{
         e.preventDefault()
         const data = {
@@ -25,15 +35,56 @@ export default function SendCart({setTable}) {
           name: client.firstname,
           products: cart,
           order: num,
-          total: total
+          total: total,
+          delivery: deliveryPay,
+          dateStore: dateStore
         }
         axios.post(baseURL, data)
         .then(({data})=>{
-          Swal.fire(
-            'Good job!',
-            'Now you joined in Best Deal in Town!',
-            'success'
-          )
+          if(data === 'Email sent delivery'){
+            Swal.fire({
+              title: '<strong>Congrats</strong>',
+              icon: 'success',
+              html:
+                'Your reservation has been made. <br/> ' +
+                'You will receive a text message or phone call when we are on our way to deliver your items.<br/>' +
+                'Feel free to call us with any questions.<br/>'+
+                '303 593 0581',
+              showCloseButton: true,
+              showCancelButton: false,
+              focusConfirm: false,
+              confirmButtonText:
+                'Great!',
+            }).then((result) => {
+              if (result.isConfirmed) {
+                history.push('/')
+                setCart([])
+              }
+            })
+            
+          }
+          else if(data === 'Email sent store'){
+            Swal.fire({
+              title: '<strong>Congrats</strong>',
+              icon: 'success',
+              html:
+                'Your reservation has been made. <br/> ' +
+                'Remember to pick it up before 7:00 PM or your reservation will be cancelled. <br/>' +
+                'Feel free to call us with any questions.<br/>'+
+                '303 593 0581',
+              showCloseButton: true,
+              showCancelButton: false,
+              focusConfirm: false,
+              confirmButtonText:
+                'Great!',
+            }).then((result) => {
+              if (result.isConfirmed) {
+                history.push('/')
+                setCart([])
+              }
+            })
+          }
+          
         })
         .catch(err =>{
           Swal.fire(
@@ -47,9 +98,11 @@ export default function SendCart({setTable}) {
       return(
       <div className="cart-details">
       <div className="cart-client-details">
-        <p className="options-cart bag-text-green">PICKUP</p>
-        <p className="text-prices-detail">Your products are ready for your pickup! Remember you have only 2 hours to pick them up.
-        After that time, we do not guarantee they will be available.</p>
+        <p className="options-cart bag-text-green">{delivery.delivery === 'delivery' ? 'DELIVERY' : 'PICKUP'}</p>
+        <p className="text-prices-detail">
+        {delivery.delivery === 'delivery' ? 'Your delivery is set. We will send your products on the previously registered date. Please be sure to be at your address on that day at that time. Remember you will have to pay once you get your products.' : 
+        `Your products are ready for your pickup! Remember you have from now until ${dateStore} of today to pick them up. After that time, we do not guarantee they will be available.`}
+       </p>
 
         <p className="text-prices-detail">Your order is:</p>
         <p className="order-number">{num}</p>
@@ -84,8 +137,9 @@ export default function SendCart({setTable}) {
           <p className="options-cart bag-text-green">PRICE DETAILS</p>
           <span className="details-row"><p className="text-prices-detail">SUBTOTAL:</p><p className="text-prices-detail">$ {subtotal}</p></span>
           <span className="details-row"><p className="text-prices-detail">DISCOUNTS:</p><p className="text-prices-detail">$ {discounts}</p></span>
-          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ 0</p></span>
-          <span className="details-row"><p className="text-prices-detail">COUPON DISCOUNT:</p> <p className="text-prices-detail">$ {coupon}</p></span>
+          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ 0.00</p></span>
+          <span className="details-row"><p className="text-prices-detail">COUPON DISCOUNT:</p> <p className="text-prices-detail">$ {couponFix}</p></span>
+          <span className="details-row" style={{visibility:delivery.delivery==="delivery"?'visible':"hidden"}}><p className="text-prices-detail">DELIVERY:</p> <p className="text-prices-detail">$ {deliveryPayFix}</p></span>
         </div>
         <hr className="divider"/>
         <span className="details-row"><p className="options-cart">TOTAL:</p> <p className="options-cart">$ {total}</p></span>

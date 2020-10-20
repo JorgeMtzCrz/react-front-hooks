@@ -9,6 +9,9 @@ export const MyContext = createContext()
 export default function ContextProvider(props) {
   const { data } = useSWR(ALL_ACCESSORIES, ALL_FETCHER)
   const [coupon, setCoupon] = useState(0)
+  const [delivery, setDelivery] = useState('')
+  const [dateDelivery, setDateDelivery] = useState('')
+  const [dateStore, setDateStore] = useState(null)
 
 
   const accesories = data && data.accesories
@@ -16,6 +19,17 @@ export default function ContextProvider(props) {
   const [cart, setCart] = useState([])
   const [client, setClient] = useState({})
 
+  const handleRadio=(e)=>{
+    e.persist()
+    setDelivery(prevState => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    }))
+
+  }
+  const addDateDelivery = (date) =>{
+    setDateDelivery(date)
+  }
 
   const addToCart =(product)=>{
     setCart(prev => ([...prev, product] ))
@@ -26,18 +40,24 @@ export default function ContextProvider(props) {
     )
   }
 
+  
+
   const addClient = (client) =>{
     setClient(prev =>({...prev, client}))
+  }
+
+  const addHour = (hour) =>{
+    setDateStore(hour)
   }
 
   const removeProduct = (e, i) =>{
      const cartFilter = cart.filter((product,index,arr) =>index !== i )
       setCart(cartFilter)
   }
-
   return (
     <>
-    <MyContext.Provider value={{ cart, coupon, removeProduct, client, addToCart, addClient, accesories}}>
+    <MyContext.Provider 
+    value={{ cart, setCart, addHour, dateStore, setDateStore, coupon, addDateDelivery, setDelivery, removeProduct, client, addToCart, addClient, accesories, handleRadio, delivery, dateDelivery, setDateDelivery}}>
     {props.children}
     </MyContext.Provider>
     </>
