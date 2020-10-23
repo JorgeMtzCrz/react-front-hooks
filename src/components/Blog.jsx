@@ -30,14 +30,14 @@ function PaymentsOps(props) {
       <h3>Check Out Some of Our Work Below</h3>
         <p><a target="_blank" rel="noopener noreferrer" href="https://bddblog.netlify.app">CLICK HERE</a> to see all of our posts!</p>
       <div className="blog-exs-container">
-        <a href="https://bddblog.netlify.app/pages/tips-tricks.html#tt-090820">
+        <a target="_blank" rel="noopener noreferrer" href="https://bddblog.netlify.app/pages/tips-tricks.html#tt-090820">
           <div className="blog-ex">
             <img src={blog1} alt="blog-img"  />
             <h1>Shortcuts To Success (for computers)</h1>
             <p>Get a quick intro on how to boost your productivity with Apple Computers</p>
           </div>
         </a>
-        <a href="https://bddblog.netlify.app/pages/tips-tricks.html#tt-091620">
+        <a target="_blank" rel="noopener noreferrer" href="https://bddblog.netlify.app/pages/tips-tricks.html#tt-091620">
           <div className="blog-ex">
             <img src={blog2} alt="blog-img" />
             <h1>Shortcuts To Success (for computers)</h1>

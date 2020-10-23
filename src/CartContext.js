@@ -11,7 +11,7 @@ export default function ContextProvider(props) {
   const [coupon, setCoupon] = useState(0)
   const [delivery, setDelivery] = useState('')
   const [dateDelivery, setDateDelivery] = useState('')
-  const [dateStore, setDateStore] = useState(null)
+  const [tax, setTax] = ('')
 
 
   const accesories = data && data.accesories
@@ -42,13 +42,20 @@ export default function ContextProvider(props) {
 
   
 
-  const addClient = (client) =>{
-    setClient(prev =>({...prev, client}))
+  const addClient = (client, setTable) =>{
+    console.log(client)
+    if((client.firstname === undefined || "") ||(client.lastname===undefined||"")||(client.email===undefined||"")||(client.telephone===undefined||"")){
+      Swal.fire(
+        `Please complete the form`,
+        '',
+        'error'
+      )
+    }else{
+      setClient(prev =>({...prev, client}))
+      setTable('3')
+    }
   }
 
-  const addHour = (hour) =>{
-    setDateStore(hour)
-  }
 
   const removeProduct = (e, i) =>{
      const cartFilter = cart.filter((product,index,arr) =>index !== i )
@@ -57,7 +64,7 @@ export default function ContextProvider(props) {
   return (
     <>
     <MyContext.Provider 
-    value={{ cart, setCart, addHour, dateStore, setDateStore, coupon, addDateDelivery, setDelivery, removeProduct, client, addToCart, addClient, accesories, handleRadio, delivery, dateDelivery, setDateDelivery}}>
+    value={{ cart, setCart, coupon, addDateDelivery, setDelivery, removeProduct, client, addToCart, addClient, accesories, handleRadio, delivery, dateDelivery, setDateDelivery}}>
     {props.children}
     </MyContext.Provider>
     </>

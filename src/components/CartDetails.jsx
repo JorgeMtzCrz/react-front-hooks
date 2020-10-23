@@ -12,9 +12,11 @@ export default function CartDetails({setTable}) {
     <>
     <MyContext.Consumer>
     {({cart, coupon, removeProduct })=>{
+      
       const subtotal = parseFloat(Math.round(cart.reduce((pv,cv)=> pv + cv.price, 0)*100)/100).toFixed(2)
+      let tax =  Math.round((subtotal* 0.0775)*100)/100
       const discounts = parseFloat(Math.round(cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)*100)/100).toFixed(2)
-      const total = parseFloat(Math.round((subtotal - discounts - coupon)*100)/100).toFixed(2)
+      const total = parseFloat(Math.round((subtotal - discounts - coupon + tax)*100)/100).toFixed(2)
       const couponFix = parseFloat(Math.round(coupon*100)/100).toFixed(2)
       return(
       <div className="cart-details">
@@ -62,7 +64,7 @@ export default function CartDetails({setTable}) {
           <p className="text-prices-detail">PRICE DETAILS</p>
           <span className="details-row"><p className="text-prices-detail">SUBTOTAL:</p><p className="text-prices-detail">$ {subtotal}</p></span>
           <span className="details-row"><p className="text-prices-detail">DISCOUNTS:</p><p className="text-prices-detail">$ {discounts}</p></span>
-          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ 0.00</p></span>
+          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ {tax === 0 ? '0.00' : tax}</p></span>
           <span className="details-row"><p className="text-prices-detail">COUPON DISCOUNT:</p> <p className="text-prices-detail">$ {couponFix}</p></span>
         </div>
         <hr className="divider"/>

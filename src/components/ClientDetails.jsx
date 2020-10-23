@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {MyContext} from '../CartContext'
-import {FormGroup} from 'reactstrap'
+import {FormGroup, Form} from 'reactstrap'
 import useForm from '../hooks/useForm'
 import {Label, Input} from 'reactstrap'
 import {InlineWidget} from 'react-calendly'
@@ -71,12 +71,13 @@ export default function ClientDetails({setTable}) {
   return (
     <>
     <MyContext.Consumer>
-    {({cart, coupon, addClient, delivery, addHour, handleRadio, removeProduct })=>{
+    {({cart, coupon, addClient, delivery, handleRadio, removeProduct })=>{
       const deliveryPay = delivery.delivery === "delivery" ? 20 : 0 
       const deliveryPayFix = parseFloat(Math.round(deliveryPay*100)/100).toFixed(2)
       const subtotal = parseFloat(Math.round(cart.reduce((pv,cv)=> pv + cv.price, 0)*100)/100).toFixed(2)
+      let tax = Math.round((subtotal* 0.0775)*100)/100       
       const discounts = parseFloat(Math.round(cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)*100)/100).toFixed(2)
-      const total = parseFloat(Math.round((subtotal - discounts - coupon + deliveryPay)*100)/100).toFixed(2)
+      const total = parseFloat(Math.round((subtotal - discounts - coupon + deliveryPay + tax)*100)/100).toFixed(2)
       const couponFix = parseFloat(Math.round(coupon*100)/100).toFixed(2)
       const client ={
         firstname: form.firstname,
@@ -86,9 +87,7 @@ export default function ClientDetails({setTable}) {
         delivery: deliveryPay,
 
       }
-      let date = new Date()
       
-      let hour = (date.setHours(date.getHours() + 2) && date.getHours()) + ':' + date.getMinutes()
 
       return(
       <div className="cart-details">
@@ -96,6 +95,7 @@ export default function ClientDetails({setTable}) {
         <p className="options-cart bag-text-green">PERSONAL INFO</p>
         <p className="text-prices-detail">Please, fill in the blanks with the information of the person who
         is going to pickup your products.</p>
+        <Form>
         <span className="details-row">
           <FormGroup className="group-form">
             <label className="text-prices-detail">First Name*</label>
@@ -132,6 +132,7 @@ export default function ClientDetails({setTable}) {
             I want my products to be delivered.
           </Label>
         </FormGroup>
+        </Form>
         <InlineWidget
         url="https://calendly.com/jorgemtzcrz/envio-bdd"
         pageSettings={{
@@ -156,6 +157,9 @@ export default function ClientDetails({setTable}) {
           <p className="text-prices-detail">
           Your delivery has been scheduled.
           </p>
+          <p className="text-prices-detail">
+          Please click on continue to complete the process.
+          </p>
         </div>
 
       </div>
@@ -171,7 +175,7 @@ export default function ClientDetails({setTable}) {
           <p className="text-prices-detail">PRICE DETAILS</p>
           <span className="details-row"><p className="text-prices-detail">SUBTOTAL:</p><p className="text-prices-detail">$ {subtotal}</p></span>
           <span className="details-row"><p className="text-prices-detail">DISCOUNTS:</p><p className="text-prices-detail">$ {discounts}</p></span>
-          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ 0.00</p></span>
+          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ {tax === 0 ? '0.00' : tax}</p></span>
           <span className="details-row"><p className="text-prices-detail">COUPON DISCOUNT:</p> <p className="text-prices-detail">$ {couponFix}</p></span>
           <span className="details-row" style={{visibility:delivery.delivery==="delivery"?'visible':"hidden"}}><p className="text-prices-detail">DELIVERY:</p> <p className="text-prices-detail">$ {deliveryPayFix}</p></span>
 
@@ -179,7 +183,7 @@ export default function ClientDetails({setTable}) {
         <hr className="divider"/>
         <span className="details-row"><p className="options-cart">TOTAL:</p> <p className="options-cart">$ {total}</p></span>
 
-        <button  onClick={()=> {addClient(client); addHour(hour); setTable('3')}} className="button-cart-continue">CONTINUE</button>
+        <button  onClick={()=> {addClient(client, setTable); }} className="button-cart-continue">CONTINUE</button>
         
       </div>
       </div>

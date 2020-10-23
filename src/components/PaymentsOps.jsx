@@ -31,12 +31,12 @@ function PaymentsOps(props) {
 
         <div>
           <p>Credit Focused - <small>focuses on using your credit history to determine approval</small></p>
-          <img className="paymentOps-imgs" src={synch} />
+          <img className="paymentOps-imgs" src={synch} alt="credit-focused-img" />
           <p>You must apply for Synchrony in store and you can get more info about the Synchrony credit based option in store or by calling 303-593-0581.</p>
         </div>
         <div>
           <p>Income Focused - <small>focuses on consistent income and good standing with your bank</small></p>
-          <img className="paymentOps-imgs" src={prog} />
+          <img className="paymentOps-imgs" src={prog} alt="income-focused-img"/>
         </div>
 
       </div>
@@ -51,7 +51,7 @@ function PaymentsOps(props) {
 
   <div className="prog-process">
     <ol>
-      <li>Apply Online at home or In Store. <a href="https://approve.me/s/bestdealintown/29657#/splash">CLICK HERE</a> to get started </li>
+      <li>Apply Online at home or In Store. <a target="_blank" rel="noopener noreferrer" href="https://approve.me/s/bestdealintown/29657#/splash">CLICK HERE</a> to get started </li>
       <li>When approved, choose your products</li>
       <li>Review, sign your lease, and make the initial payment ~$55 </li>
       <li>Take your products with you or schedule a time for delivery!! </li>
@@ -59,7 +59,7 @@ function PaymentsOps(props) {
   </div>
 
   <p>By the way, it’s totally free to apply. </p>
-  <a id="approval-btn" href="https://approve.me/s/bestdealintown/29657#/splash">APPLY NOW</a>
+  <a id="approval-btn" target="_blank" rel="noopener noreferrer" href="https://approve.me/s/bestdealintown/29657#/splash">APPLY NOW</a>
 
   <br />
   <br />
@@ -98,7 +98,7 @@ function PaymentsOps(props) {
   <div align="center">
     <p>Click the IMAGE BELOW to get approved today.</p>
     <br />
-    <a href="https://approve.me/s/bestdealintown/29657#/splash"><img src="https://bestdealdenver.com/image/data/PL_Square.png" /></a></div>
+    <a target="_blank" rel="noopener noreferrer" href="https://approve.me/s/bestdealintown/29657#/splash"><img alt="best-deal-img-square" src="https://bestdealdenver.com/image/data/PL_Square.png" /></a></div>
     </div>
   <div className="clearfix footer_margin"></div>
     <br />

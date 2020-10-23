@@ -25,7 +25,7 @@ function Installs(props) {
 
           <div>
             <p>If you need your TV installed, our team is ready to go.</p>
-            <a href="https://calendly.com/bdit/install">Schedule Install</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://calendly.com/bdit/install">Schedule Install</a>
             <p>Great news! If you buy a TV & mount with us you get a great discount on both the install & the mount.</p>
           </div>
 
@@ -41,7 +41,7 @@ function Installs(props) {
             <small>*Subtract $20 if your TV is less than 55 <br /> <span>Take 20% off if you buy your TV with US!</span></small>
           </div>
           <div className="install-cta">
-            <a href="https://calendly.com/bdit/install">Schedule Install</a>
+            <a arget="_blank" rel="noopener noreferrer" href="https://calendly.com/bdit/install">Schedule Install</a>
           </div>
 
         </div>

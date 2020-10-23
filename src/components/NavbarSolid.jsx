@@ -52,7 +52,7 @@ const NavbarSolid = (props) => {
     <div>
       <div className="navbar-logo">
         <div className="navbar-container" >
-          <a href="/"> <img className="logo" src={altLogo} alt="BDIT Logo" /></a>
+          <Link to="/"> <img className="logo" src={altLogo} alt="BDIT Logo" /></Link>
 
         <div className="contactl">
             <a href="tel:303-593-0581">
@@ -61,7 +61,7 @@ const NavbarSolid = (props) => {
                 <p>(303) 593-0581</p>
               </div>
             </a>
-            <a href="https://g.page/bestDealDenver?share">
+            <a target="_blank" rel="noopener noreferrer" href="https://g.page/bestDealDenver?share">
               <div>
                 <b>Come Say Hi!</b>
                 <p>4371 S Broadway  <br/>  Englewood, CO 80113</p>

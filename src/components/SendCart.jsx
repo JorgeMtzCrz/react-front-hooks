@@ -5,8 +5,6 @@ import Swal from 'sweetalert2'
 // User STYLING
 import '../assets/css/cartdetail.css'
 import { useHistory } from 'react-router-dom';
-import Moment from 'react-moment'
-import moment from 'moment';
 
 
 
@@ -26,7 +24,8 @@ export default function SendCart({setTable}) {
       let num = Math.floor((Math.random() * 9999999999) + 1);
       const subtotal = parseFloat(Math.round(cart.reduce((pv,cv)=> pv + cv.price, 0)*100)/100).toFixed(2)
       const discounts = parseFloat(Math.round(cart.reduce((pv,cv)=>  cv.discount ? pv + cv.discount : 0, 0)*100)/100).toFixed(2)
-      const total = parseFloat(Math.round((subtotal - discounts - coupon + deliveryPay)*100)/100).toFixed(2)
+      let tax = Math.round((subtotal* 0.0775)*100)/100 
+      const total = parseFloat(Math.round((subtotal - discounts - coupon + deliveryPay+tax)*100)/100).toFixed(2)
       const couponFix = parseFloat(Math.round(coupon*100)/100).toFixed(2)
       const handleSubmit =(e) =>{
         e.preventDefault()
@@ -101,7 +100,7 @@ export default function SendCart({setTable}) {
         <p className="options-cart bag-text-green">{delivery.delivery === 'delivery' ? 'DELIVERY' : 'PICKUP'}</p>
         <p className="text-prices-detail">
         {delivery.delivery === 'delivery' ? 'Your delivery is set. We will send your products on the previously registered date. Please be sure to be at your address on that day at that time. Remember you will have to pay once you get your products.' : 
-        `Your products are ready for your pickup! Remember you have from now until ${dateStore} of today to pick them up. After that time, we do not guarantee they will be available.`}
+        `Your products are ready for your pickup! Remember you have from now until 6:45pm of today to pick them up. After that time, we do not guarantee they will be available.`}
        </p>
 
         <p className="text-prices-detail">Your order is:</p>
@@ -137,7 +136,7 @@ export default function SendCart({setTable}) {
           <p className="options-cart bag-text-green">PRICE DETAILS</p>
           <span className="details-row"><p className="text-prices-detail">SUBTOTAL:</p><p className="text-prices-detail">$ {subtotal}</p></span>
           <span className="details-row"><p className="text-prices-detail">DISCOUNTS:</p><p className="text-prices-detail">$ {discounts}</p></span>
-          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ 0.00</p></span>
+          <span className="details-row"><p className="text-prices-detail">TAX:</p> <p className="text-prices-detail">$ {tax === 0 ? '0.00' : tax}</p></span>
           <span className="details-row"><p className="text-prices-detail">COUPON DISCOUNT:</p> <p className="text-prices-detail">$ {couponFix}</p></span>
           <span className="details-row" style={{visibility:delivery.delivery==="delivery"?'visible':"hidden"}}><p className="text-prices-detail">DELIVERY:</p> <p className="text-prices-detail">$ {deliveryPayFix}</p></span>
         </div>
