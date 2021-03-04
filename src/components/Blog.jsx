@@ -1,8 +1,8 @@
 
 import React from 'react'
 import NavbarSolid from './NavbarSolid';
-import BannerEmail from './BannerEmail';
 import Footer from './Footer';
+import {Helmet} from "react-helmet";
 
 // User Styling
 import '../assets/css/blog.css';
@@ -17,6 +17,10 @@ function PaymentsOps(props) {
 
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://bditdenver.com/blog" />
+    </Helmet>
     <NavbarSolid/>
 
     <div className="inner-container main">

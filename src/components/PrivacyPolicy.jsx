@@ -3,6 +3,7 @@ import NavbarSolid from './NavbarSolid';
 import BannerEmail from './BannerEmail';
 import Footer from './Footer';
 import TextSection from './TextSection';
+import {Helmet} from "react-helmet";
 
 
 function PrivacyPolicy(props) {
@@ -61,6 +62,10 @@ function PrivacyPolicy(props) {
   const privacyPolicy = 'Privacy Policy'
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://bditdenver.com/privacy-policy" />
+    </Helmet>
     <NavbarSolid/>
     <TextSection title={privacyPolicy} paragraphs={paragraphs}/>
     <BannerEmail/>

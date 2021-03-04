@@ -7,7 +7,7 @@ import CardsHome from './CardsHome';
 import BannerEmail from './BannerEmail';
 import OurCommitments from './OurCommitments';
 import Footer from './Footer';
-
+import {Helmet} from "react-helmet";
 
 function Home(props) {
 
@@ -22,6 +22,10 @@ function Home(props) {
 
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://bditdenver.com/" />
+    </Helmet>
     <NavbarSolid/>
     <CarouselHome/>
     <StarSection/>

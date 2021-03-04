@@ -43,7 +43,6 @@ export default function ContextProvider(props) {
   
 
   const addClient = (client, setTable) =>{
-    console.log(client)
     if((client.firstname === undefined || "") ||(client.lastname===undefined||"")||(client.email===undefined||"")||(client.telephone===undefined||"")){
       Swal.fire(
         `Please complete the form`,

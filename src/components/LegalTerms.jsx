@@ -3,7 +3,7 @@ import NavbarSolid from './NavbarSolid';
 import BannerEmail from './BannerEmail';
 import Footer from './Footer';
 import TextSection from './TextSection';
-
+import {Helmet} from "react-helmet";
 
 function LegalTerms(props) {
   let pageHeader = React.createRef();
@@ -99,6 +99,10 @@ function LegalTerms(props) {
   const legalTerms = 'Legal Terms'
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://bditdenver.com/legal-terms" />
+    </Helmet>
     <NavbarSolid/>
     <TextSection title={legalTerms} paragraphs={paragraphs}/>
     <BannerEmail/>

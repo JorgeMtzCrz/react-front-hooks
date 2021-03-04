@@ -18,9 +18,8 @@ import tooltip from '../assets/images/toolquest.svg'
 
 //const baseURL = 'http://localhost:3000/product'
 //const baseURL = 'https://bestdealtest.herokuapp.com/product'
-const baseURL = 'https://bestdealapp.herokuapp.com/product'
-
-
+//const baseURL = 'https://bestdealapp.herokuapp.com/product'
+const baseURL = 'https://bditapp.herokuapp.com/product'
 
 function ProductDetail(props) {
   const { data } = useSWR(`${baseURL}/detail/${props.match.params.id}`, ALL_FETCHER)
@@ -43,7 +42,19 @@ function ProductDetail(props) {
                     <img src={product.img} alt={product.title}/>
                   </div>
                   <div className="title-detail">
-                    <p className="title-price">${product.price}</p>
+                    {
+                      product.discount? 
+                      <>
+                      <p className="title-price" style={{margin:0}}>${product.price - product.discount}</p>
+                      <p className="title-price" style={{textDecorationLine:'line-through', textDecorationColor:'#000', fontSize:'18px', color:'red', margin:0}}>${product.price}</p>
+                      </>
+                        :
+                      <>
+                      <p className="title-price">${product.price}</p>
+                      </>
+                  
+                  
+                    }
                     <p className="title-product">{product.title}</p>
                     <p className="description-product">{product.description}</p>
                     <div className="tooltip-content">

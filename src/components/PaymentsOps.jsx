@@ -1,7 +1,7 @@
 import React from 'react'
 import NavbarSolid from './NavbarSolid'
-import BannerEmail from './BannerEmail'
 import Footer from './Footer'
+import {Helmet} from "react-helmet";
 
 // User Styling
 import '../assets/css/paymentOps.css'
@@ -15,10 +15,14 @@ function PaymentsOps(props) {
 
   return (
     <>
+    <Helmet>
+    <meta charSet="utf-8" />
+    <link rel="canonical" href="https://bditdenver.com/payment-options" />
+    </Helmet> 
     <NavbarSolid/>
 
-<div className="inner-container main">
-  <div className="inner-container-content">
+    <div className="inner-container main">
+    <div className="inner-container-content">
     <h4>Pay Over Time</h4>
     <h1 className="title-green title-h1">Financing & Leasing Options</h1>
 

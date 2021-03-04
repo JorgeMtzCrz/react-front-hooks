@@ -8,6 +8,7 @@ import {MyContext} from '../CartContext'
 import { Link } from 'react-router-dom';
 import LoadScreen from './Loading'
 import ReactTooltip from 'react-tooltip'
+import {Helmet} from "react-helmet";
 
 // USER STYLING
 import '../assets/css/prodPages.css'
@@ -22,6 +23,10 @@ function Audio(props) {
   if(!audio) return <LoadScreen />
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://bditdenver.com/audio" />
+    </Helmet>
     <NavbarSolid/>
     <div className="container-products">
       <div className="side-products"></div>
@@ -32,11 +37,17 @@ function Audio(props) {
             audio.map((e,i)=>{
               return(
               <>
-              <div key={e._id}  className="card-product">
-              <Link  to={`${e.url}`}> <img width="100%" height="250px" src={e.img} alt="hdtvs" /></Link>
+              <div key={e._id} style={{height: audio.length < 7 ? '50%' : '400px'}}  className="card-product">
+              <Link  to={`${e.url}`}> <img width="100%" height="250px" src={e.img} alt="audio" /></Link>
                 <div  className="product-price-section">
                   <h4 className="subtitle-card">{e.title}</h4>
-                  <p className="subtitle-card">${e.price}</p>
+                  {e.discount ? 
+                    <>
+                    <p className="subtitle-card" style={{margin:0}}>${e.price - e.discount}</p>
+                    <p className="subtitle-card" style={{textDecorationLine:'line-through', textDecorationColor:'#000', color:'red', margin:0}}>${e.price}</p>
+                    </>
+                    :<p className="subtitle-card" >${e.price}</p>
+                  }
                   <div className="tooltip-content">
                   <button onClick={()=> addToCart(e)} className="button-card-blue">RESERVE</button>
                   <p data-tip="Reserve your product, come to the store, pay and pick them up. <br> Or choose a delivery date and time and pay when

@@ -56,8 +56,7 @@ export default function ClientDetails({setTable}) {
           }).then(function (response) {
             // handle success
             e.preventDefault()
-            const created = response.data.collection.sort(compareValues('created_at', 'desc'))
-            addDateDelivery(created[0].start_time)
+            addDateDelivery('Date Scheduled')
             setSpin(false)
           }).catch(function (error) {
             // handle error
@@ -134,7 +133,7 @@ export default function ClientDetails({setTable}) {
         </FormGroup>
         </Form>
         <InlineWidget
-        url="https://calendly.com/jorgemtzcrz/envio-bdd"
+        url="https://calendly.com/bdit/delivery"
         pageSettings={{
           backgroundColor: 'ffffff',
           hideEventTypeDetails: false,

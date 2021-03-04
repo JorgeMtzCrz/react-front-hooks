@@ -13,7 +13,7 @@ function Why(props) {
     <>
       <img className="aboutus-hero" src={hero} alt="wall to wall with macbook pros, iMacs, and samsung TVs and Vizio TVs" />
         <div className="mb-5 why-section-container">
-          <span>Why We're The</span><h1 className="title-hit title-green">#1 eco-Electronics Store In Denver</h1>
+          <span>Why We're The</span><h1 className="title-hit title-green"> #1 Discount Electronic store in Denver</h1>
           <div className="mt-5 text-container-why">
             <span className="text-why text-why-black">We got started because we saw a problem: We needed <span className="text-why-blue">good quality electronics</span>, but the <span className="text-why-green">BIG companies were focused more on profit than value.</span></span>
             <span className="mt-5 text-why-black">We decided to approach it differently:</span>

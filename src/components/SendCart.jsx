@@ -10,7 +10,8 @@ import { useHistory } from 'react-router-dom';
 
 
  //const baseURL = 'http://localhost:3000/product/email'
- const baseURL = 'https://bestdealapp.herokuapp.com/product/email'
+ //const baseURL = 'https://bestdealapp.herokuapp.com/product/email'
+ const baseURL = 'https://bditapp.herokuapp.com/product/email'
 
 export default function SendCart({setTable}) {
   const history =useHistory()

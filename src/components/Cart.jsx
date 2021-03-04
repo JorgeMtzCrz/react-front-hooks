@@ -9,6 +9,7 @@ import {
 import CartDetails from './CartDetails';
 import ClientDetails from './ClientDetails';
 import SendCart from './SendCart';
+import {Helmet} from "react-helmet";
 
 
 export default function Cart() {
@@ -21,6 +22,10 @@ export default function Cart() {
   
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://bditdenver.com/cart" />
+    </Helmet>
     <NavbarSolid/>
     <div className="cart-breadcrumb">
       <span onClick={()=> setTable('1')} style={{color:"#96BA27", fontWeight:"bold"}} className="text-breadcrumb">BAG </span>

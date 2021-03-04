@@ -9,6 +9,7 @@ import samsung from '../assets/images/samsung.png'
 import sonos from '../assets/images/sonos.png'
 import vizio from '../assets/images/vizio.png'
 import philips from '../assets/images/philips.png'
+import { Link } from 'react-router-dom'
 
 const slides = [sony,apple,samsung,vizio,sonos,philips]
 
@@ -27,7 +28,7 @@ function ScrollPartners(props) {
             </div>
           ))}
         </div>
-        <button className="button-scroll-green">BUY GREEN</button>
+        <Link to="/hdtvs"><button className="button-scroll-green">BUY GREEN</button></Link>
       </div>
   );
 }

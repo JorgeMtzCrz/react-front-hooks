@@ -5,9 +5,9 @@ import { ACTIVE_URL, ALL_FETCHER } from '../services/card_service'
 
 import LoadScreen from './Loading'
 
-
 // User STYLING
 import '../assets/css/home.css'
+import { Link } from 'react-router-dom'
 
 
 function CardsHome(props) {
@@ -36,7 +36,7 @@ function CardsHome(props) {
                   <h3 className={ i === 0 || i === 3 ? "title-blue":"title-green"}>{e.title}</h3>
                   <h5 className="subtitle-card">{e.subtitle}</h5>
                   <p className="description-card">{e.description}</p>
-                  <button className={i === 0 || i === 3 ? "button-card-blue":"button-card-green"}>SEE MORE</button>
+                <Link to={`//${e.url}`} target='_blank'><button className={i === 0 || i === 3 ? "button-card-blue":"button-card-green"}>SEE MORE</button></Link>
                 </div>
               </div>
             </div>

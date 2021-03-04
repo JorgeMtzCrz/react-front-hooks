@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 // USER STYLING
 import '../assets/css/aboutus.css'
@@ -21,7 +22,7 @@ function FeelBoxed(props) {
           </div>
           <div className="text-feel">
             <p className="title-feel ">Don't feel boxed in by the pressure to buy new. <br /> <span className="text-dark">Choose freedom, choose the environment, choose value. </span></p>
-            <button className="button-feel ">BUY GREEN</button>
+            <Link to="/hdtvs"><button className="button-feel ">BUY GREEN</button></Link>
           </div>
         </div>
 

@@ -41,7 +41,7 @@ const NavbarSolid = (props) => {
     
   }
   useEffect(() => {
-    axios.get(`https://bestdealapp.herokuapp.com/product/search?title=${searchTerm}`)
+    axios.get(`https://bditapp.herokuapp.com/product/search?title=${searchTerm}`)
       .then(({data: {products}})=>{
         setProducts(products)
       })

@@ -61,8 +61,8 @@ export default function Footer(props) {
             <h4 className="subtitle-footer">Site Admin</h4>
             <Link to="//admin.bditdenver.com" target="_blank"><p>Login</p></Link>
             <Link to="//manager.roverpayapp.com/login" target="_blank"><p>Argyle Admin</p></Link>
-            <p> <a href="https://approve.me/s/bestdealintown/29657#/splash">Progressive</a> </p>
-            <p> <a href="https://businesscenter.synchronybusiness.com/portal/login">Synchrony</a> </p>
+            <Link to="//approve.me/s/bestdealintown/29657#/splash" target="_blank"><p>Progressive</p></Link>
+            <Link to="//businesscenter.synchronybusiness.com/portal/login" target="_blank"><p>Synchrony</p></Link>
         </div>
       </div>
       <div className="social-column-content">
